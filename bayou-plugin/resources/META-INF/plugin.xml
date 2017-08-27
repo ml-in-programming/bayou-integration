@@ -17,6 +17,7 @@
   <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
   <idea-version since-build="145.0"/>
 
+
   <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
        on how to target different products -->
   <!-- uncomment to enable plugin in all products
@@ -24,15 +25,20 @@
   -->
 
   <extensions defaultExtensionNs="com.intellij">
-    <!-- Add your extensions here -->
+    <fileTypeFactory implementation="tanvd.bayou.prototype.language.file.BayouFileTypeFactory"/>
+    <lang.parserDefinition language="Bayou" implementationClass="tanvd.bayou.prototype.language.BayouParserDefinition"/>
+    <lang.syntaxHighlighterFactory key="Bayou" language="Bayou" implementationClass="tanvd.bayou.prototype.language.highlighting.BayouHighlighterFactory"/>
+    <completion.contributor language="Bayou" implementationClass="tanvd.bayou.prototype.language.completion.BayouCompletionContributor"/>
   </extensions>
+
+  <depends>org.jetbrains.kotlin</depends>
+
 
   <actions>
     <!-- Add your actions here -->
     <action id="tanvd.bayou.prototype.EditorAction" class="tanvd.bayou.prototype.EditorAction"
             text="Generate With Bayou" description="Generate With Bayou">
       <add-to-group group-id="CodeMenu" anchor="first"/>
-      <keyboard-shortcut keymap="$default" first-keystroke="G"/>
     </action>
   </actions>
 

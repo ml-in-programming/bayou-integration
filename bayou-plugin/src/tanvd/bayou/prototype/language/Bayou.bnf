@@ -1,0 +1,20 @@
+{
+  parserClass="tanvd.bayou.prototype.language.parser.BayouParser"
+
+  extends="com.intellij.extapi.psi.ASTWrapperPsiElement"
+
+  psiClassPrefix="Bayou"
+  psiImplClassSuffix="Impl"
+  psiPackage="tanvd.bayou.prototype.language.psi"
+  psiImplPackage="tanvd.bayou.prototype.language.psi.impl"
+
+  elementTypeHolderClass="tanvd.bayou.prototype.language.psi.BayouTypes"
+  elementTypeClass="tanvd.bayou.prototype.language.psi.BayouElementType"
+  tokenTypeClass="tanvd.bayou.prototype.language.psi.BayouTokenType"
+}
+
+bayouFile ::= (property | COMMENT)*
+property ::= (key SEPARATOR VALUE)
+
+key ::= (API | TYPE | CONTEXT)
+
