@@ -17,10 +17,9 @@ package tanvd.bayou.implementation.core.dsl
 
 
 import org.eclipse.jdt.core.dom.*
-import tanvd.bayou.implementation.application.dom.Visitor
-import tanvd.bayou.implementation.core.synthesizer.Environment
-import tanvd.bayou.implementation.core.synthesizer.SynthesisException
-import tanvd.bayou.implementation.core.synthesizer.Type
+import tanvd.bayou.implementation.core.synthesizer.implementation.Environment
+import tanvd.bayou.implementation.core.synthesizer.implementation.SynthesisException
+import tanvd.bayou.implementation.core.synthesizer.implementation.Type
 import java.util.*
 
 class DLoop : DASTNode {
@@ -48,7 +47,8 @@ class DLoop : DASTNode {
         for (call in _cond)
             call.updateSequences(soFar, max, max_length)
 
-        val num_unrolls = if (Visitor.V() == null) 1 else Visitor.V().options.NUM_UNROLLS
+        //TODO-tanvd Check
+        val num_unrolls = 1
         for (i in 0 until num_unrolls) {
             for (node in _body)
                 node.updateSequences(soFar, max, max_length)

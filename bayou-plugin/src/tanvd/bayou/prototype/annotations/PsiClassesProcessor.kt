@@ -5,8 +5,10 @@ import com.intellij.psi.PsiClass
 import com.intellij.psi.PsiTypeElement
 import com.intellij.util.Processor
 import org.jetbrains.uast.java.annotations
+import tanvd.bayou.implementation.BayouAPI
 import tanvd.bayou.prototype.api.BayouApi
 import tanvd.bayou.prototype.api.BayouRequest
+import tanvd.bayou.prototype.api.BayouTextConverter
 import tanvd.bayou.prototype.api.InputParameter
 import tanvd.bayou.prototype.utils.*
 
@@ -46,7 +48,10 @@ class PsiClassesProcessor(val project: Project) : Processor<PsiClass> {
             }
             if (contextClasses.isNotEmpty() || apiCalls.isNotEmpty()) {
                 val request = BayouRequest(inputParams, apiCalls, apiTypes, contextClasses)
-                val response = BayouApi.executeRequest(request)
+                val programs = BayouAPI.synthesize(BayouTextConverter.toProgramText(request))
+                val response = programs?.firstOrNull()?.let {
+                    BayouTextConverter.fromProgramText(it)
+                }
                 val codeBlock = if (response != null) {
                     val (imports, code) = response
                     val qualifiedCode = CodeUtils.qualifyWithImports(code, imports)

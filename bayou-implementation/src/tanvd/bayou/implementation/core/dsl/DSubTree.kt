@@ -18,10 +18,9 @@ package tanvd.bayou.implementation.core.dsl
 import org.eclipse.jdt.core.dom.Block
 import org.eclipse.jdt.core.dom.Expression
 import org.eclipse.jdt.core.dom.Statement
-import tanvd.bayou.implementation.core.synthesizer.Environment
-import tanvd.bayou.implementation.core.synthesizer.SynthesisException
+import tanvd.bayou.implementation.core.synthesizer.implementation.Environment
+import tanvd.bayou.implementation.core.synthesizer.implementation.SynthesisException
 import java.util.*
-import java.util.stream.Collectors
 
 class DSubTree : DASTNode {
 

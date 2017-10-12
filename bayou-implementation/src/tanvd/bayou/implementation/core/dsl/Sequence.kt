@@ -1,7 +1,5 @@
 package tanvd.bayou.implementation.core.dsl
 
-import kotlin.collections.ArrayList
-
 data class Sequence(val calls: MutableList<String> = ArrayList()) {
     fun addCall(apiCall: String) {
         calls.add(apiCall)

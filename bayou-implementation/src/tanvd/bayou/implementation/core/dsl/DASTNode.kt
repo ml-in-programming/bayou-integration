@@ -15,7 +15,7 @@ limitations under the License.
 */
 package tanvd.bayou.implementation.core.dsl
 
-import tanvd.bayou.implementation.core.synthesizer.Synthesizable
+import tanvd.bayou.implementation.core.synthesizer.implementation.Synthesizable
 
 abstract class DASTNode : Synthesizable {
     class TooManySequencesException : Exception()

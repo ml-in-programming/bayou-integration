@@ -19,8 +19,8 @@ import org.eclipse.jdt.core.dom.CatchClause
 import org.eclipse.jdt.core.dom.Expression
 import org.eclipse.jdt.core.dom.Statement
 import org.eclipse.jdt.core.dom.TryStatement
-import tanvd.bayou.implementation.core.synthesizer.Environment
-import tanvd.bayou.implementation.core.synthesizer.SynthesisException
+import tanvd.bayou.implementation.core.synthesizer.implementation.Environment
+import tanvd.bayou.implementation.core.synthesizer.implementation.SynthesisException
 import java.util.*
 
 class DExcept : DASTNode {
@@ -148,7 +148,7 @@ class DExcept : DASTNode {
         }
         statement.body = tryBlock
         val exceptionsThrown_ = ArrayList(exceptionsThrown)
-        exceptionsThrown_.sortWith (Comparator( {e1: Class<*>, e2: Class<*> -> if (e1.isAssignableFrom(e2)) 1 else -1 }) )
+        exceptionsThrown_.sortWith(Comparator({ e1: Class<*>, e2: Class<*> -> if (e1.isAssignableFrom(e2)) 1 else -1 }))
 
         if (this.exceptToClause == null)
             this.exceptToClause = HashMap<Any, Any>()

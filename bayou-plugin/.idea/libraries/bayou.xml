@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="bayou">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../bayou-implementation/out/artifacts/bayou_jar/bayou.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../bayou-implementation/src" />
+    </SOURCES>
+  </library>
+</component>

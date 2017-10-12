@@ -16,9 +16,9 @@ limitations under the License.
 package tanvd.bayou.implementation.core.dsl
 
 import org.eclipse.jdt.core.dom.*
-import tanvd.bayou.implementation.core.synthesizer.Environment
-import tanvd.bayou.implementation.core.synthesizer.SynthesisException
-import tanvd.bayou.implementation.core.synthesizer.Type
+import tanvd.bayou.implementation.core.synthesizer.implementation.Environment
+import tanvd.bayou.implementation.core.synthesizer.implementation.SynthesisException
+import tanvd.bayou.implementation.core.synthesizer.implementation.Type
 import java.util.*
 
 class DBranch : DASTNode {

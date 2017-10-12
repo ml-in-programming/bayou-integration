@@ -20,9 +20,9 @@ import org.eclipse.jdt.core.dom.ASTNode
 import org.eclipse.jdt.core.dom.Assignment
 import org.eclipse.jdt.core.dom.IMethodBinding
 import org.eclipse.jdt.core.dom.SimpleName
-import tanvd.bayou.implementation.core.synthesizer.Environment
-import tanvd.bayou.implementation.core.synthesizer.SynthesisException
-import tanvd.bayou.implementation.core.synthesizer.Type
+import tanvd.bayou.implementation.core.synthesizer.implementation.Environment
+import tanvd.bayou.implementation.core.synthesizer.implementation.SynthesisException
+import tanvd.bayou.implementation.core.synthesizer.implementation.Type
 import java.lang.reflect.Constructor
 import java.lang.reflect.Executable
 import java.lang.reflect.Method
@@ -56,8 +56,8 @@ class DAPICall : DASTNode {
     private val signature: String
         get() {
             return methodBinding.name + "(" +
-            methodBinding.parameterTypes.joinToString(",") { t -> (if (t.isTypeVariable) "Tau_" else "") + t.qualifiedName } +
-            ")"
+                    methodBinding.parameterTypes.joinToString(",") { t -> (if (t.isTypeVariable) "Tau_" else "") + t.qualifiedName } +
+                    ")"
         }
 
     private/* get the type-erased name */// generic type variable
