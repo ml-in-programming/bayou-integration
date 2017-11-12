@@ -19,7 +19,7 @@ package tanvd.bayou.implementation
 import org.apache.commons.cli.DefaultParser
 import org.apache.commons.cli.HelpFormatter
 import org.apache.commons.cli.Options
-import tanvd.bayou.implementation.core.synthesizer.ApiSynthesizerRemoteTensorFlowAsts
+import tanvd.bayou.implementation.core.code.synthesizer.ApiSynthesizerRemoteTensorFlowAsts
 import java.nio.file.Files
 import java.nio.file.Paths
 

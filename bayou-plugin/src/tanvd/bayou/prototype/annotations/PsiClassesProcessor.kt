@@ -6,7 +6,6 @@ import com.intellij.psi.PsiTypeElement
 import com.intellij.util.Processor
 import org.jetbrains.uast.java.annotations
 import tanvd.bayou.implementation.BayouAPI
-import tanvd.bayou.prototype.api.BayouApi
 import tanvd.bayou.prototype.api.BayouRequest
 import tanvd.bayou.prototype.api.BayouTextConverter
 import tanvd.bayou.prototype.api.InputParameter

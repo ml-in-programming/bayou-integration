@@ -1,6 +1,6 @@
 package tanvd.bayou.implementation
 
-import tanvd.bayou.implementation.core.synthesizer.ApiSynthesizerRemoteTensorFlowAsts
+import tanvd.bayou.implementation.core.code.synthesizer.ApiSynthesizerRemoteTensorFlowAsts
 
 object BayouAPI {
     private val tensorFlowAPI =  ApiSynthesizerRemoteTensorFlowAsts("localhost", 8084,
