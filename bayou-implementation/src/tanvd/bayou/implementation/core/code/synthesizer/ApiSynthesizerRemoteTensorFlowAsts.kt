@@ -22,6 +22,7 @@ import tanvd.bayou.implementation.core.code.synthesizer.implementation.ParseExce
 import tanvd.bayou.implementation.core.code.synthesizer.implementation.Parser
 import tanvd.bayou.implementation.core.code.synthesizer.implementation.Synthesizer
 import tanvd.bayou.implementation.core.ml.AstGenerator
+import tanvd.bayou.implementation.core.ml.Evidences
 import tanvd.bayou.implementation.utils.JsonUtil
 
 import java.io.*
@@ -159,7 +160,7 @@ class ApiSynthesizerRemoteTensorFlowAsts(private val _tensorFlowHost: String?, p
             throw SynthesiseException(e)
         }
 
-        val result = AstGenerator.generateAsts(astsJson)
+        val result = AstGenerator.generateAsts(astsJson, JsonUtil.readValue(evidence, Evidences::class))
 
         result.forEach { ast ->
             println("START PROGRAM")

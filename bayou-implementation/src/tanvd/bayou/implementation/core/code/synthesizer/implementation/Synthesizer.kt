@@ -15,32 +15,12 @@ limitations under the License.
 */
 package tanvd.bayou.implementation.core.code.synthesizer.implementation
 
-import com.google.gson.GsonBuilder
 import org.eclipse.jface.text.Document
 import tanvd.bayou.implementation.core.code.dsl.*
 import java.net.URLClassLoader
 import java.util.*
 
 class Synthesizer {
-
-    internal inner class JSONInputWrapper {
-        var asts: List<DSubTree>? = null
-    }
-
-    private fun getASTsFromNN(astJson: String): DSubTree {
-        val nodeAdapter = RuntimeTypeAdapterFactory.of(DASTNode::class.java, "node")
-                .registerSubtype(DAPICall::class.java)
-                .registerSubtype(DBranch::class.java)
-                .registerSubtype(DExcept::class.java)
-                .registerSubtype(DLoop::class.java)
-                .registerSubtype(DSubTree::class.java)
-        val gson = GsonBuilder().serializeNulls()
-                .registerTypeAdapterFactory(nodeAdapter)
-                .create()
-        val js = gson.fromJson(astJson, DSubTree::class.java)
-
-        return js
-    }
 
     fun execute(parser: Parser, ast: DSubTree): List<String> {
         val synthesizedPrograms = LinkedList<String>()

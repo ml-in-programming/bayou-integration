@@ -4,6 +4,7 @@ import org.tensorflow.*
 import tanvd.bayou.implementation.utils.JsonUtil
 import org.tensorflow.Tensor
 import tanvd.bayou.implementation.core.code.dsl.*
+import tanvd.bayou.implementation.core.code.synthesizer.implementation.SynthesisException
 import tanvd.bayou.implementation.utils.RandomSelector
 import tanvd.bayou.implementation.utils.getFloatTensor2D
 import java.io.File
@@ -42,13 +43,31 @@ object AstGenerator {
 //    and all([c in context for c in js['context']])
 //    return ev_okay
 
-    fun generateAsts(response: String): List<DSubTree> {
+    fun generateAsts(response: String, evidence: Evidences): List<DSubTree> {
         val results = ArrayList<DSubTree>()
         for (i in 1..10) {
-            val ast = generateAst(response)
-            results.add(ast)
+            try {
+                val ast = generateAst(response)
+                if (verifyAst(evidence)) {
+                    results.add(ast)
+                }
+            } catch (e : Exception) {}
         }
         return results
+    }
+
+    private val calls_in_last_ast: MutableList<String> = ArrayList()
+
+    fun verifyAst(evidence: Evidences) : Boolean {
+        val callsTypes = calls_in_last_ast.mapNotNull { Evidences.typeFromCall(it) }
+        val callsApis = calls_in_last_ast.mapNotNull { Evidences.apicallFromCall(it) }
+        val typesContains = evidence.types.all {
+            callsTypes.contains(it)
+        }
+        val apisContains = evidence.apicalls.all {
+            callsApis.contains(it)
+        }
+        return typesContains && apisContains
     }
 
     private fun generateAst(response: String) : DSubTree {
@@ -68,7 +87,6 @@ object AstGenerator {
         return ast
     }
 
-    val calls_in_last_ast: MutableList<String> = ArrayList()
 
     private fun generateFromPsi(psi: Tensor, depth: Long = 0, in_nodes : List<String> = listOf("DSubTree"),
                                 in_edges: List<Edges> = listOf(Edges.ChildEdge)): DASTNode {
@@ -79,15 +97,15 @@ object AstGenerator {
         val node = in_nodes.last()
         when (node) {
             "DBranch" -> {
-                val resultFirst = getUntilStop(psi, depth, nodes, edges, check_call = true)
+                val resultFirst = genUntilStoop(psi, depth, nodes, edges, check_call = true)
                 val ast_cond = resultFirst.ast_nodes
                 nodes = resultFirst.nodes.toMutableList()
                 edges = resultFirst.edges.toMutableList()
-                val resultSecond = getUntilStop(psi, depth, nodes, edges)
+                val resultSecond = genUntilStoop(psi, depth, nodes, edges)
                 val ast_then = resultSecond.ast_nodes
                 nodes = resultSecond.nodes.toMutableList()
                 edges = resultSecond.edges.toMutableList()
-                val resultThird = getUntilStop(psi, depth, nodes, edges)
+                val resultThird = genUntilStoop(psi, depth, nodes, edges)
                 val ast_else = resultThird.ast_nodes
                 nodes = resultThird.nodes.toMutableList()
                 edges = resultThird.edges.toMutableList()
@@ -95,11 +113,11 @@ object AstGenerator {
             }
             "DExcept" -> {
                 ast["node"] = node
-                val resultFirst = getUntilStop(psi, depth, nodes, edges)
+                val resultFirst = genUntilStoop(psi, depth, nodes, edges)
                 val ast_try = resultFirst.ast_nodes
                 nodes = resultFirst.nodes.toMutableList()
                 edges = resultFirst.edges.toMutableList()
-                val resultSecond = getUntilStop(psi, depth, nodes, edges)
+                val resultSecond = genUntilStoop(psi, depth, nodes, edges)
                 val ast_catch = resultSecond.ast_nodes
                 nodes = resultSecond.nodes.toMutableList()
                 edges = resultSecond.edges.toMutableList()
@@ -109,11 +127,11 @@ object AstGenerator {
 
             }
             "DLoop" -> {
-                val resultFirst = getUntilStop(psi, depth, nodes, edges, check_call=true)
+                val resultFirst = genUntilStoop(psi, depth, nodes, edges, check_call=true)
                 val ast_cond = resultFirst.ast_nodes
                 nodes = resultFirst.nodes.toMutableList()
                 edges = resultFirst.edges.toMutableList()
-                val resultSecond = getUntilStop(psi, depth, nodes, edges)
+                val resultSecond = genUntilStoop(psi, depth, nodes, edges)
                 val ast_body = resultSecond.ast_nodes
                 nodes = resultSecond.nodes.toMutableList()
                 edges = resultSecond.edges.toMutableList()
@@ -121,7 +139,7 @@ object AstGenerator {
 
             }
             "DSubTree" -> {
-                val (ast_nodes, _, _) = getUntilStop(psi, depth, nodes, edges)
+                val (ast_nodes, _, _) = genUntilStoop(psi, depth, nodes, edges)
                 return DSubTree(ast_nodes.toMutableList())
             }
             else -> {
@@ -135,29 +153,12 @@ object AstGenerator {
 
     }
 
+    private val maxGenUntilStop = 20;
+
     private data class CodeGenResult(val ast_nodes: List<DASTNode>, val nodes:List<String>, val edges: List<Edges>)
 
-//    ast = []
-//    nodes, edges = in_nodes[:], in_edges[:]
-//    num = 0
-//    while True:
-//    assert num < MAX_GEN_UNTIL_STOP # exception caught in main
-//    dist = self.model.infer_ast(self.sess, psi, nodes, edges)
-//    idx = np.random.choice(range(len(dist)), p=dist)
-//    prediction = self.model.config.decoder.chars[idx]
-//    nodes += [prediction]
-//    if check_call:  # exception caught in main
-//    assert prediction not in ['DBranch', 'DExcept', 'DLoop', 'DSubTree']
-//    if prediction == 'STOP':
-//    edges += [SIBLING_EDGE]
-//    break
-//    js = self.generate_ast(psi, depth + 1, nodes, edges + [CHILD_EDGE])
-//    ast.append(js)
-//    edges += [SIBLING_EDGE]
-//    num += 1
-//    return ast, nodes, edges
-    private fun getUntilStop(psi: Tensor, depth: Long, in_nodes: List<String>, in_edges: List<Edges>,
-                             check_call: Boolean = false) : CodeGenResult {
+    private fun genUntilStoop(psi: Tensor, depth: Long, in_nodes: List<String>, in_edges: List<Edges>,
+                              check_call: Boolean = false) : CodeGenResult {
         val nodes = in_nodes.toMutableList()
         val edges = in_edges.toMutableList()
         val ast : ArrayList<DASTNode> = ArrayList()
@@ -175,29 +176,15 @@ object AstGenerator {
             ast.add(js)
             edges += Edges.SiblingEdge
             num += 1
+            if (num > maxGenUntilStop) {
+                throw SynthesisException(-1)
+            }
 
         }
         return CodeGenResult(ast, nodes, edges)
 
     }
 
-//    def infer_ast(self, sess, psi, nodes, edges):
-//    # use the given psi and get decoder's start state
-//    state = sess.run(self.initial_state, {self.psi: psi})
-//
-//    # run the decoder for every time step
-//    for node, edge in zip(nodes, edges):
-//    assert edge == CHILD_EDGE or edge == SIBLING_EDGE, 'invalid edge: {}'.format(edge)
-//    n = np.array([self.config.decoder.vocab[node]], dtype=np.int32)
-//    e = np.array([edge == CHILD_EDGE], dtype=np.bool)
-//
-//    feed = {self.decoder.initial_state: state,
-//        self.decoder.nodes[0].name: n,
-//        self.decoder.edges[0].name: e}
-//    [probs, state] = sess.run([self.probs, self.decoder.state], feed)
-//
-//    dist = probs[0]
-//    return dist
     private fun infer_ast_model(psi: Tensor, nodes: List<String>, edges: List<Edges>): FloatArray {
         val decoderInitialState = "initial_state_decoder"
         val decoderState = "decoder/rnn/decoder_state"

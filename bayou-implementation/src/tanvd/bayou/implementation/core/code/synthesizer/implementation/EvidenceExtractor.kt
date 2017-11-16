@@ -58,34 +58,26 @@ class EvidenceExtractor : ASTVisitor() {
         this.evidenceBlock = evidenceBlock
 
         // performing casts wildly.. if any exceptions occur it's due to incorrect input format
-        if (binding.name == "apicalls") {
-            for (arg in invocation.arguments()) {
-                val a = arg as StringLiteral
-                output.apicalls.add(a.literalValue)
-            }
-        } else if (binding.name == "types") {
-            for (arg in invocation.arguments()) {
-                val a = arg as StringLiteral
-                output.types.add(a.literalValue)
-            }
-        } else if (binding.name == "context") {
-            for (arg in invocation.arguments()) {
-                val a = arg as StringLiteral
-                output.context.add(a.literalValue)
-            }
-        } else if (binding.name == "keywords") {
-            for (arg in invocation.arguments()) {
-                val a = arg as StringLiteral
-                output.keywords.add(a.literalValue)
-            }
-        } else
-            throw SynthesisException(SynthesisException.InvalidEvidenceType)
+        when {
+            binding.name == "apicalls" -> invocation.arguments()
+                    .map { it as StringLiteral }
+                    .forEach { output.apicalls.add(it.literalValue) }
+            binding.name == "types" -> invocation.arguments()
+                    .map { it as StringLiteral }
+                    .forEach { output.types.add(it.literalValue) }
+            binding.name == "context" -> invocation.arguments()
+                    .map { it as StringLiteral }
+                    .forEach { output.context.add(it.literalValue) }
+            binding.name == "keywords" -> invocation.arguments()
+                    .map { it as StringLiteral }
+                    .forEach { output.keywords.add(it.literalValue) }
+            else -> throw SynthesisException(SynthesisException.InvalidEvidenceType)
+        }
 
         return false
     }
 
     companion object {
-
         // Check if the given block contains statements that are not evidence API calls
         internal fun isLegalEvidenceBlock(evidBlock: Block): Boolean {
             for (obj in evidBlock.statements()) {
