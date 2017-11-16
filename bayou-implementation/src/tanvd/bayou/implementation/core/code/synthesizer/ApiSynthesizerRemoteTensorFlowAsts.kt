@@ -163,24 +163,12 @@ class ApiSynthesizerRemoteTensorFlowAsts(private val _tensorFlowHost: String?, p
 
         result.forEach { ast ->
             println("START PROGRAM")
-            val synthesizedPrograms: List<String> = Synthesizer().execute(parser, JsonUtil.writeValueAsString(ast))
+            val synthesizedPrograms: List<String> = Synthesizer().execute(parser, ast)
             println(synthesizedPrograms.joinToString(separator = "\n"))
             println("END PROGRAM")
         }
 
-        /*
-         * Synthesise results from the code and asts and return.
-         */
-        var synthesizedPrograms: List<String> = Synthesizer().execute(parser, astsJson)
-
-        if (synthesizedPrograms.size > maxProgramCount)
-        // unsure if execute always returns n output for n ast inputs.
-            synthesizedPrograms = synthesizedPrograms.subList(0, maxProgramCount)
-
-        _logger.trace("synthesizedPrograms: " + synthesizedPrograms)
-
-        _logger.debug("exiting")
-        return synthesizedPrograms
+        error("not implemented further")
     }
 
     companion object {

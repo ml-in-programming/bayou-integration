@@ -42,9 +42,8 @@ class Synthesizer {
         return js
     }
 
-    fun execute(parser: Parser, astJson: String): List<String> {
+    fun execute(parser: Parser, ast: DSubTree): List<String> {
         val synthesizedPrograms = LinkedList<String>()
-        val ast = getASTsFromNN(astJson)
 
         classLoader = URLClassLoader.newInstance(parser.classpathURLs)
 
