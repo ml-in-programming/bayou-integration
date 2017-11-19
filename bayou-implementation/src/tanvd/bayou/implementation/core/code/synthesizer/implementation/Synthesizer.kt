@@ -40,6 +40,7 @@ class Synthesizer {
                 synthesizedPrograms.add(visitor.synthesizedProgram!!)
             }
         } catch (e: SynthesisException) {
+            print(e.message)
             // do nothing and try next ast
         }
 

@@ -26,28 +26,31 @@ import java.nio.file.Paths
 internal object TestClient {
     private val _testDialog = """
 import edu.rice.cs.caper.bayou.annotations.Evidence;
-import android.content.Context;
-import android.content.Intent;
-import android.speech.RecognitionListener;
+import android.bluetooth.BluetoothAdapter;
 
 // Bayou supports three types of evidence:
 // 1. apicalls - API methods the code should invoke
 // 2. types - datatypes of objects which invoke API methods
 // 3. context - datatypes of variables that the code should use
 
-public class TestSpeech {
+public class TestBluetooth {
 
-    /* Construct a speech regonizer with the provided listener */
-    void speechRecognition(Context context, Intent intent, RecognitionListener listener) {
+    /* Get an input stream that can be used to read from
+     * the given blueooth hardware address */
+    void readFromBluetooth(BluetoothAdapter adapter) {
+        // Intersperse code with evidence
+        String address = "00:43:A8:23:10:F0";
+
         { // Provide evidence within a separate block
-            // Code should make API calls on "SpeechRecognizer"...
-            Evidence.types("SpeechRecognizer");
-            // ...and use a "Context" as argument
-            Evidence.context("Context");
+            // Code should call "getInputStream"...
+            Evidence.apicalls("getInputStream");
+            // ...on a "BluetoothSocket" type
+            Evidence.types("BluetoothSocket");
         } // Synthesized code will replace this block
     }
 
 }
+
         """
 
     private val NUM_SAMPLES = "num_samples"
