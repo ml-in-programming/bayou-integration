@@ -23,6 +23,10 @@ import tanvd.bayou.implementation.core.code.synthesizer.implementation.Parser
 import tanvd.bayou.implementation.core.code.synthesizer.implementation.Synthesizer
 import tanvd.bayou.implementation.core.ml.AstGenerator
 import tanvd.bayou.implementation.core.ml.Evidences
+import tanvd.bayou.implementation.core.ml.lda.LdaApi
+import tanvd.bayou.implementation.core.ml.lda.LdaContexts
+import tanvd.bayou.implementation.core.ml.lda.LdaTypes
+//import tanvd.bayou.implementation.core.ml.lda.LdaInference
 import tanvd.bayou.implementation.utils.JsonUtil
 
 import java.io.*
@@ -160,7 +164,13 @@ class ApiSynthesizerRemoteTensorFlowAsts(private val _tensorFlowHost: String?, p
             throw SynthesiseException(e)
         }
 
-        val result = AstGenerator.generateAsts(astsJson, JsonUtil.readValue(evidence, Evidences::class))
+        val tfidf = JsonUtil.readValue(astsJson, Array<Array<Array<Double>>>::class)
+        val ldaTypes = LdaTypes.getTopicDistribution(tfidf[1][0].map { it.toString() }.toTypedArray()).toTypedArray()
+        val ldaApi = LdaApi.getTopicDistribution(tfidf[0][0].map { it.toString() }.toTypedArray()).toTypedArray()
+        val ldaContext = LdaContexts.getTopicDistribution(tfidf[2][0].map { it.toString() }.toTypedArray()).toTypedArray()
+
+
+        val result = AstGenerator.generateAsts(ldaApi, ldaTypes, ldaContext, JsonUtil.readValue(evidence, Evidences::class))
 
         result.forEach { ast ->
             println("START PROGRAM")

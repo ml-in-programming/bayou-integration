@@ -1,12 +1,11 @@
 package tanvd.bayou.implementation.utils
 
-import java.lang.Math.abs
-import java.util.Random
+import java.util.*
 
 
 internal class RandomSelector(val items: Map<Int, Float>) {
     var rand = Random()
-    var totalSum : Float = items.values.sum()
+    var totalSum: Float = items.values.sum()
 
     val random: Int
         get() {

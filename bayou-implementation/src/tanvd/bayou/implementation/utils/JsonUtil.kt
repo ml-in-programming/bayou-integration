@@ -15,11 +15,11 @@ object JsonUtil {
         disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES)
     }
 
-    fun writeValueAsString(obj: Any) : String {
+    fun writeValueAsString(obj: Any): String {
         return jsonMapper.writeValueAsString(obj)
     }
 
-    fun <T : Any>readValue(serialized: String, klass: KClass<T>): T {
+    fun <T : Any> readValue(serialized: String, klass: KClass<T>): T {
         return jsonMapper.readValue(serialized, klass.java)
     }
 }

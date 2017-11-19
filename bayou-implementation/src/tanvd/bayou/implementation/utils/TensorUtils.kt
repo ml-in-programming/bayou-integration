@@ -9,7 +9,7 @@ fun getFloatTensor1D(tensor: Tensor): FloatArray {
 }
 
 fun getFloatTensor2D(tensor: Tensor): Array<FloatArray> {
-    val array = Array(tensor.shape()[0].toInt(), {kotlin.FloatArray(tensor.shape()[1].toInt())})
+    val array = Array(tensor.shape()[0].toInt(), { kotlin.FloatArray(tensor.shape()[1].toInt()) })
     tensor.copyTo(array)
     return array
 }

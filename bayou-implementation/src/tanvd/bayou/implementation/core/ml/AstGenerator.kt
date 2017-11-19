@@ -1,10 +1,9 @@
 package tanvd.bayou.implementation.core.ml
 
 import org.tensorflow.*
-import tanvd.bayou.implementation.utils.JsonUtil
-import org.tensorflow.Tensor
 import tanvd.bayou.implementation.core.code.dsl.*
 import tanvd.bayou.implementation.core.code.synthesizer.implementation.SynthesisException
+import tanvd.bayou.implementation.utils.JsonUtil
 import tanvd.bayou.implementation.utils.RandomSelector
 import tanvd.bayou.implementation.utils.getFloatTensor2D
 import java.io.File
@@ -19,9 +18,9 @@ object AstGenerator {
 
     val prefixPath = "/home/tanvd/Diploma/bayou-integration"
 
-    val graph : Graph
+    val graph: Graph
 
-    val session : Session
+    val session: Session
 
     val config = JsonUtil.readValue(String(File("$prefixPath/bayou-implementation/resources/artifacts/model/config.json").readBytes()), DecoderConfig::class)
 
@@ -32,33 +31,24 @@ object AstGenerator {
         session = saved.session()
     }
 
-//    # Include in here any conditions that dictate whether an AST should be returned or not
-//    def okay(js, ast):
-//    calls = ast['calls']
-//    apicalls = list(set(chain.from_iterable([bayou.core.evidence.APICalls.from_call(call) for call in calls])))
-//    types = list(set(chain.from_iterable([bayou.core.evidence.Types.from_call(call) for call in calls])))
-//    context = list(set(chain.from_iterable([bayou.core.evidence.Context.from_call(call) for call in calls])))
-//
-//    ev_okay = all([c in apicalls for c in js['apicalls']]) and all([t in types for t in js['types']]) \
-//    and all([c in context for c in js['context']])
-//    return ev_okay
-
-    fun generateAsts(response: String, evidence: Evidences): List<DSubTree> {
+    fun generateAsts(ldaApi: Array<Float>, ldaTypes: Array<Float>, ldaContext: Array<Float>, evidence: Evidences): List<DSubTree> {
         val results = ArrayList<DSubTree>()
-        for (i in 1..10) {
+        for (i in 1..100) {
             try {
-                val ast = generateAst(response)
+                val ast = generateAst(ldaApi, ldaTypes, ldaContext)
                 if (verifyAst(evidence)) {
                     results.add(ast)
                 }
-            } catch (e : Exception) {}
+            } catch (e: Exception) {
+                print(e.message)
+            }
         }
         return results
     }
 
     private val calls_in_last_ast: MutableList<String> = ArrayList()
 
-    fun verifyAst(evidence: Evidences) : Boolean {
+    fun verifyAst(evidence: Evidences): Boolean {
         val callsTypes = calls_in_last_ast.mapNotNull { Evidences.typeFromCall(it) }
         val callsApis = calls_in_last_ast.mapNotNull { Evidences.apicallFromCall(it) }
         val typesContains = evidence.types.all {
@@ -67,19 +57,19 @@ object AstGenerator {
         val apisContains = evidence.apicalls.all {
             callsApis.contains(it)
         }
+        calls_in_last_ast.clear()
         return typesContains && apisContains
     }
 
-    private fun generateAst(response: String) : DSubTree {
-        val splittedResponse  = response.split("\n")
+    private fun generateAst(ldaApi: Array<Float>, ldaTypes: Array<Float>, ldaContext: Array<Float>): DSubTree {
         val runner = session.runner()
-        for (i in 0..(splittedResponse.size/3 - 1)) {
-            val list = JsonUtil.readValue(splittedResponse[i * 3 + 2].drop(1).dropLast(1), Array<Float>::class)
-            val ty = Tensor.create(arrayOf(1, list.size.toLong()).toLongArray(), FloatBuffer.wrap(list.toFloatArray()))
-            runner.feed(splittedResponse[i * 3].dropLast(2), ty)
+        listOf("APICalls" to ldaApi, "Types" to ldaTypes, "Context" to ldaContext).forEach { (name, arr) ->
+
+            val ty = Tensor.create(arrayOf(1, arr.size.toLong()).toLongArray(), FloatBuffer.wrap(arr.toFloatArray()))
+            runner.feed(name, ty)
         }
         runner.fetch("model_psi")
-        val array = Array(1, {kotlin.FloatArray(32)})
+        val array = Array(1, { kotlin.FloatArray(32) })
         val result = runner.run()
         val psi = result.first()
         psi.copyTo(array)
@@ -88,7 +78,7 @@ object AstGenerator {
     }
 
 
-    private fun generateFromPsi(psi: Tensor, depth: Long = 0, in_nodes : List<String> = listOf("DSubTree"),
+    private fun generateFromPsi(psi: Tensor, depth: Long = 0, in_nodes: List<String> = listOf("DSubTree"),
                                 in_edges: List<Edges> = listOf(Edges.ChildEdge)): DASTNode {
         val ast: SortedMap<String, Any> = TreeMap()
 
@@ -97,15 +87,15 @@ object AstGenerator {
         val node = in_nodes.last()
         when (node) {
             "DBranch" -> {
-                val resultFirst = genUntilStoop(psi, depth, nodes, edges, check_call = true)
+                val resultFirst = genUntilStop(psi, depth, nodes, edges, check_call = true)
                 val ast_cond = resultFirst.ast_nodes
                 nodes = resultFirst.nodes.toMutableList()
                 edges = resultFirst.edges.toMutableList()
-                val resultSecond = genUntilStoop(psi, depth, nodes, edges)
+                val resultSecond = genUntilStop(psi, depth, nodes, edges)
                 val ast_then = resultSecond.ast_nodes
                 nodes = resultSecond.nodes.toMutableList()
                 edges = resultSecond.edges.toMutableList()
-                val resultThird = genUntilStoop(psi, depth, nodes, edges)
+                val resultThird = genUntilStop(psi, depth, nodes, edges)
                 val ast_else = resultThird.ast_nodes
                 nodes = resultThird.nodes.toMutableList()
                 edges = resultThird.edges.toMutableList()
@@ -113,11 +103,11 @@ object AstGenerator {
             }
             "DExcept" -> {
                 ast["node"] = node
-                val resultFirst = genUntilStoop(psi, depth, nodes, edges)
+                val resultFirst = genUntilStop(psi, depth, nodes, edges)
                 val ast_try = resultFirst.ast_nodes
                 nodes = resultFirst.nodes.toMutableList()
                 edges = resultFirst.edges.toMutableList()
-                val resultSecond = genUntilStoop(psi, depth, nodes, edges)
+                val resultSecond = genUntilStop(psi, depth, nodes, edges)
                 val ast_catch = resultSecond.ast_nodes
                 nodes = resultSecond.nodes.toMutableList()
                 edges = resultSecond.edges.toMutableList()
@@ -127,11 +117,11 @@ object AstGenerator {
 
             }
             "DLoop" -> {
-                val resultFirst = genUntilStoop(psi, depth, nodes, edges, check_call=true)
+                val resultFirst = genUntilStop(psi, depth, nodes, edges, check_call = true)
                 val ast_cond = resultFirst.ast_nodes
                 nodes = resultFirst.nodes.toMutableList()
                 edges = resultFirst.edges.toMutableList()
-                val resultSecond = genUntilStoop(psi, depth, nodes, edges)
+                val resultSecond = genUntilStop(psi, depth, nodes, edges)
                 val ast_body = resultSecond.ast_nodes
                 nodes = resultSecond.nodes.toMutableList()
                 edges = resultSecond.edges.toMutableList()
@@ -139,7 +129,7 @@ object AstGenerator {
 
             }
             "DSubTree" -> {
-                val (ast_nodes, _, _) = genUntilStoop(psi, depth, nodes, edges)
+                val (ast_nodes, _, _) = genUntilStop(psi, depth, nodes, edges)
                 return DSubTree(ast_nodes.toMutableList())
             }
             else -> {
@@ -155,18 +145,21 @@ object AstGenerator {
 
     private val maxGenUntilStop = 20;
 
-    private data class CodeGenResult(val ast_nodes: List<DASTNode>, val nodes:List<String>, val edges: List<Edges>)
+    private data class CodeGenResult(val ast_nodes: List<DASTNode>, val nodes: List<String>, val edges: List<Edges>)
 
-    private fun genUntilStoop(psi: Tensor, depth: Long, in_nodes: List<String>, in_edges: List<Edges>,
-                              check_call: Boolean = false) : CodeGenResult {
+    private fun genUntilStop(psi: Tensor, depth: Long, in_nodes: List<String>, in_edges: List<Edges>,
+                             check_call: Boolean = false): CodeGenResult {
         val nodes = in_nodes.toMutableList()
         val edges = in_edges.toMutableList()
-        val ast : ArrayList<DASTNode> = ArrayList()
+        val ast: ArrayList<DASTNode> = ArrayList()
         var num = 0
         while (true) {
             val dist = infer_ast_model(psi, nodes, edges)
             val idx = RandomSelector((0 until dist.size).zip(dist.toList()).toMap()).random
             val prediction = config.chars[idx]
+            if (check_call && listOf("DBranch", "DExcept", "DLoop", "DSubTree").contains(prediction)) {
+                throw SynthesisException(-1)
+            }
             nodes += arrayListOf(prediction)
             if (prediction == "STOP") {
                 edges += Edges.SiblingEdge
@@ -186,6 +179,9 @@ object AstGenerator {
     }
 
     private fun infer_ast_model(psi: Tensor, nodes: List<String>, edges: List<Edges>): FloatArray {
+        if (nodes.size > 100) {
+            throw SynthesisException(-1)
+        }
         val decoderInitialState = "initial_state_decoder"
         val decoderState = "decoder/rnn/decoder_state"
         val modelPsi = "model_psi"
@@ -197,8 +193,8 @@ object AstGenerator {
             val e = if (Edges.ChildEdge == edge) byteArrayOf(1) else byteArrayOf(0)
             val runner = session.runner()
             runner.feed(decoderInitialState, state)
-            runner.feed("node0",Tensor.create(longArrayOf(1), IntBuffer.wrap(intArrayOf(n.toInt()))))
-            runner.feed("edge0",Tensor.create(DataType.BOOL, longArrayOf(1), ByteBuffer.wrap(e)))
+            runner.feed("node0", Tensor.create(longArrayOf(1), IntBuffer.wrap(intArrayOf(n.toInt()))))
+            runner.feed("edge0", Tensor.create(DataType.BOOL, longArrayOf(1), ByteBuffer.wrap(e)))
             runner.fetch(modelProbs)
             runner.fetch(decoderState)
             tensors = runner.run()

@@ -3,7 +3,7 @@ package tanvd.bayou.implementation
 import tanvd.bayou.implementation.core.code.synthesizer.ApiSynthesizerRemoteTensorFlowAsts
 
 object BayouAPI {
-    private val tensorFlowAPI =  ApiSynthesizerRemoteTensorFlowAsts("localhost", 8084,
+    private val tensorFlowAPI = ApiSynthesizerRemoteTensorFlowAsts("localhost", 8084,
             Configuration.SynthesizeTimeoutMs,
             Configuration.EvidenceClasspath,
             Configuration.AndroidJarPath)

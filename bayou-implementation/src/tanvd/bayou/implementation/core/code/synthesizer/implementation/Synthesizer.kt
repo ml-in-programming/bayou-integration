@@ -16,7 +16,7 @@ limitations under the License.
 package tanvd.bayou.implementation.core.code.synthesizer.implementation
 
 import org.eclipse.jface.text.Document
-import tanvd.bayou.implementation.core.code.dsl.*
+import tanvd.bayou.implementation.core.code.dsl.DSubTree
 import java.net.URLClassLoader
 import java.util.*
 
@@ -29,19 +29,19 @@ class Synthesizer {
 
         val cu = parser.cu
         val programs = ArrayList<String>()
-            val visitor = Visitor(ast, Document(parser.source), cu)
-            try {
-                cu.accept(visitor)
-                if (visitor.synthesizedProgram == null)
-                    listOf("ERROR")
-                val program = visitor.synthesizedProgram!!.replace("\\s".toRegex(), "")
-                if (!programs.contains(program)) {
-                    programs.add(program)
-                    synthesizedPrograms.add(visitor.synthesizedProgram!!)
-                }
-            } catch (e: SynthesisException) {
-                // do nothing and try next ast
+        val visitor = Visitor(ast, Document(parser.source), cu)
+        try {
+            cu.accept(visitor)
+            if (visitor.synthesizedProgram == null)
+                listOf("ERROR")
+            val program = visitor.synthesizedProgram!!.replace("\\s".toRegex(), "")
+            if (!programs.contains(program)) {
+                programs.add(program)
+                synthesizedPrograms.add(visitor.synthesizedProgram!!)
             }
+        } catch (e: SynthesisException) {
+            // do nothing and try next ast
+        }
 
 
         return synthesizedPrograms
