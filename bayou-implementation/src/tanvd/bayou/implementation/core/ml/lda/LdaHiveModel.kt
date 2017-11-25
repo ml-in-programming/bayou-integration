@@ -64,8 +64,9 @@ open class LdaHiveModel(modelFile: String,
     init {
         _tau0 = 1020.0
         _kappa = 0.7
-        val serialized = BufferedReader(InputStreamReader(FileInputStream(prefix + modelFile))).readLine()
-        val phi = JsonUtil.readValue(serialized, Array<DoubleArray>::class)
+        val serialized = BufferedReader(InputStreamReader(FileInputStream(prefix + modelFile))).readLines()
+
+        val phi = deserialize(serialized)
         phi.forEach { list ->
             list.withIndex().forEach { (ind_word: Int, value_word) ->
                 if (_phi[ind_word.toString()] == null) {
@@ -80,6 +81,16 @@ open class LdaHiveModel(modelFile: String,
 
         this._rhot = Math.pow(_tau0 + _updateCount, -_kappa)
         this._docRatio = (_D.toDouble() / _miniBatchSize).toFloat()
+    }
+
+    fun deserialize(serialized: List<String>): Array<DoubleArray> {
+        val totalList = ArrayList<ArrayList<Double>>()
+        for (str in serialized) {
+            val curList = ArrayList<Double>()
+            curList += str.split(" ").filter { it.isNotEmpty() }.map { it.toDouble() }
+            totalList += curList
+        }
+        return totalList.map { it.toTypedArray().toDoubleArray() }.toTypedArray()
     }
 
     protected fun initMiniBatch(miniBatch: Array<Array<String>>,

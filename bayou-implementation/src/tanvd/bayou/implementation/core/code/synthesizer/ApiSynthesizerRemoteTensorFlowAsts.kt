@@ -26,6 +26,9 @@ import tanvd.bayou.implementation.core.ml.Evidences
 import tanvd.bayou.implementation.core.ml.lda.LdaApi
 import tanvd.bayou.implementation.core.ml.lda.LdaContexts
 import tanvd.bayou.implementation.core.ml.lda.LdaTypes
+import tanvd.bayou.implementation.core.ml.tfidf.TfIdfApi
+import tanvd.bayou.implementation.core.ml.tfidf.TfIdfContext
+import tanvd.bayou.implementation.core.ml.tfidf.TfIdfTypes
 //import tanvd.bayou.implementation.core.ml.lda.LdaInference
 import tanvd.bayou.implementation.utils.JsonUtil
 
@@ -137,37 +140,16 @@ class ApiSynthesizerRemoteTensorFlowAsts(private val _tensorFlowHost: String?, p
             throw SynthesiseException(e)
         }
 
-        /*
-         * Contact the remote Python server and provide evidence to be fed to Tensor Flow to generate solution
-         * ASTs.
-         */
-        var astsJson: String = ""
-        try {
-            Socket(_tensorFlowHost, _tensorFlowPort).use { pyServerSocket ->
-                pyServerSocket.soTimeout = _maxNetworkWaitTimeMs // only wait this long for response then throw exception
+        val evidenceData = JsonUtil.readValue(evidence, Evidences::class)
 
-                val requestObj = JSONObject()
-                requestObj.put("request type", "generate asts")
-                requestObj.put("evidence", evidence)
-                requestObj.put("max ast count", maxProgramCount)
 
-                if (sampleCount != null)
-                    requestObj.put("sample count", sampleCount)
+        val tfidfTypes = TfIdfTypes.transform(evidenceData.types)
+        val tfidfApi = TfIdfApi.transform(evidenceData.apicalls)
+        val tfidfContext = TfIdfContext.transform(evidenceData.context)
 
-                sendString(requestObj.toString(2), DataOutputStream(pyServerSocket.getOutputStream()))
-
-                astsJson = receiveString(pyServerSocket.getInputStream())
-                _logger.trace("astsJson:" + astsJson)
-            }
-        } catch (e: IOException) {
-            _logger.debug("exiting")
-            throw SynthesiseException(e)
-        }
-
-        val tfidf = JsonUtil.readValue(astsJson, Array<Array<Array<Double>>>::class)
-        val ldaTypes = LdaTypes.getTopicDistribution(tfidf[1][0].map { it.toString() }.toTypedArray()).toTypedArray()
-        val ldaApi = LdaApi.getTopicDistribution(tfidf[0][0].map { it.toString() }.toTypedArray()).toTypedArray()
-        val ldaContext = LdaContexts.getTopicDistribution(tfidf[2][0].map { it.toString() }.toTypedArray()).toTypedArray()
+        val ldaTypes = LdaTypes.getTopicDistribution(tfidfTypes.map { it.toString() }.toTypedArray()).toTypedArray()
+        val ldaApi = LdaApi.getTopicDistribution(tfidfApi.map { it.toString() }.toTypedArray()).toTypedArray()
+        val ldaContext = LdaContexts.getTopicDistribution(tfidfContext.map { it.toString() }.toTypedArray()).toTypedArray()
 
 
         val result = AstGenerator.generateAsts(ldaApi, ldaTypes, ldaContext, JsonUtil.readValue(evidence, Evidences::class))

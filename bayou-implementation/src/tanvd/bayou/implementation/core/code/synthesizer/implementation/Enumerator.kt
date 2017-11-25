@@ -240,7 +240,7 @@ class Enumerator(internal val ast: AST, internal val env: Environment) {
 
     private fun searchForChains(targetType: Type, chain: InvocationChain, chains: MutableList<InvocationChain>, composeLength: Int) {
         //TODO-tanvd Fix for too long chains of invocations
-        if (chains.size > 50 || chain.methods.size > 50) {
+        if (chains.size > 100 || chain.methods.size > 100) {
             throw SynthesisException(-1)
         }
         val currType = chain.currentType
