@@ -19,7 +19,7 @@ package tanvd.bayou.implementation
 import org.apache.commons.cli.DefaultParser
 import org.apache.commons.cli.HelpFormatter
 import org.apache.commons.cli.Options
-import tanvd.bayou.implementation.core.code.synthesizer.ApiSynthesizerRemoteTensorFlowAsts
+import tanvd.bayou.implementation.core.code.synthesizer.BayouSynthesizer
 import java.nio.file.Files
 import java.nio.file.Paths
 
@@ -77,10 +77,7 @@ public class TestSpeech {
 //    }
 
     private fun synthesise(code: String, sampleCount: Int?, maxProgramCount: Int) {
-        val results: List<String> = ApiSynthesizerRemoteTensorFlowAsts("localhost", 8084,
-                Configuration.SynthesizeTimeoutMs,
-                Configuration.EvidenceClasspath,
-                Configuration.AndroidJarPath).synthesise(code, maxProgramCount).toList()
+        val results: List<String> = BayouSynthesizer().synthesise(code).toList()
 
         for (result in results) {
             println("\n---------- BEGIN PROGRAM  ----------")

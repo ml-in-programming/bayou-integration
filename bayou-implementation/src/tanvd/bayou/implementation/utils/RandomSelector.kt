@@ -5,7 +5,6 @@ import java.util.*
 
 internal class RandomSelector(val items: Map<Int, Float>) {
     var rand = Random()
-    var totalSum: Float = items.values.sum()
 
     val random: Int
         get() {

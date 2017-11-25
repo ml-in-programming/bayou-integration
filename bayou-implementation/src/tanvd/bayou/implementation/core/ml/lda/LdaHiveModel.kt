@@ -1,10 +1,10 @@
 package tanvd.bayou.implementation.core.ml.lda
 
-import hivemall.utils.lang.ArrayUtils
-import hivemall.utils.math.MathUtils
 import org.apache.commons.math3.distribution.GammaDistribution
 import org.apache.commons.math3.special.Gamma
-import tanvd.bayou.implementation.utils.JsonUtil
+import tanvd.bayou.implementation.utils.ArrayUtils
+import tanvd.bayou.implementation.utils.MathUtils
+import tanvd.bayou.implementation.utils.Resource
 import java.io.BufferedReader
 import java.io.FileInputStream
 import java.io.InputStreamReader
@@ -21,8 +21,6 @@ open class LdaHiveModel(modelFile: String,
     private val SHAPE = 100.0
     private val SCALE = 1.0 / SHAPE
 
-    val prefix = "/home/tanvd/Diploma/bayou-integration/bayou-implementation/resources/artifacts/model/lda/"
-
     // ---------------------------------
     // HyperParameters
 
@@ -34,10 +32,10 @@ open class LdaHiveModel(modelFile: String,
     private var _docRatio = 1f
 
     // positive value which downweights early iterations
-    private val _tau0: Double
+    private val _tau0: Double = 1020.0
 
     // exponential decay rate (i.e., learning rate) which must be in (0.5, 1] to guarantee convergence
-    private val _kappa: Double
+    private val _kappa: Double = 0.7
     private var _rhot: Double
     private var _updateCount = 0L
 
@@ -62,9 +60,7 @@ open class LdaHiveModel(modelFile: String,
 
 
     init {
-        _tau0 = 1020.0
-        _kappa = 0.7
-        val serialized = BufferedReader(InputStreamReader(FileInputStream(prefix + modelFile))).readLines()
+        val serialized = Resource.getLines("artifacts/model/lda/$modelFile")
 
         val phi = deserialize(serialized)
         phi.forEach { list ->
@@ -120,8 +116,6 @@ open class LdaHiveModel(modelFile: String,
 
     private fun initParams(gammaWithRandom: Boolean) {
         val gamma = arrayOfNulls<FloatArray>(_miniBatchSize)
-//        val phi = HashMap<String, ArrayList<Float>>()
-
 
         for (d in 0 until _miniBatchSize) {
             if (gammaWithRandom) {
@@ -130,14 +124,13 @@ open class LdaHiveModel(modelFile: String,
                 gamma[d] = ArrayUtils.newFloatArray(_K, 1f)
             }
 
-            for (label in _miniBatchDocs[d].keys) {
-//                phi.put(label, ArrayList(Collections.nCopies(_K, 0.0f)))
-                if (!_lambda.containsKey(label)) { // lambda for newly observed word
-                    _lambda.put(label, ArrayUtils.newRandomFloatArray(_K, _gd))
-                }
-            }
+            _miniBatchDocs[d].keys
+                    .filterNot { _lambda.containsKey(it) }
+                    .forEach {
+                        // lambda for newly observed word
+                        _lambda.put(it, ArrayUtils.newRandomFloatArray(_K, _gd))
+                    }
         }
-//        this._phi = phi
         this._gamma = gamma
     }
 

@@ -3,10 +3,10 @@ package tanvd.bayou.implementation.core.ml
 import org.tensorflow.*
 import tanvd.bayou.implementation.core.code.dsl.*
 import tanvd.bayou.implementation.core.code.synthesizer.implementation.SynthesisException
-import tanvd.bayou.implementation.utils.JsonUtil
+import tanvd.bayou.implementation.utils.JsonUtils
 import tanvd.bayou.implementation.utils.RandomSelector
+import tanvd.bayou.implementation.utils.Resource
 import tanvd.bayou.implementation.utils.getFloatTensor2D
-import java.io.File
 import java.nio.ByteBuffer
 import java.nio.FloatBuffer
 import java.nio.IntBuffer
@@ -16,17 +16,14 @@ import kotlin.collections.ArrayList
 
 object AstGenerator {
 
-    val prefixPath = "/home/tanvd/Diploma/bayou-integration"
+    private val graph: Graph
 
-    val graph: Graph
+    private val session: Session
 
-    val session: Session
-
-    val config = JsonUtil.readValue(String(File("$prefixPath/bayou-implementation/resources/artifacts/model/config.json").readBytes()), DecoderConfig::class)
+    private val config = JsonUtils.readValue(Resource.getLines("artifacts/model/config.json").joinToString(separator = "\n"), DecoderConfig::class)
 
     init {
-        val path = "$prefixPath/full-model"
-        val saved = SavedModelBundle.load(path, "train")
+        val saved = SavedModelBundle.load(Resource.getPath("artifacts/model/full-model"), "train")
         graph = saved.graph()
         session = saved.session()
     }

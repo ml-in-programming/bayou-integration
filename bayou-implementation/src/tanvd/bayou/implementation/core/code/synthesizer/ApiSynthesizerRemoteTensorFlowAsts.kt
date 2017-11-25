@@ -16,7 +16,6 @@ limitations under the License.
 package tanvd.bayou.implementation.core.code.synthesizer
 
 import org.apache.logging.log4j.LogManager
-import org.json.JSONObject
 import tanvd.bayou.implementation.core.code.synthesizer.implementation.EvidenceExtractor
 import tanvd.bayou.implementation.core.code.synthesizer.implementation.ParseException
 import tanvd.bayou.implementation.core.code.synthesizer.implementation.Parser
@@ -29,95 +28,22 @@ import tanvd.bayou.implementation.core.ml.lda.LdaTypes
 import tanvd.bayou.implementation.core.ml.tfidf.TfIdfApi
 import tanvd.bayou.implementation.core.ml.tfidf.TfIdfContext
 import tanvd.bayou.implementation.core.ml.tfidf.TfIdfTypes
-//import tanvd.bayou.implementation.core.ml.lda.LdaInference
-import tanvd.bayou.implementation.utils.JsonUtil
-
+import tanvd.bayou.implementation.utils.JsonUtils
+import tanvd.bayou.implementation.utils.Resource
 import java.io.*
-import java.net.Socket
-import java.nio.charset.StandardCharsets
 
-/**
- * A synthesis strategy that relies on a remote server that uses TensorFlow to create ASTs from extracted evidence.
- *
- * @param tensorFlowHost  The network name of the tensor flow host server. May not be null.
- * @param tensorFlowPort The port the tensor flow host server on which connections requests are expected.
- * May not be negative.
- * @param maxNetworkWaitTimeMs The maximum amount of time to wait on a response from the tensor flow server on each
- * request. 0 means forever. May not be negative.
- * @param evidenceClasspath A classpath string that includes the class edu.rice.cs.caper.bayou.annotations.Evidence.
- * May not be null.
- * @param androidJarPath The path to android.jar. May not be null.
- */
-class ApiSynthesizerRemoteTensorFlowAsts(private val _tensorFlowHost: String?, private val _tensorFlowPort: Int,
-                                         private val _maxNetworkWaitTimeMs: Int, private val _evidenceClasspath: String?,
-                                         private val _androidJarPath: File?) : ApiSynthesizer {
-
-    init {
-        _logger.debug("entering")
-
-        if (_tensorFlowHost == null) {
-            _logger.debug("exiting")
-            throw NullPointerException("tensorFlowHost")
-        }
-
-        if (_tensorFlowHost.trim { it <= ' ' } == "") {
-            _logger.debug("exiting")
-            throw IllegalArgumentException("tensorFlowHost must be nonempty and contain non-whitespace characters")
-        }
-
-        if (_tensorFlowPort < 0) {
-            _logger.debug("exiting")
-            throw IllegalArgumentException("tensorFlowPort may not be negative")
-        }
-
-        if (_maxNetworkWaitTimeMs < 0) {
-            _logger.debug("exiting")
-            throw IllegalArgumentException("tensorFlowPort may not be negative")
-        }
-
-        if (_evidenceClasspath == null) {
-            _logger.debug("exiting")
-            throw NullPointerException("evidenceClasspath")
-        }
-
-        if (_androidJarPath == null) {
-            _logger.debug("exiting")
-            throw NullPointerException("androidJarPath")
-        }
-
-        if (!_androidJarPath.exists()) {
-            _logger.debug("exiting")
-            throw IllegalArgumentException("androidJarPath does not exist: " + _androidJarPath.absolutePath)
-        }
-        _logger.trace("_tensorFlowHost:" + _tensorFlowHost)
-        _logger.trace("_evidenceClasspath:" + _evidenceClasspath)
-        _logger.debug("exiting")
-    }
+class BayouSynthesizer {
 
     @Throws(SynthesiseException::class)
-    override fun synthesise(code: String, maxProgramCount: Int): Iterable<String> {
-        return synthesiseHelp(code, maxProgramCount, null)
+    fun synthesise(code: String): Iterable<String> {
+        return synthesiseHelp(code)
     }
 
-    @Throws(SynthesiseException::class)
-    override fun synthesise(code: String, maxProgramCount: Int, sampleCount: Int): Iterable<String> {
-        return synthesiseHelp(code, maxProgramCount, sampleCount)
-    }
 
     // sampleCount of null means don't send a sampleCount key in the request message.  Means use default sample count.
     @Throws(SynthesiseException::class)
-    private fun synthesiseHelp(code: String?, maxProgramCount: Int, sampleCount: Int?): Iterable<String> {
-        _logger.debug("entering")
-
-        if (code == null) {
-            _logger.debug("exiting")
-            throw NullPointerException("code")
-        }
-
-        if (sampleCount != null && sampleCount < 1)
-            throw IllegalArgumentException("sampleCount must be 1 or greater")
-
-        val combinedClassPath = _evidenceClasspath + File.pathSeparator + _androidJarPath!!.absolutePath
+    private fun synthesiseHelp(code: String): Iterable<String> {
+        val combinedClassPath = Resource.getPath("artifacts/classes/") + File.pathSeparator + Resource.getPath("artifacts/jar/android.jar")
 
         /*
          * Parse the program.
@@ -140,7 +66,7 @@ class ApiSynthesizerRemoteTensorFlowAsts(private val _tensorFlowHost: String?, p
             throw SynthesiseException(e)
         }
 
-        val evidenceData = JsonUtil.readValue(evidence, Evidences::class)
+        val evidenceData = JsonUtils.readValue(evidence, Evidences::class)
 
 
         val tfidfTypes = TfIdfTypes.transform(evidenceData.types)
@@ -152,7 +78,7 @@ class ApiSynthesizerRemoteTensorFlowAsts(private val _tensorFlowHost: String?, p
         val ldaContext = LdaContexts.getTopicDistribution(tfidfContext.map { it.toString() }.toTypedArray()).toTypedArray()
 
 
-        val result = AstGenerator.generateAsts(ldaApi, ldaTypes, ldaContext, JsonUtil.readValue(evidence, Evidences::class))
+        val result = AstGenerator.generateAsts(ldaApi, ldaTypes, ldaContext, JsonUtils.readValue(evidence, Evidences::class))
 
         result.forEach { ast ->
             println("START PROGRAM")
@@ -168,51 +94,8 @@ class ApiSynthesizerRemoteTensorFlowAsts(private val _tensorFlowHost: String?, p
         /**
          * Place to send logging information.
          */
-        private val _logger = LogManager.getLogger(ApiSynthesizerRemoteTensorFlowAsts::class.java.name)
+        private val _logger = LogManager.getLogger(BayouSynthesizer::class.java.name)
 
-
-        /**
-         * Reads the first 4 bytes of inputStream and interprets them as a 32-bit big endian signed integer 'length'.
-         * Reads the next 'length' bytes from inputStream and returns them as a UTF-8 encoded string.
-         *
-         * @param inputStream the source of bytes
-         * @return the string form of the n+4 bytes
-         * @throws IOException if there is a problem reading from the stream.
-         */
-        // n.b. package static for unit testing without creation
-        @Throws(IOException::class)
-        internal fun receiveString(inputStream: InputStream): String {
-            _logger.debug("entering")
-            var responseBytes: ByteArray = kotlin.ByteArray(0)
-            run {
-                val dis = DataInputStream(inputStream)
-                val numResponseBytes = dis.readInt()
-                responseBytes = ByteArray(numResponseBytes)
-                dis.readFully(responseBytes)
-            }
-
-            _logger.debug("exiting")
-            return String(responseBytes, StandardCharsets.UTF_8)
-
-        }
-
-        /**
-         * Gets the byte representation of string in UTF-8 encoding, sends the length of the byte encoding across
-         * outputStream via writeInt(...), and then sends the byte representation via write(byte[]).
-         *
-         * @param string the string to send
-         * @param outputStream the destination of string
-         * @throws IOException if there is a problem sending the string
-         */
-        // n.b. package static for unit testing without creation
-        @Throws(IOException::class)
-        internal fun sendString(string: String, outputStream: DataOutput) {
-            _logger.debug("entering")
-            val stringBytes = string.toByteArray(StandardCharsets.UTF_8)
-            outputStream.writeInt(stringBytes.size)
-            outputStream.write(stringBytes)
-            _logger.debug("exiting")
-        }
 
         /**
          * @return extractor.execute(code, evidenceClasspath) if value is non-null.
