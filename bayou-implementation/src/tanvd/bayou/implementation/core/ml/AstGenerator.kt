@@ -3,6 +3,7 @@ package tanvd.bayou.implementation.core.ml
 import org.tensorflow.*
 import tanvd.bayou.implementation.core.code.dsl.*
 import tanvd.bayou.implementation.core.code.synthesizer.implementation.SynthesisException
+import tanvd.bayou.implementation.core.ml.quality.RelevanceMeasurement
 import tanvd.bayou.implementation.utils.JsonUtils
 import tanvd.bayou.implementation.utils.RandomSelector
 import tanvd.bayou.implementation.utils.Resource
@@ -22,6 +23,8 @@ object AstGenerator {
 
     private val config = JsonUtils.readValue(Resource.getLines("artifacts/model/config.json").joinToString(separator = "\n"), DecoderConfig::class)
 
+    private val calls_in_last_ast: MutableList<String> = ArrayList()
+
     init {
         val saved = SavedModelBundle.load(Resource.getPath("artifacts/model/full-model"), "train")
         graph = saved.graph()
@@ -33,30 +36,17 @@ object AstGenerator {
         for (i in 1..100) {
             try {
                 val ast = generateAst(ldaApi, ldaTypes, ldaContext)
-                if (verifyAst(evidence)) {
+                if (RelevanceMeasurement.filterByEvidences(calls_in_last_ast, evidence)) {
                     results.add(ast)
                 }
             } catch (e: Exception) {
                 print(e.message)
             }
+            calls_in_last_ast.clear()
         }
         return results
     }
 
-    private val calls_in_last_ast: MutableList<String> = ArrayList()
-
-    fun verifyAst(evidence: Evidences): Boolean {
-        val callsTypes = calls_in_last_ast.mapNotNull { Evidences.typeFromCall(it) }
-        val callsApis = calls_in_last_ast.mapNotNull { Evidences.apicallFromCall(it) }
-        val typesContains = evidence.types.all {
-            callsTypes.contains(it)
-        }
-        val apisContains = evidence.apicalls.all {
-            callsApis.contains(it)
-        }
-        calls_in_last_ast.clear()
-        return typesContains && apisContains
-    }
 
     private fun generateAst(ldaApi: Array<Float>, ldaTypes: Array<Float>, ldaContext: Array<Float>): DSubTree {
         val runner = session.runner()
@@ -88,6 +78,9 @@ object AstGenerator {
                 val ast_cond = resultFirst.ast_nodes
                 nodes = resultFirst.nodes.toMutableList()
                 edges = resultFirst.edges.toMutableList()
+                if (ast_cond.isEmpty()) {
+                    throw SynthesisException(-1)
+                }
                 val resultSecond = genUntilStop(psi, depth, nodes, edges)
                 val ast_then = resultSecond.ast_nodes
                 nodes = resultSecond.nodes.toMutableList()

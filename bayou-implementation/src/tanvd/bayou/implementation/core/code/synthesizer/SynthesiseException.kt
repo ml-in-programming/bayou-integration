@@ -18,8 +18,4 @@ package tanvd.bayou.implementation.core.code.synthesizer
 /**
  * Thrown to indicate a problem arose during synthesis.
  */
-class SynthesiseException : Exception {
-    internal constructor(cause: Throwable) : super(cause) {}
-
-    internal constructor(msg: String) : super(msg) {}
-}
+class SynthesiseException(cause: Throwable) : Exception(cause)

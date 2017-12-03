@@ -16,11 +16,14 @@ limitations under the License.
 package tanvd.bayou.implementation.core.code.synthesizer.implementation
 
 import org.eclipse.jface.text.Document
+import org.slf4j.LoggerFactory
 import tanvd.bayou.implementation.core.code.dsl.DSubTree
 import java.net.URLClassLoader
 import java.util.*
 
 class Synthesizer {
+
+    private val logger = LoggerFactory.getLogger(Synthesizer::class.java)
 
     fun execute(parser: Parser, ast: DSubTree): List<String> {
         val synthesizedPrograms = LinkedList<String>()
@@ -40,8 +43,7 @@ class Synthesizer {
                 synthesizedPrograms.add(visitor.synthesizedProgram!!)
             }
         } catch (e: SynthesisException) {
-            print(e.message)
-            // do nothing and try next ast
+            logger.error("Got exception during synthesis of ast $ast", e)
         }
 
 

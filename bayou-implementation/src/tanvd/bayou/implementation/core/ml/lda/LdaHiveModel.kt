@@ -5,18 +5,13 @@ import org.apache.commons.math3.special.Gamma
 import tanvd.bayou.implementation.utils.ArrayUtils
 import tanvd.bayou.implementation.utils.MathUtils
 import tanvd.bayou.implementation.utils.Resource
-import java.io.BufferedReader
-import java.io.FileInputStream
-import java.io.InputStreamReader
 import java.util.*
 import javax.annotation.Nonnegative
 import kotlin.collections.ArrayList
 import kotlin.collections.LinkedHashMap
 
 
-open class LdaHiveModel(modelFile: String,
-                        val _alpha: Float,
-                        val _eta: Float) {
+open class LdaHiveModel(modelFile: String, private val _alpha: Float, private val _eta: Float) {
 
     private val SHAPE = 100.0
     private val SCALE = 1.0 / SHAPE
@@ -27,7 +22,7 @@ open class LdaHiveModel(modelFile: String,
     //total number of documents
     private val _D = 1000000
     // number of topics
-    protected val _K: Int
+    private val _K: Int
 
     private var _docRatio = 1f
 
@@ -55,8 +50,8 @@ open class LdaHiveModel(modelFile: String,
     }
 
     // for mini-batch
-    protected val _miniBatchDocs: ArrayList<Map<String, Float>> = ArrayList()
-    protected var _miniBatchSize: Int = 1
+    private val _miniBatchDocs: ArrayList<Map<String, Float>> = ArrayList()
+    private var _miniBatchSize: Int = 1
 
 
     init {
@@ -79,7 +74,7 @@ open class LdaHiveModel(modelFile: String,
         this._docRatio = (_D.toDouble() / _miniBatchSize).toFloat()
     }
 
-    fun deserialize(serialized: List<String>): Array<DoubleArray> {
+    private fun deserialize(serialized: List<String>): Array<DoubleArray> {
         val totalList = ArrayList<ArrayList<Double>>()
         for (str in serialized) {
             val curList = ArrayList<Double>()
@@ -89,8 +84,8 @@ open class LdaHiveModel(modelFile: String,
         return totalList.map { it.toTypedArray().toDoubleArray() }.toTypedArray()
     }
 
-    protected fun initMiniBatch(miniBatch: Array<Array<String>>,
-                                docs: MutableList<Map<String, Float>>) {
+    private fun initMiniBatch(miniBatch: Array<Array<String>>,
+                              docs: MutableList<Map<String, Float>>) {
         docs.clear()
 
 
@@ -244,7 +239,7 @@ open class LdaHiveModel(modelFile: String,
                     lambdaTilde.put(label, lambdaTilde_label)
                 }
 
-                val phi_label = phi_d.get(label)
+                val phi_label = phi_d[label]
                 for (k in 0 until _K) {
                     lambdaTilde_label[k] += _docRatio * phi_label!![k]
                 }

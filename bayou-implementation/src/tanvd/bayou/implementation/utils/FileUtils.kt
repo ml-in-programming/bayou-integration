@@ -20,4 +20,4 @@ object Resource {
     fun getPath(fileName: String): String {
         return javaClass.classLoader.getResource(fileName).file
     }
- }
+}

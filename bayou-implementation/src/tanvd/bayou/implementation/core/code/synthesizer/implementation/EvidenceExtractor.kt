@@ -15,27 +15,18 @@ limitations under the License.
 */
 package tanvd.bayou.implementation.core.code.synthesizer.implementation
 
-import com.google.gson.GsonBuilder
 import org.eclipse.jdt.core.dom.*
-import java.util.*
+import tanvd.bayou.implementation.core.ml.Evidences
 
 class EvidenceExtractor : ASTVisitor() {
 
-    internal var output = JSONOutputWrapper()
+    internal var output = Evidences()
     internal var evidenceBlock: Block? = null
 
-    internal inner class JSONOutputWrapper {
-        var apicalls: MutableList<String> = ArrayList()
-        var types: MutableList<String> = ArrayList()
-        var context: MutableList<String> = ArrayList()
-        var keywords: MutableList<String> = ArrayList()
 
-    }
-
-    fun execute(parser: Parser): String? {
-        val gson = GsonBuilder().setPrettyPrinting().serializeNulls().create()
+    fun execute(parser: Parser): Evidences? {
         parser.cu.accept(this)
-        return gson.toJson(output)
+        return output
     }
 
     @Throws(SynthesisException::class)
@@ -68,9 +59,6 @@ class EvidenceExtractor : ASTVisitor() {
             binding.name == "context" -> invocation.arguments()
                     .map { it as StringLiteral }
                     .forEach { output.context.add(it.literalValue) }
-            binding.name == "keywords" -> invocation.arguments()
-                    .map { it as StringLiteral }
-                    .forEach { output.keywords.add(it.literalValue) }
             else -> throw SynthesisException(SynthesisException.InvalidEvidenceType)
         }
 
