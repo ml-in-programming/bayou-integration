@@ -1,13 +1,16 @@
-package tanvd.bayou.implementation.model.android.ast
+package tanvd.bayou.implementation.model.configurable.ast
 
-import org.tensorflow.*
+import org.tensorflow.Graph
+import org.tensorflow.SavedModelBundle
+import org.tensorflow.Session
+import org.tensorflow.Tensor
+import tanvd.bayou.implementation.Config
+import tanvd.bayou.implementation.EvidenceType
+import tanvd.bayou.implementation.WrangleType
 import tanvd.bayou.implementation.core.ast.AstGenerator
-import tanvd.bayou.implementation.model.android.synthesizer.dsl.*
 import tanvd.bayou.implementation.model.android.synthesizer.SynthesisException
-import tanvd.bayou.implementation.utils.JsonUtils
-import tanvd.bayou.implementation.utils.RandomSelector
-import tanvd.bayou.implementation.utils.Resource
-import tanvd.bayou.implementation.utils.getFloatTensor2D
+import tanvd.bayou.implementation.model.configurable.synthesizer.dsl.*
+import tanvd.bayou.implementation.utils.*
 import java.nio.ByteBuffer
 import java.nio.FloatBuffer
 import java.nio.IntBuffer
@@ -16,24 +19,26 @@ import java.util.*
 data class DecoderConfig(val units: Long, val vocab: Map<String, Long>, val chars: List<String>)
 
 
-class AndroidAstGenerator : AstGenerator<AndroidAstGeneratorInput>{
+class ConfigurableAstGenerator(val main_config: Config) : AstGenerator<ConfigurableAstGeneratorInput> {
 
     private val graph: Graph
     private val session: Session
-    private val config = JsonUtils.readValue(Resource.getLines("artifacts/model/config.json").joinToString(separator = "\n"), DecoderConfig::class)
+    private val config = JsonUtils.readValue(Downloader.downloadFile(main_config.name, "synth_config",
+            main_config.synthesizer.config_url).readLines().joinToString(separator = "\n"), DecoderConfig::class)
     private val calls_in_last_ast: MutableList<String> = ArrayList()
 
     init {
-        val saved = SavedModelBundle.load(Resource.getPath("artifacts/model/full-model"), "train")
+        val saved = SavedModelBundle.load(Downloader.downloadZip(main_config.name, "synth_model",
+                main_config.synthesizer.model_url).absolutePath + "\\full-model", "train")
         graph = saved.graph()
         session = saved.session()
     }
 
-    override fun process(input: AndroidAstGeneratorInput): List<DSubTree> {
+    override fun process(input: ConfigurableAstGeneratorInput): List<DSubTree> {
         val results = ArrayList<DSubTree>()
         for (i in 1..100) {
             try {
-                results.add(generateAst(input.apiCalls, input.apiTypes, input.contextClasses))
+                results.add(generateAst(input))
             } catch (e: Exception) {
                 print(e.message)
             }
@@ -42,20 +47,44 @@ class AndroidAstGenerator : AstGenerator<AndroidAstGeneratorInput>{
         return results
     }
 
-    private fun generateAst(ldaApi: Array<Float>, ldaTypes: Array<Float>, ldaContext: Array<Float>): DSubTree {
+    private fun generateAst(input: ConfigurableAstGeneratorInput): DSubTree {
         val runner = session.runner()
-        listOf("APICalls" to ldaApi, "Types" to ldaTypes, "Context" to ldaContext).forEach { (name, arr) ->
-            val ty = Tensor.create(arrayOf(1, arr.size.toLong()).toLongArray(), FloatBuffer.wrap(arr.toFloatArray()))
+        input.evidences.forEach { (type, arr) ->
+            val ty = if (main_config.evidences.first { it.type == type }.wrangling.type == WrangleType.KHot) {
+                val indexesOfExistingEvidences = arr.withIndex().mapNotNull { (ind, value) -> if (value.equals(0f, 0.00001f)) null else ind}
+                if (indexesOfExistingEvidences.isNotEmpty()) {
+                    val newArray = Array(indexesOfExistingEvidences.size, { Array(arr.size, { 0f }) })
+                    for ((ind, i) in indexesOfExistingEvidences.withIndex()) {
+                        newArray[ind][i] = 1f
+                    }
+                    Tensor.create(arrayOf(indexesOfExistingEvidences.size.toLong(), 1L,
+                            arr.size.toLong()).toLongArray(), FloatBuffer.wrap(newArray.map { it.toList() }.toList().flatMap { it }.toFloatArray()))
+
+                } else {
+                    //TODO-tanvd Is it correct way in a case without some evidence? (to add zeros)
+                    Tensor.create(arrayOf(1, 1L,
+                            arr.size.toLong()).toLongArray(), FloatBuffer.wrap(Array(arr.size, {0f}).toFloatArray()))
+                }
+            } else {
+                Tensor.create(arrayOf(1, arr.size.toLong()).toLongArray(), FloatBuffer.wrap(arr.toFloatArray()))
+            }
+            val name = when (type) {
+                EvidenceType.ApiCall -> "APICalls"
+                EvidenceType.ApiType -> "Types"
+                EvidenceType.ContextType -> "Context"
+            }
             runner.feed(name, ty)
+
         }
         runner.fetch("model_psi")
-        val array = Array(1, { kotlin.FloatArray(32) })
+        val array = Array(1, { kotlin.FloatArray(main_config.synthesizer.psi_size) })
         val result = runner.run() as List<Tensor<Float>>
         val psi = result.first()
         psi.copyTo(array)
         val ast = generateFromPsi(result.first()) as DSubTree
         return ast
     }
+
 
 
     private fun generateFromPsi(psi: Tensor<Float>, depth: Long = 0, in_nodes: List<String> = listOf("DSubTree"),

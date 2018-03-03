@@ -13,35 +13,23 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 */
-package tanvd.bayou.implementation.model.stdlib.synthesizer
+package tanvd.bayou.implementation.model.configurable.synthesizer
 
 import com.google.googlejavaformat.java.Formatter
 import com.google.googlejavaformat.java.FormatterException
-import com.google.gson.Gson
-import com.google.gson.GsonBuilder
-import org.eclipse.jdt.core.dom.CompilationUnit
 import org.eclipse.jface.text.Document
-import tanvd.bayou.implementation.model.stdlib.synthesizer.dsl.*
+import tanvd.bayou.implementation.SynthesizerMode
+import tanvd.bayou.implementation.model.configurable.synthesizer.dsl.*
 
 import java.net.URLClassLoader
 import java.util.ArrayList
 import java.util.LinkedList
 
-class Synthesizer {
-
-    var mode: Mode
+class Synthesizer(val mode: Mode) {
 
     enum class Mode {
         COMBINATORIAL_ENUMERATOR,
         CONDITIONAL_PROGRAM_GENERATOR
-    }
-
-    constructor() {
-        this.mode = Mode.COMBINATORIAL_ENUMERATOR // default mode
-    }
-
-    constructor(mode: Mode) {
-        this.mode = mode
     }
 
     fun execute(parser: Parser, ast: DSubTree): List<String> {
@@ -72,5 +60,12 @@ class Synthesizer {
     companion object {
 
         internal var classLoader: ClassLoader? = null
+    }
+}
+
+fun SynthesizerMode.toInnerMode(): Synthesizer.Mode {
+    return when (this) {
+        SynthesizerMode.Combinatorial -> Synthesizer.Mode.COMBINATORIAL_ENUMERATOR
+        SynthesizerMode.Conditional -> Synthesizer.Mode.CONDITIONAL_PROGRAM_GENERATOR
     }
 }

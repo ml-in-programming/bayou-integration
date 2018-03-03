@@ -1,0 +1,62 @@
+{
+  "name": "android",
+  "classpath": [
+    {
+      "lib_name": "evidence.jar",
+      "lib_url": "https://downloader.disk.yandex.ru/disk/bfa3532a010fc4fcfad2496b71ebc20d4ad13bc8d05b4b7e47759ed85174a466/5a9b31ab/FcTsVOb5tq9LkIlr7mpge35n33_MX8UrqW6_MOpwQSMYRFJUfn8kKyxKKZFp_UGcU_yPqidkmeAyS8Ye81vPEQ%3D%3D?uid=0&filename=evidence.jar&disposition=attachment&hash=wtF6elpigdngOXFZIAbgus93aVIT59JZ7PZZuLgDeRY%3D%3A&limit=0&content_type=application%2Fjava-archive&fsize=1527&hid=69bdb324f80dd9918d71d857735295af&media_type=unknown&tknv=v2"
+    },
+    {
+      "lib_name": "android.jar",
+      "lib_url": "https://downloader.disk.yandex.ru/disk/bac68f26618041d23906d45a413a964663d00735b964866f7e2bcf83ce558016/5a9b3168/2LMPzeftTyaZ20zQhcTq5mykYZ3eK7pq-BlIoUK8EaoBs_e7GjOKRaSYZvfBMzc9DKjoala2wzjUxBj4TXQlgw%3D%3D?uid=0&filename=android.jar&disposition=attachment&hash=8b7d%2BuwV%2Bnz24jL3AeC0sK/%2BOuxTy2gQU6UpaVuz9yQ%3D%3A&limit=0&content_type=application%2Fjava-archive&fsize=21314949&hid=a438f7d20ed1888caf8a188119870611&media_type=unknown&tknv=v2"
+    }
+  ],
+  "evidences": [
+    {
+      "type": "ApiCall",
+      "wrangling": {
+        "type": "LDA",
+        "config": {
+          "tfidf_vocab_url": "https://downloader.disk.yandex.ru/disk/43c60a175027ee010420ff577c2a908f02c0352b34a28ad858c24fb9be39391d/5a9b32a8/FcTsVOb5tq9LkIlr7mpge1XUOxSQ3iG1EocwNCvKGgftUfwiKUpl40XO28doIlua7AygEmrcGl8ns7r3Qw0miw%3D%3D?uid=0&filename=tfidf_vocab_api.json&disposition=attachment&hash=pGtwQFGFjVqQoKp6aDpu0PjM20LwE8EpE/96d%2BW/yKw%3D%3A&limit=0&content_type=application%2Foctet-stream&fsize=52447&hid=af39dc35bf35e52c7ac8081ecdaa7468&media_type=data&tknv=v2",
+          "tfidf_model_url": "https://downloader.disk.yandex.ru/disk/9910a4ac269c50b267ded18fca94dfd6c63ded83a1bb6d7fba48486061c14b3e/5a9b328d/FcTsVOb5tq9LkIlr7mpgezzy1sU9R-PZxR2MTLRb3yGC5P_HGiw1d240OJjMtYjuWm30DxzwWbr950ZvJAOKZQ%3D%3D?uid=0&filename=tfidf_model_api.json&disposition=attachment&hash=FoTRZOT8uAbagRNhNEGE4D/KO2RdIZp9IZNmJECRwMc%3D%3A&limit=0&content_type=application%2Foctet-stream&fsize=41347&hid=4a2e0943c803a46f6fa9694a2484cb8d&media_type=data&tknv=v2",
+          "lda_model_url": "https://downloader.disk.yandex.ru/disk/59f3270af8521bec32d061fccb8880ffa1fc4778efd39f01dae287b83429bb4b/5a9b3275/FcTsVOb5tq9LkIlr7mpge_U1xJJsELERcDvcA_b-HykKZh7MGeixwLGlVWeruNl2FPxFOHcJw6wbQCG2j9MteA%3D%3D?uid=0&filename=lda_model_api.json&disposition=attachment&hash=oTuscCy6BUnxgPGkxaMuIhsvJD0eIsnheyB7LJd8pW8%3D%3A&limit=0&content_type=application%2Foctet-stream&fsize=12249306&hid=49f1a8f249818a62855da2aefc161680&media_type=data&tknv=v2",
+          "lda_alpha": "0.1",
+          "lda_eta": "0.00390625"
+        }
+      }
+    },
+    {
+      "type": "ApiType",
+      "wrangling": {
+        "type": "LDA",
+        "config": {
+          "tfidf_vocab_url": "https://downloader.disk.yandex.ru/disk/5cc8c23377fe65f6a8f7302adf5618a56b688d8cd9166975e9c69025e83a1613/5a9b331f/FcTsVOb5tq9LkIlr7mpge9CF0zPw4cbRmRcfliNgx2id__wJij7_Ar5yoPbvdjdvBmh5tUPS0ogmWU-2c2FFcQ%3D%3D?uid=0&filename=tfidf_vocab_types.json&disposition=attachment&hash=s5ZDCdUI%2BmfXfNPTpnC7mINWrIs3heGCW9uiHnRFpE0%3D%3A&limit=0&content_type=application%2Foctet-stream&fsize=10740&hid=1a3bc7f61ea62eacec10986211143d0b&media_type=data&tknv=v2",
+          "tfidf_model_url": "https://downloader.disk.yandex.ru/disk/5ab0fbfbc6e24cdca3fdcb757a5d7f93b7cbc42412e21a3e44f3d74b8edc430f/5a9b3309/FcTsVOb5tq9LkIlr7mpge_g5J1hzQlZQhE-Ag9pCV5MmTblyxXWnFwsIRDHgdE4INaVMnAvTy4b9EHoKe7tptQ%3D%3D?uid=0&filename=tfidf_model_types.json&disposition=attachment&hash=BkvzUOSrLRvVaoA14EIAHU2hvIbazmjxrwFsW9Ud62M%3D%3A&limit=0&content_type=application%2Foctet-stream&fsize=9367&hid=d74a559bce788920247460a105b98815&media_type=data&tknv=v2",
+          "lda_model_url": "https://downloader.disk.yandex.ru/disk/dce33eb756fbb596125ba33b41a6144c5272963f518902fb0b2f6d79d6ec0b02/5a9b3340/FcTsVOb5tq9LkIlr7mpge5wW2oqlWqkm9N8lLZ0kskiA9MhG6XopONLqglN_wHl_YUF-QGyzad-z40Qg7Coxdg%3D%3D?uid=0&filename=lda_model_types.json&disposition=attachment&hash=3ephcK8cX5VSibqUWQa%2B1I6fiVWyl/70P4YEVy8t46o%3D%3A&limit=0&content_type=application%2Foctet-stream&fsize=694126&hid=ee066f7976c4e19af8d769a4b3d291dd&media_type=data&tknv=v2",
+          "lda_alpha": "0.1",
+          "lda_eta": "0.015625"
+        }
+      }
+    },
+    {
+      "type": "ContextType",
+      "wrangling": {
+        "type": "LDA",
+        "config": {
+          "tfidf_vocab_url": "https://downloader.disk.yandex.ru/disk/d030d0d5e77ab4d3fc3f515b2b0b39cd6b6141ee2f494921c0de3d8a111742cc/5a9b3413/FcTsVOb5tq9LkIlr7mpge1hatPjk65gtV2BDpc3HwEJyXrORA5E8fGvpml8FdaMH2XT91eySxNNZJxp1lCDCfg%3D%3D?uid=0&filename=tfidf_vocab_context.json&disposition=attachment&hash=4MXQVKX0pDkNP9PxmHoOEeeh3mLY2nReqMJN03MPW8g%3D%3A&limit=0&content_type=application%2Foctet-stream&fsize=7267&hid=a9a69cd2006d664906b3f9dbede2b7cf&media_type=data&tknv=v2",
+          "tfidf_model_url": "https://downloader.disk.yandex.ru/disk/5c95f71a28d1a9547a95df85ba241d2a52765f973b3b3a75c21bb2e345d16650/5a9b33fc/FcTsVOb5tq9LkIlr7mpge2aPDUw6-A_KcgHUKKAGrUfMcrOut7mttpWDcLSYujtMR_vcd_NT0y44YLqo0ZFyZA%3D%3D?uid=0&filename=tfidf_model_context.json&disposition=attachment&hash=lDlTyOETrwX6gnrQTCd6iIh2Z3QSa/A%2Ba5Jgnbw588k%3D%3A&limit=0&content_type=application%2Foctet-stream&fsize=6520&hid=8236c15128576e346a8161441eb89118&media_type=data&tknv=v2",
+          "lda_model_url": "https://downloader.disk.yandex.ru/disk/00e644230dd08e6be79dfa79e1691625988e42e4f629b14f9a3bf4fd2a7f4a24/5a9b33e4/FcTsVOb5tq9LkIlr7mpge8aldQBP4UrqQMH5wInKpXGKRqMWwZoTPXW5TU8yPiJGRj_ld8kn8Omy05B7GR7Hnw%3D%3D?uid=0&filename=lda_model_context.json&disposition=attachment&hash=SD4VZpUGEp/OJEkb8n4cay40UWrupBTNxaIITc9Q9UI%3D%3A&limit=0&content_type=application%2Foctet-stream&fsize=241072&hid=035f3da20d97ffdb3f3b171d54f98a0b&media_type=data&tknv=v2",
+          "lda_alpha": "0.1",
+          "lda_eta": "0.03125"
+        }
+      }
+    }
+  ],
+  "synthesizer": {
+    "model_url": "https://downloader.disk.yandex.ru/disk/8a680110bf62d061582b6dd19ace6b5c1e3b36493b2b46aad9676b6d329d81f6/5a9b3472/FcTsVOb5tq9LkIlr7mpge2hkEkqiYGgrKbUZE2f574n4mt9OgtmHuI5lP06bPZ9MB3OM6rHqh8LISI_cWjdwMg%3D%3D?uid=0&filename=full-model.zip&disposition=attachment&hash=iJ8HGRXd3A0so4tw42fRpe9sfyBgLSFO1j2Kf1%2BZ9eY%3D%3A&limit=0&content_type=application%2Fx-zip-compressed&fsize=28552170&hid=6340616da02c30e7ed5fb0b66bf4cab1&media_type=compressed&tknv=v2",
+    "config_url": "https://downloader.disk.yandex.ru/disk/67bce916e1790f5a8f32a6c8a22ba2e9a09ae95ce3a539ddb1f08115a54e6196/5a9b349a/FcTsVOb5tq9LkIlr7mpgeypA4erlb1fEYUpv_nLI0CmOK2B-P40DbdTcCAcKozIjiywtOzCL7AuPVeCQFYw3hA%3D%3D?uid=0&filename=config.json&disposition=attachment&hash=3RSTOmHBQHtIOzFPxQsXvDWKXSrkMpqnFLwRYLOiwrE%3D%3A&limit=0&content_type=application%2Foctet-stream&fsize=524370&hid=c1c4fb97f1a8082f318dea918e71c50f&media_type=data&tknv=v2",
+    "psi_size": 32
+  },
+  "concretization": {
+    "mode": "Combinatorial"
+  }
+}

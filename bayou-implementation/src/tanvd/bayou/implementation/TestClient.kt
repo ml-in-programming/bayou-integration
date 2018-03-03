@@ -16,35 +16,36 @@ limitations under the License.
 package tanvd.bayou.implementation
 
 
-import org.apache.commons.cli.DefaultParser
-import org.apache.commons.cli.HelpFormatter
-import org.apache.commons.cli.Options
-import tanvd.bayou.implementation.model.android.AndroidSynthesizingModel
-import tanvd.bayou.implementation.model.stdlib.StdlibSynthesizingModel
-import java.nio.file.Files
-import java.nio.file.Paths
+import java.io.File
 
 internal object TestClient {
-    private val _testDialog = """
+    private val _testDialogJava = """
 import edu.rice.cs.caper.bayou.annotations.Evidence;
 import java.util.List;
 
 public class TestUtil {
-
-    void add(List<String> items, String item) {
-        Evidence.apicalls("add");
+    void write(String file, String toWrite) {
+        Evidence.apicalls("write");
+        Evidence.types("FileWriter");
     }
 }
         """
 
-    private val NUM_SAMPLES = "num_samples"
+    private val _testDialogAndroid = """
+import edu.rice.cs.caper.bayou.annotations.Evidence;
+import android.bluetooth.BluetoothSocket;
 
-    private val NUM_PROGRAMS = "num_programs"
+public class TestBluetooth {
+    void readFromBluetooth(BluetoothSocket adapter) {
+        Evidence.apicalls("getInputStream");
+    }
+}
 
-    private val HELP = "help"
+        """
 
     private fun synthesise(code: String) {
-        val results: List<String> = StdlibSynthesizingModel().synthesize(code, 100).toList()
+//        val results: List<String> = BayouClient.getModel("android").synthesize(code, 100).toList()
+        val results: List<String> = BayouClient.getConfigurableModel(File("C:\\Users\\TanVD\\Work\\Diploma\\bayou-integration\\bayou-implementation\\resources\\android.json").readText()).synthesize(code, 100).toList()
 
         for (result in results) {
             println("\n---------- BEGIN PROGRAM  ----------")
@@ -55,72 +56,6 @@ public class TestUtil {
 
     @JvmStatic
     fun main(args: Array<String>) {
-        /*
-         * Define the command line arguments for the application and parse args accordingly.
-         */
-        val options = Options()
-        options.addOption("s", NUM_SAMPLES, true, "the number of asts to sample from the model")
-        options.addOption("p", NUM_PROGRAMS, true, "the maximum number of programs to return")
-        options.addOption(HELP, HELP, false, "print this message")
-
-        val line = DefaultParser().parse(options, args)
-
-        /*
-         * If more arguments are given than possibly correct or the user asked for help, show help message and exit.
-         */
-        if (args.size >= 6 || line.hasOption(HELP)) {
-            val formatter = HelpFormatter()
-            formatter.printHelp("synthesize.sh [OPTION]... [FILE]", options)
-            System.exit(1)
-        }
-
-        /*
-         * Determine the query code to synthesize against.
-         */
-        val code = if (args.isEmpty()) {
-            _testDialog
-        } else {
-            val finalArg = args[args.size - 1]
-            if (finalArg.startsWith("-")) {
-                System.err.println("If command line arguments are specified, final argument must be a file path.")
-                System.exit(2)
-            }
-
-            String(Files.readAllBytes(Paths.get(finalArg)))
-        }
-
-        /*
-         * Determine the model sample count requrest, or null if a default should be used.
-         */
-        var sampleCount: Int? = null
-        if (line.hasOption(NUM_SAMPLES)) {
-            val numSamplesString = line.getOptionValue(NUM_SAMPLES)
-            try {
-                sampleCount = Integer.parseInt(numSamplesString)
-                if (sampleCount < 1)
-                    throw NumberFormatException()
-            } catch (e: NumberFormatException) {
-                System.err.println(NUM_SAMPLES + " must be a natural number.")
-                System.exit(3)
-            }
-
-        }
-
-        var maxProgramCount = Integer.MAX_VALUE
-        if (line.hasOption(NUM_PROGRAMS)) {
-            val maxProgramCountStr = line.getOptionValue(NUM_PROGRAMS)
-            try {
-                maxProgramCount = Integer.parseInt(maxProgramCountStr)
-                if (maxProgramCount < 1)
-                    throw NumberFormatException()
-            } catch (e: NumberFormatException) {
-                System.err.println(NUM_PROGRAMS + " must be a natural number.")
-                System.exit(4)
-            }
-
-        }
-
-        synthesise(code)
-
+        synthesise(_testDialogAndroid)
     }
 }
