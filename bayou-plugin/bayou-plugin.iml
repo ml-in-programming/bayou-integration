@@ -10,8 +10,9 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="bayou-annotations" level="project" />
     <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
-    <orderEntry type="library" name="bayou" level="project" />
+    <orderEntry type="library" name="bayou-implementation-1.1.0-jar-with-dependencies" level="project" />
+    <orderEntry type="library" name="bayou-annotations" level="project" />
+    <orderEntry type="library" name="bayou-implementation-1.1.0-jar-with-dependencies1" level="project" />
   </component>
 </module>

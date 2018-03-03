@@ -4,17 +4,17 @@ import com.intellij.openapi.project.Project
 import com.intellij.psi.PsiClass
 import com.intellij.psi.PsiTypeElement
 import com.intellij.util.Processor
-import org.jetbrains.uast.java.annotations
-import tanvd.bayou.implementation.BayouAPI
-import tanvd.bayou.prototype.api.BayouApi
-import tanvd.bayou.prototype.api.BayouRequest
-import tanvd.bayou.prototype.api.BayouTextConverter
-import tanvd.bayou.prototype.api.InputParameter
+import tanvd.bayou.prototype.annotations.java.ApiCall
+import tanvd.bayou.prototype.annotations.java.ApiType
+import tanvd.bayou.prototype.annotations.java.ContextClass
+import tanvd.bayou.prototype.synthesizer.BayouRequest
+import tanvd.bayou.prototype.synthesizer.BayouSynthesizer
+import tanvd.bayou.prototype.synthesizer.implementation.BayouTextConverter
+import tanvd.bayou.prototype.synthesizer.InputParameter
 import tanvd.bayou.prototype.utils.*
 
 
 class PsiClassesProcessor(val project: Project) : Processor<PsiClass> {
-
     override fun process(psiClass: PsiClass): Boolean {
         psiClass.methods.forEach { method ->
             val contextClasses = ArrayList<String>()
@@ -29,12 +29,12 @@ class PsiClassesProcessor(val project: Project) : Processor<PsiClass> {
                         }
                     }
                     ApiCall::class.qualifiedName -> {
-                        val stringElement = annotation.findAttributeValue(ApiCall::name.name)!!.text
+                        val stringElement = annotation.findAttributeValue(ApiCall::name.name)!!.text.drop("AndroidFunctions.".length)
                         val apiCallName = stringElement.trim('"')
                         apiCalls.add(apiCallName)
                     }
                     ApiType::class.qualifiedName -> {
-                        val stringElement = annotation.findAttributeValue(ApiType::name.name)!!.text
+                        val stringElement = annotation.findAttributeValue(ApiType::klass.name)!!.text.dropLast(".class".length)
                         val apiTypeName = stringElement.trim('"')
                         apiTypes.add(apiTypeName)
                     }
@@ -43,15 +43,11 @@ class PsiClassesProcessor(val project: Project) : Processor<PsiClass> {
             val inputParams = ArrayList<InputParameter>()
             method.parameterList.parameters.forEach {
                 if (it.name != null && it.type.qualifiedClassName != null) {
-                    inputParams.add(InputParameter(it.name!!, it.type.qualifiedClassName!!))
+                    inputParams.add(InputParameter(it.name!!, it.type.canonicalText))
                 }
             }
             if (contextClasses.isNotEmpty() || apiCalls.isNotEmpty()) {
-                val request = BayouRequest(inputParams, apiCalls, apiTypes, contextClasses)
-                val programs = BayouAPI.synthesize(BayouTextConverter.toProgramText(request))
-                val response = programs?.firstOrNull()?.let {
-                    BayouTextConverter.fromProgramText(it)
-                }
+                val response = BayouSynthesizer.invoke(BayouRequest(inputParams, apiCalls, apiTypes, contextClasses))
                 val codeBlock = if (response != null) {
                     val (imports, code) = response
                     val qualifiedCode = CodeUtils.qualifyWithImports(code, imports)

@@ -19,38 +19,22 @@ package tanvd.bayou.implementation
 import org.apache.commons.cli.DefaultParser
 import org.apache.commons.cli.HelpFormatter
 import org.apache.commons.cli.Options
-import tanvd.bayou.implementation.core.synthesizer.ApiSynthesizerRemoteTensorFlowAsts
+import tanvd.bayou.implementation.model.android.AndroidSynthesizingModel
+import tanvd.bayou.implementation.model.stdlib.StdlibSynthesizingModel
 import java.nio.file.Files
 import java.nio.file.Paths
 
 internal object TestClient {
     private val _testDialog = """
-        import edu.rice.cs.caper.bayou.annotations.Evidence;
-import android.bluetooth.BluetoothAdapter;
+import edu.rice.cs.caper.bayou.annotations.Evidence;
+import java.util.List;
 
-// Bayou supports three types of evidence:
-// 1. apicalls - API methods the code should invoke
-// 2. types - datatypes of objects which invoke API methods
-// 3. context - datatypes of variables that the code should use
+public class TestUtil {
 
-public class TestBluetooth {
-
-    /* Get an input stream that can be used to read from
-     * the given blueooth hardware address */
-    void readFromBluetooth(BluetoothAdapter adapter) {
-        // Intersperse code with evidence
-        String address = "00:43:A8:23:10:F0";
-
-        { // Provide evidence within a separate block
-            // Code should call "getInputStream"...
-            Evidence.apicalls("getInputStream");
-            // ...on a "BluetoothSocket" type
-            Evidence.types("BluetoothSocket");
-        } // Synthesized code will replace this block
+    void add(List<String> items, String item) {
+        Evidence.apicalls("add");
     }
-
 }
-
         """
 
     private val NUM_SAMPLES = "num_samples"
@@ -59,28 +43,8 @@ public class TestBluetooth {
 
     private val HELP = "help"
 
-//    @Throws(IOException::class, SynthesisError::class)
-//    private fun synthesise(code: String, sampleCount: Int?, maxProgramCount: Int) {
-//        var results: List<String>  = emptyList()
-//        run {
-//            results = if (sampleCount != null)
-//                ApiSynthesisClient("localhost", Configuration.ListenPort).synthesise(code, maxProgramCount, sampleCount)
-//            else
-//                ApiSynthesisClient("localhost", Configuration.ListenPort).synthesise(code, maxProgramCount)
-//        }
-//
-//        for (result in results) {
-//            println("\n---------- BEGIN PROGRAM  ----------")
-//            print(result)
-//        }
-//        print("\n") // don't have next console prompt start on final line of code output.
-//    }
-
-    private fun synthesise(code: String, sampleCount: Int?, maxProgramCount: Int) {
-        val results: List<String> = ApiSynthesizerRemoteTensorFlowAsts("localhost", 8084,
-                Configuration.SynthesizeTimeoutMs,
-                Configuration.EvidenceClasspath,
-                Configuration.AndroidJarPath).synthesise(code, maxProgramCount).toList()
+    private fun synthesise(code: String) {
+        val results: List<String> = StdlibSynthesizingModel().synthesize(code, 100).toList()
 
         for (result in results) {
             println("\n---------- BEGIN PROGRAM  ----------")
@@ -156,7 +120,7 @@ public class TestBluetooth {
 
         }
 
-        synthesise(code, sampleCount, maxProgramCount)
+        synthesise(code)
 
     }
 }
