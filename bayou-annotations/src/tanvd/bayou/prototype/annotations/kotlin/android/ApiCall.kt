@@ -1,4 +1,4 @@
-package tanvd.bayou.prototype.annotations.kotlin
+package tanvd.bayou.prototype.annotations.kotlin.android
 
 @Repeatable
 @Retention(AnnotationRetention.SOURCE)

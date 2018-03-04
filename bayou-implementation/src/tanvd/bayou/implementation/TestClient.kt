@@ -16,6 +16,7 @@ limitations under the License.
 package tanvd.bayou.implementation
 
 
+import tanvd.bayou.implementation.facade.SimpleSynthesisProgress
 import java.io.File
 
 internal object TestClient {
@@ -45,7 +46,7 @@ public class TestBluetooth {
 
     private fun synthesise(code: String) {
 //        val results: List<String> = BayouClient.getModel("android").synthesize(code, 100).toList()
-        val results: List<String> = BayouClient.getConfigurableModel(File("C:\\Users\\TanVD\\Work\\Diploma\\bayou-integration\\bayou-implementation\\resources\\android.json").readText()).synthesize(code, 100).toList()
+        val results: List<String> = BayouClient.getConfigurableModel(File("C:\\Users\\TanVD\\Work\\Diploma\\bayou-integration\\bayou-implementation\\resources\\stdlib.json").readText()).synthesize(code, 100, SimpleSynthesisProgress()).toList()
 
         for (result in results) {
             println("\n---------- BEGIN PROGRAM  ----------")
@@ -56,6 +57,6 @@ public class TestBluetooth {
 
     @JvmStatic
     fun main(args: Array<String>) {
-        synthesise(_testDialogAndroid)
+        synthesise(_testDialogJava)
     }
 }

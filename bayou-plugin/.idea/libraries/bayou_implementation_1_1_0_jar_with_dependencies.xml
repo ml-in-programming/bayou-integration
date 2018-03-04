@@ -5,7 +5,9 @@
     </CLASSES>
     <JAVADOC />
     <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/bayou-implementation-1.1.0-jar-with-dependencies.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/bayou-implementation-1.1.0-src.zip!/" />
+      <root url="jar://$PROJECT_DIR$/lib/bayou-implementation-1.1.0-src.zip!/bayou-implementation-1.1.0/src" />
     </SOURCES>
   </library>
 </component>

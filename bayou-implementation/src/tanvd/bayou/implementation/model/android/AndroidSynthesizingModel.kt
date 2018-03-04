@@ -4,6 +4,7 @@ import org.apache.logging.log4j.LogManager
 import tanvd.bayou.implementation.model.SynthesizingModel
 import tanvd.bayou.implementation.model.SynthesizeException
 import tanvd.bayou.implementation.core.evidence.EvidenceExtractor
+import tanvd.bayou.implementation.facade.SynthesisProgress
 import tanvd.bayou.implementation.model.android.synthesizer.ParseException
 import tanvd.bayou.implementation.model.android.synthesizer.Parser
 import tanvd.bayou.implementation.model.android.synthesizer.Synthesizer
@@ -22,7 +23,7 @@ class AndroidSynthesizingModel : SynthesizingModel {
 
     private val astGenerator = AndroidAstGenerator()
 
-    override fun synthesize(code: String, maxPrograms: Int): Iterable<String> {
+    override fun synthesize(code: String, maxPrograms: Int, synthesisProgress: SynthesisProgress): Iterable<String> {
         val combinedClassPath = Resource.getClassPath("artifacts/jar/evidence.jar") + File.pathSeparator + Resource.getClassPath("artifacts/jar/android.jar")
         /*
          * Parse the program.
@@ -47,7 +48,7 @@ class AndroidSynthesizingModel : SynthesizingModel {
         /**
          * Generate asts, verify them and then dedup and sort by relevance
          */
-        val asts = AndroidRelevanceMeasurement.sortAndDedup(astGenerator.process(evidence.toAstGeneratorInput()).filter { AndroidEvidenceAstVerification.verify(it, evidence) })
+        val asts = AndroidRelevanceMeasurement.sortAndDedup(astGenerator.process(evidence.toAstGeneratorInput(), synthesisProgress).filter { AndroidEvidenceAstVerification.verify(it, evidence) })
 
         /*
          * Try to generate programs from asts

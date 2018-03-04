@@ -16,8 +16,8 @@ limitations under the License.
 package tanvd.bayou.implementation.core.evidence
 
 import org.eclipse.jdt.core.dom.*
-import tanvd.bayou.implementation.model.android.synthesizer.Parser
-import tanvd.bayou.implementation.model.android.synthesizer.SynthesisException
+import tanvd.bayou.implementation.model.configurable.synthesizer.Parser
+import tanvd.bayou.implementation.model.configurable.synthesizer.SynthesisException
 
 class EvidenceExtractor : ASTVisitor() {
 

@@ -1,6 +1,6 @@
-package tanvd.bayou.prototype.annotations.java;
+package tanvd.bayou.prototype.annotations.kotlin.android
 
-public enum AndroidFunctions {
+enum class AndroidFunctions {
     abortAnimation,
     accept,
     acquire,
@@ -1001,7 +1001,7 @@ public enum AndroidFunctions {
     indexOf,
     inflate,
     inflateTransition,
-    init,
+    `init`,
     initLoader,
     initialize,
     insert,
@@ -2143,5 +2143,5 @@ public enum AndroidFunctions {
     writePendingIntentOrNullToParcel,
     writeToParcel,
     zoomIn,
-    zoomOut
+    zoomOut;
 }

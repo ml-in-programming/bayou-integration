@@ -2,6 +2,7 @@ package tanvd.bayou.implementation.model.stdlib
 
 import org.apache.logging.log4j.LogManager
 import tanvd.bayou.implementation.core.evidence.EvidenceExtractor
+import tanvd.bayou.implementation.facade.SynthesisProgress
 import tanvd.bayou.implementation.model.SynthesizeException
 import tanvd.bayou.implementation.model.SynthesizingModel
 import tanvd.bayou.implementation.model.stdlib.ast.StdlibAstGenerator
@@ -21,7 +22,7 @@ class  StdlibSynthesizingModel : SynthesizingModel {
 
     private val astGenerator = StdlibAstGenerator()
 
-    override fun synthesize(code: String, maxPrograms: Int): Iterable<String> {
+    override fun synthesize(code: String, maxPrograms: Int, synthesisProgress: SynthesisProgress): Iterable<String> {
         val combinedClassPath = Resource.getClassPath("artifacts/jar/evidence.jar")
         /*
          * Parse the program.
@@ -46,7 +47,7 @@ class  StdlibSynthesizingModel : SynthesizingModel {
         /**
          * Generate asts, verify them and then dedup and sort by relevance
          */
-        val asts = StdlibRelevanceMeasurement.sortAndDedup(astGenerator.process(evidence.toAstGeneratorInput()).filter { StdlibEvidenceAstVerification.verify(it, evidence) })
+        val asts = StdlibRelevanceMeasurement.sortAndDedup(astGenerator.process(evidence.toAstGeneratorInput(), synthesisProgress).filter { StdlibEvidenceAstVerification.verify(it, evidence) })
 
         /*
          * Try to generate programs from asts

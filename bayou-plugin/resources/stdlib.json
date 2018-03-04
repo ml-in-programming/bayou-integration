@@ -3,7 +3,7 @@
   "classpath": [
     {
       "lib_name": "evidence.jar",
-      "lib_url": "https://downloader.disk.yandex.ru/disk/5bcc19bdfd2b92eac9544e283665a57a3c7b31357b9fdecfb9542c58eb9a0c70/5a9b1e93/FcTsVOb5tq9LkIlr7mpge35n33_MX8UrqW6_MOpwQSMYRFJUfn8kKyxKKZFp_UGcU_yPqidkmeAyS8Ye81vPEQ%3D%3D?uid=0&filename=evidence.jar&disposition=attachment&hash=KfnZ3243I5zAHBbD%2BHIfHVmsGO5LmOQgQeJUD3rz8A8%3D&limit=0&content_type=application%2Fjava-archive&fsize=1527&hid=69bdb324f80dd9918d71d857735295af&media_type=unknown&tknv=v2"
+      "lib_url": "https://www.dropbox.com/s/ac2oup45jm3dzhs/evidence.jar?dl=1"
     }
   ],
   "evidences": [
@@ -12,7 +12,7 @@
       "wrangling": {
         "type": "KHot",
         "config": {
-          "khot_vocab": "https://downloader.disk.yandex.ru/disk/2d735adb4fe711e286a9278dca4cd54e7f2fbf0d3cb3f3ca7ac45dab42ca6564/5a9b202f/FcTsVOb5tq9LkIlr7mpgey9e9vQM74RayudtZPRkPg33vkz5ZIPANzm4YNMmPG1vzfg5R2P9Q9hIRcrpuZP2LQ%3D%3D?uid=0&filename=api_calls.json&disposition=attachment&hash=%2BHF2UzlVHSUdFuBP4DGArFfU4oB9RDY/UqvRYzeWnFU%3D%3A&limit=0&content_type=application%2Foctet-stream&fsize=156693&hid=abba1bebf5ffbb333f297afad918309c&media_type=data&tknv=v2"
+          "khot_vocab": "https://www.dropbox.com/s/0e3ej5nnpw4m85a/api_calls.json?dl=1"
         }
       }
     },
@@ -21,14 +21,14 @@
       "wrangling": {
         "type": "KHot",
         "config": {
-          "khot_vocab": "https://downloader.disk.yandex.ru/disk/2c3cbacf0a39cb3d0b73701f914903e60b0be5bf90c9c21bf3bcae2dc55b6129/5a9b2074/FcTsVOb5tq9LkIlr7mpgezeXErsvv6FtGLTKzOqLdd-BK2S6blVjf7wGqgjoMkQL9KqFFQ1WzkW0jFQE2ZYVFg%3D%3D?uid=0&filename=api_types.json&disposition=attachment&hash=sxDeYCMuUsoHXSx92SLiGwuIYggbB2wwlQKTuuP2M90%3D%3A&limit=0&content_type=application%2Foctet-stream&fsize=69739&hid=9caef0faf29f7ac47e1a99e4d8d3789f&media_type=data&tknv=v2"
+          "khot_vocab": "https://www.dropbox.com/s/lwdzqpuij5976qu/api_types.json?dl=1"
         }
       }
     }
   ],
   "synthesizer": {
-    "model_url": "https://downloader.disk.yandex.ru/disk/fa6e3c59060a892daf10c9f3dffaf4c1ef46d1d1ac8cb7b99354bb8227e2a02e/5a9b20d6/FcTsVOb5tq9LkIlr7mpge9CgW0C_vYmGePYJaOPqA1MNhv3JS2WRu3LN4gvtX4sdUj6yfS0eZvNIkUxl9aJSSA%3D%3D?uid=0&filename=full-model.zip&disposition=attachment&hash=%2BtSG4e1iCBWSBDH9WqCtV196SVSMJ4%2BxXWXnLxee7ns%3D%3A&limit=0&content_type=application%2Fx-zip-compressed&fsize=143487590&hid=7f0f106a7e5370c9736cc4920f0d5acb&media_type=compressed&tknv=v2",
-    "config_url": "https://downloader.disk.yandex.ru/disk/30121b183468ba40ad75c226d865444004590c2aa9b06e2e20bd3312d18fd1a6/5a9b20c2/FcTsVOb5tq9LkIlr7mpge45XKgfa0x0-CWlFd9MmERYYcuzAbCoYdw3LKmJU7G7EyS7NbcAxf66WCvJxHopoSQ%3D%3D?uid=0&filename=config.json&disposition=attachment&hash=KAtOSxXwOLOTzivBk800ScZjtxySJQpxdTY%2BQ8xmB0c%3D%3A&limit=0&content_type=application%2Foctet-stream&fsize=3380313&hid=64a527fc6f2dee83b443c5d64d67e47d&media_type=data&tknv=v2",
+    "model_url": "https://www.dropbox.com/s/m6wr72kp4eo2xte/full-model.zip?dl=1",
+    "config_url": "https://www.dropbox.com/s/1fi1oztmv1un16t/config.json?dl=1",
     "psi_size": 64
   },
   "concretization": {

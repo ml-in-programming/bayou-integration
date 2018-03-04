@@ -2,6 +2,7 @@ package tanvd.bayou.implementation.model.stdlib.ast
 
 import org.tensorflow.*
 import tanvd.bayou.implementation.core.ast.AstGenerator
+import tanvd.bayou.implementation.facade.SynthesisProgress
 import tanvd.bayou.implementation.model.android.synthesizer.SynthesisException
 import tanvd.bayou.implementation.model.stdlib.synthesizer.dsl.*
 import tanvd.bayou.implementation.utils.*
@@ -26,7 +27,7 @@ class StdlibAstGenerator : AstGenerator<StdlibAstGeneratorInput>{
         session = saved.session()
     }
 
-    override fun process(input: StdlibAstGeneratorInput): List<DSubTree> {
+    override fun process(input: StdlibAstGeneratorInput, synthesisProgress: SynthesisProgress): List<DSubTree> {
         val results = ArrayList<DSubTree>()
         for (i in 1..100) {
             try {

@@ -1,6 +1,7 @@
 package tanvd.bayou.prototype.utils
 
 import com.intellij.codeInsight.actions.ReformatCodeProcessor
+import com.intellij.openapi.application.runReadAction
 import com.intellij.openapi.command.WriteCommandAction
 import com.intellij.openapi.project.Project
 import com.intellij.psi.JavaPsiFacade
@@ -42,3 +43,4 @@ fun executeWriteAction(project: Project, file: PsiFile, body: () -> Unit) {
         }
     }.execute()
 }
+

@@ -8,7 +8,8 @@ import tanvd.bayou.implementation.Config
 import tanvd.bayou.implementation.EvidenceType
 import tanvd.bayou.implementation.WrangleType
 import tanvd.bayou.implementation.core.ast.AstGenerator
-import tanvd.bayou.implementation.model.android.synthesizer.SynthesisException
+import tanvd.bayou.implementation.facade.SynthesisProgress
+import tanvd.bayou.implementation.model.configurable.synthesizer.SynthesisException
 import tanvd.bayou.implementation.model.configurable.synthesizer.dsl.*
 import tanvd.bayou.implementation.utils.*
 import java.nio.ByteBuffer
@@ -24,17 +25,17 @@ class ConfigurableAstGenerator(val main_config: Config) : AstGenerator<Configura
     private val graph: Graph
     private val session: Session
     private val config = JsonUtils.readValue(Downloader.downloadFile(main_config.name, "synth_config",
-            main_config.synthesizer.config_url).readLines().joinToString(separator = "\n"), DecoderConfig::class)
+            main_config.synthesizer.config_url, "Synthesizing Config").readLines().joinToString(separator = "\n"), DecoderConfig::class)
     private val calls_in_last_ast: MutableList<String> = ArrayList()
 
     init {
         val saved = SavedModelBundle.load(Downloader.downloadZip(main_config.name, "synth_model",
-                main_config.synthesizer.model_url).absolutePath + "\\full-model", "train")
+                main_config.synthesizer.model_url, "Synthesizing Model").absolutePath + "\\full-model", "train")
         graph = saved.graph()
         session = saved.session()
     }
 
-    override fun process(input: ConfigurableAstGeneratorInput): List<DSubTree> {
+    override fun process(input: ConfigurableAstGeneratorInput, synthesisProgress: SynthesisProgress): List<DSubTree> {
         val results = ArrayList<DSubTree>()
         for (i in 1..100) {
             try {
@@ -43,6 +44,7 @@ class ConfigurableAstGenerator(val main_config: Config) : AstGenerator<Configura
                 print(e.message)
             }
             calls_in_last_ast.clear()
+            synthesisProgress.fraction += 0.01
         }
         return results
     }

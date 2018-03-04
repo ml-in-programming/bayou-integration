@@ -1,10 +1,10 @@
 package tanvd.bayou.implementation.core.ast
 
-import tanvd.bayou.implementation.core.synthesizer.DSubTree
+import tanvd.bayou.implementation.facade.SynthesisProgress
 
 
 interface AstGeneratorInput
 
 interface AstGenerator<in E: AstGeneratorInput> {
-    fun process(input: E): List<*>
+    fun process(input: E, synthesisProgress: SynthesisProgress): List<*>
 }

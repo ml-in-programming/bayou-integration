@@ -1,17 +1,17 @@
 package tanvd.bayou.prototype.annotations.processing
 
-import tanvd.bayou.prototype.annotations.kotlin.AndroidFunctions
 import java.io.InputStreamReader
 import kotlin.reflect.KClass
 
 class FunctionsProcessor {
     fun process() {
-        val json = InputStreamReader(FunctionsProcessor::class.java.getResourceAsStream("/android_functions.json")).use {
+        val json = InputStreamReader(FunctionsProcessor::class.java.getResourceAsStream("/stdlib_functions.json")).use {
             it.readText()
         }
         val functionArray = JsonUtils.readValue(json, List::class as KClass<List<String>>)
         val functionNameRegex = Regex(".*\\.([^.]+)\\(.*")
         val result = functionArray.filter { it.endsWith(")") }
+                .filterNot { it.startsWith("javax") }
                 .map {
                     functionNameRegex.find(it)!!.groupValues[1]
                 }
