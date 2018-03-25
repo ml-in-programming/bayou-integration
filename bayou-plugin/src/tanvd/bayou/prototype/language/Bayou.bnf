@@ -13,8 +13,12 @@
   tokenTypeClass="tanvd.bayou.prototype.language.psi.BayouTokenType"
 }
 
-bayouFile ::= (property | COMMENT)*
-property ::= (key SEPARATOR VALUE)
+bayouFile ::= ((ANDROID bodyAndroid) | (STDLIB bodyStdlib))
 
-key ::= (API | TYPE | CONTEXT)
+keyAndroid ::= (API | TYPE | CONTEXT)
+bodyAndroid ::= (keyAndroid SEPARATOR VALUE)+
+
+keyStdlib ::= (API | TYPE)
+bodyStdlib ::= (keyStdlib SEPARATOR VALUE)+
+
 

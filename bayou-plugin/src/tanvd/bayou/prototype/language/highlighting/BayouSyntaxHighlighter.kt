@@ -19,32 +19,23 @@ class BayouSyntaxHighlighter : SyntaxHighlighterBase() {
     }
 
     override fun getTokenHighlights(tokenType: IElementType): Array<TextAttributesKey> {
-        if (tokenType == BayouTypes.SEPARATOR) {
-            return arrayOf(SEPARATOR)
-        } else if (tokenType == BayouTypes.API) {
-            return arrayOf(KEY)
-        } else if (tokenType == BayouTypes.TYPE) {
-            return arrayOf(TYPE)
-        } else if (tokenType == BayouTypes.CONTEXT) {
-            return arrayOf(CONTEXT)
-        } else if (tokenType == BayouTypes.VALUE) {
-            return arrayOf(VALUE)
-        } else if (tokenType == BayouTypes.COMMENT) {
-            return arrayOf(COMMENT)
-        } else if (tokenType == TokenType.BAD_CHARACTER) {
-            return arrayOf(BAD_CHARACTER)
-        } else {
-            return arrayOf()
+        return when (tokenType) {
+            BayouTypes.SEPARATOR -> arrayOf(SEPARATOR)
+            BayouTypes.API -> arrayOf(KEY)
+            BayouTypes.TYPE -> arrayOf(KEY)
+            BayouTypes.CONTEXT -> arrayOf(KEY)
+            BayouTypes.VALUE -> arrayOf(VALUE)
+            BayouTypes.ANDROID -> arrayOf(KEY)
+            BayouTypes.STDLIB -> arrayOf(KEY)
+            TokenType.BAD_CHARACTER -> arrayOf(BAD_CHARACTER)
+            else -> arrayOf()
         }
     }
 
     companion object {
         val SEPARATOR = createTextAttributesKey("BAYOU_SEPARATOR", DefaultLanguageHighlighterColors.OPERATION_SIGN)
         val KEY = createTextAttributesKey("BAYOU_KEY", DefaultLanguageHighlighterColors.KEYWORD)
-        val TYPE = createTextAttributesKey("BAYOU_TYPE", DefaultLanguageHighlighterColors.KEYWORD)
-        val CONTEXT = createTextAttributesKey("BAYOU_CONTEXT", DefaultLanguageHighlighterColors.KEYWORD)
         val VALUE = createTextAttributesKey("BAYOU_VALUE", DefaultLanguageHighlighterColors.CLASS_NAME)
-        val COMMENT = createTextAttributesKey("BAYOU_COMMENT", DefaultLanguageHighlighterColors.LINE_COMMENT)
         val BAD_CHARACTER = createTextAttributesKey("BAYOU_BAD_CHARACTER", HighlighterColors.BAD_CHARACTER)
     }
 }

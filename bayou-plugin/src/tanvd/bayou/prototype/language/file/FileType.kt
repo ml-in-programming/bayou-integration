@@ -17,6 +17,7 @@ class BayouFileType private constructor() : LanguageFileType(BayouLanguage.INSTA
 
     override fun getDescription(): String {
         return "Bayou language file"
+
     }
 
     override fun getDefaultExtension(): String {

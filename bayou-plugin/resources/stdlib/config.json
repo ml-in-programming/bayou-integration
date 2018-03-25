@@ -1,0 +1,37 @@
+{
+  "name": "stdlib",
+  "classpath": [
+    {
+      "lib_name": "evidence.jar",
+      "lib_url": "https://www.dropbox.com/s/ac2oup45jm3dzhs/evidence.jar?dl=1"
+    }
+  ],
+  "evidences": [
+    {
+      "type": "ApiCall",
+      "wrangling": {
+        "type": "KHot",
+        "config": {
+          "khot_vocab": "https://www.dropbox.com/s/0e3ej5nnpw4m85a/api_calls.json?dl=1"
+        }
+      }
+    },
+    {
+      "type": "ApiType",
+      "wrangling": {
+        "type": "KHot",
+        "config": {
+          "khot_vocab": "https://www.dropbox.com/s/lwdzqpuij5976qu/api_types.json?dl=1"
+        }
+      }
+    }
+  ],
+  "synthesizer": {
+    "model_url": "https://www.dropbox.com/s/m6wr72kp4eo2xte/full-model.zip?dl=1",
+    "config_url": "https://www.dropbox.com/s/1fi1oztmv1un16t/config.json?dl=1",
+    "psi_size": 64
+  },
+  "concretization": {
+    "mode": "Combinatorial"
+  }
+}

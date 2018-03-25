@@ -7,11 +7,19 @@ import com.intellij.psi.PsiElement;
 
 public class BayouVisitor extends PsiElementVisitor {
 
-  public void visitKey(@NotNull BayouKey o) {
+  public void visitBodyAndroid(@NotNull BayouBodyAndroid o) {
     visitPsiElement(o);
   }
 
-  public void visitProperty(@NotNull BayouProperty o) {
+  public void visitBodyStdlib(@NotNull BayouBodyStdlib o) {
+    visitPsiElement(o);
+  }
+
+  public void visitKeyAndroid(@NotNull BayouKeyAndroid o) {
+    visitPsiElement(o);
+  }
+
+  public void visitKeyStdlib(@NotNull BayouKeyStdlib o) {
     visitPsiElement(o);
   }
 

@@ -28,7 +28,7 @@ class BayouParserDefinition : ParserDefinition {
     }
 
     override fun getCommentTokens(): TokenSet {
-        return COMMENTS
+        return TokenSet.EMPTY
     }
 
     override fun getStringLiteralElements(): TokenSet {
@@ -57,7 +57,6 @@ class BayouParserDefinition : ParserDefinition {
 
     companion object {
         val WHITE_SPACES = TokenSet.create(TokenType.WHITE_SPACE)
-        val COMMENTS = TokenSet.create(BayouTypes.COMMENT)
 
         val FILE = IFileElementType(BayouLanguage.INSTANCE)
     }
