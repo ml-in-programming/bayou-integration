@@ -3,6 +3,8 @@ package tanvd.bayou.prototype
 import com.intellij.codeInsight.completion.AllClassesGetter
 import com.intellij.codeInsight.completion.PlainPrefixMatcher
 import com.intellij.openapi.application.runReadAction
+import com.intellij.openapi.fileEditor.FileDocumentManager
+import com.intellij.openapi.fileEditor.FileEditorManager
 import com.intellij.openapi.progress.ProgressIndicator
 import com.intellij.openapi.progress.ProgressManager
 import com.intellij.openapi.progress.Task
@@ -10,22 +12,10 @@ import com.intellij.openapi.project.Project
 import com.intellij.psi.search.GlobalSearchScope
 import tanvd.bayou.implementation.facade.SynthesisProgress
 import tanvd.bayou.implementation.facade.SynthesisPhase
-import tanvd.bayou.prototype.annotations.PsiClassesProcessor
+import tanvd.bayou.prototype.language.EvidencesInput
+import tanvd.bayou.prototype.language.PsiClassesProcessor
 
-class BayouTask(project: Project, title: String) : Task.Backgroundable(project, title) {
-    override fun run(p0: ProgressIndicator) {
-        runReadAction {
-            AllClassesGetter.processJavaClasses(
-                    PlainPrefixMatcher(""),
-                    project,
-                    GlobalSearchScope.projectScope(project),
-                    PsiClassesProcessor(project, ProgressIndicatorWrapper(p0))
-            )
-        }
-    }
-}
-
-class BayouRunnable(val project: Project, val title: String) : Runnable {
+class BayouRunnable(val project: Project, val title: String, val map: Map<String, EvidencesInput>) : Runnable {
     override fun run() {
         val indicator = ProgressManager.getInstance().progressIndicator
         runReadAction {
@@ -33,7 +23,7 @@ class BayouRunnable(val project: Project, val title: String) : Runnable {
                     PlainPrefixMatcher(""),
                     project,
                     GlobalSearchScope.projectScope(project),
-                    PsiClassesProcessor(project, ProgressIndicatorWrapper(indicator))
+                    PsiClassesProcessor(project, ProgressIndicatorWrapper(indicator), map)
             )
         }
     }
