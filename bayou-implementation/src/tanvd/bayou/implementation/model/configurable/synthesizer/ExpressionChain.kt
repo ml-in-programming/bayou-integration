@@ -16,7 +16,7 @@ limitations under the License.
 package tanvd.bayou.implementation.model.configurable.synthesizer
 
 import java.lang.reflect.Method
-import java.util.ArrayList
+import java.util.*
 
 internal class ExpressionChain {
 

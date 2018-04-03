@@ -15,9 +15,10 @@ limitations under the License.
 */
 package tanvd.bayou.implementation.model.configurable.synthesizer
 
-import org.eclipse.jdt.core.dom.*
-
-import java.util.HashSet
+import org.eclipse.jdt.core.dom.AST
+import org.eclipse.jdt.core.dom.Expression
+import org.eclipse.jdt.core.dom.SimpleName
+import java.util.*
 
 /**
  * A variable in the synthesizer's type system

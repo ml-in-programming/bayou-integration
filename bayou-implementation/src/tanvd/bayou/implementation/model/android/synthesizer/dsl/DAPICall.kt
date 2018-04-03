@@ -38,11 +38,15 @@ class DAPICall : DASTNode {
         internal set
 
     /* CAUTION: This field is only available during AST generation */
-    @Transient lateinit var methodBinding: IMethodBinding
-    @Transient internal var linenum: Int = 0
+    @Transient
+    lateinit var methodBinding: IMethodBinding
+    @Transient
+    internal var linenum: Int = 0
     /* CAUTION: These fields are only available during synthesis (after synthesize(...) is called) */
-    @Transient lateinit var method: Method
-    @Transient internal var constructor: Constructor<*>? = null
+    @Transient
+    lateinit var method: Method
+    @Transient
+    internal var constructor: Constructor<*>? = null
 
     private val className: String
         get() {
@@ -61,7 +65,7 @@ class DAPICall : DASTNode {
         }
 
     private/* get the type-erased name */// generic type variable
-            // first bound is the class
+    // first bound is the class
             /* find the method in the class *//* .. or the constructor */ val constructorOrMethod: Executable
         @Throws(SynthesisException::class)
         get() {

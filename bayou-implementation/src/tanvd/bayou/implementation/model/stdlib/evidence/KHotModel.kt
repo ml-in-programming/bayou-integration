@@ -16,7 +16,7 @@ open class KHotModel(vocabFile: String) {
     }
 
     fun transform(doc: List<String>): Array<Int> {
-        val kHotVector = Array(vocabulary.size, {0})
+        val kHotVector = Array(vocabulary.size, { 0 })
         for (str in doc) {
             kHotVector[vocabulary[str]!!] = 1
         }

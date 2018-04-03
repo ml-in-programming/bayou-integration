@@ -1,10 +1,13 @@
 package tanvd.bayou.implementation.model.android.ast
 
-import org.tensorflow.*
+import org.tensorflow.Graph
+import org.tensorflow.SavedModelBundle
+import org.tensorflow.Session
+import org.tensorflow.Tensor
 import tanvd.bayou.implementation.core.ast.AstGenerator
 import tanvd.bayou.implementation.facade.SynthesisProgress
-import tanvd.bayou.implementation.model.android.synthesizer.dsl.*
 import tanvd.bayou.implementation.model.android.synthesizer.SynthesisException
+import tanvd.bayou.implementation.model.android.synthesizer.dsl.*
 import tanvd.bayou.implementation.utils.JsonUtils
 import tanvd.bayou.implementation.utils.RandomSelector
 import tanvd.bayou.implementation.utils.Resource
@@ -17,7 +20,7 @@ import java.util.*
 data class DecoderConfig(val units: Long, val vocab: Map<String, Long>, val chars: List<String>)
 
 
-class AndroidAstGenerator : AstGenerator<AndroidAstGeneratorInput>{
+class AndroidAstGenerator : AstGenerator<AndroidAstGeneratorInput> {
 
     private val graph: Graph
     private val session: Session

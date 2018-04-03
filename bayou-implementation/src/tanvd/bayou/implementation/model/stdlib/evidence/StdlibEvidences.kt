@@ -1,13 +1,13 @@
 package tanvd.bayou.implementation.model.stdlib.evidence
 
-import tanvd.bayou.implementation.core.evidence.EvidencesExtractorResult
 import tanvd.bayou.implementation.core.evidence.Evidences
+import tanvd.bayou.implementation.core.evidence.EvidencesExtractorResult
 import tanvd.bayou.implementation.model.stdlib.ast.StdlibAstGeneratorInput
 
 data class StdlibEvidences(val apicalls: MutableList<String> = ArrayList(),
-                           val types: MutableList<String> = ArrayList()): Evidences {
+                           val types: MutableList<String> = ArrayList()) : Evidences {
 
-    constructor(result: EvidencesExtractorResult): this(result.apicalls, result.types)
+    constructor(result: EvidencesExtractorResult) : this(result.apicalls, result.types)
 
     override fun toAstGeneratorInput(): StdlibAstGeneratorInput {
         return StdlibAstGeneratorInput(ApiCallProcessor.wrangle(apicalls), ApiTypeProcessor.wrangle(types))

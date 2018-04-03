@@ -1,14 +1,14 @@
 package tanvd.bayou.implementation.model.android.evidence
 
-import tanvd.bayou.implementation.core.evidence.EvidencesExtractorResult
 import tanvd.bayou.implementation.core.evidence.Evidences
+import tanvd.bayou.implementation.core.evidence.EvidencesExtractorResult
 import tanvd.bayou.implementation.model.android.ast.AndroidAstGeneratorInput
 
 data class AndroidEvidences(val apicalls: MutableList<String> = ArrayList(),
                             val types: MutableList<String> = ArrayList(),
-                            val context: MutableList<String> = ArrayList()): Evidences {
+                            val context: MutableList<String> = ArrayList()) : Evidences {
 
-    constructor(result: EvidencesExtractorResult): this(result.apicalls, result.types, result.context)
+    constructor(result: EvidencesExtractorResult) : this(result.apicalls, result.types, result.context)
 
     override fun toAstGeneratorInput(): AndroidAstGeneratorInput {
         return AndroidAstGeneratorInput(ApiCallProcessor.wrangle(apicalls), ApiTypeProcessor.wrangle(types), ContextTypeProcessor.wrangle(context))

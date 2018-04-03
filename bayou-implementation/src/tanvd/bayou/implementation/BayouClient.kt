@@ -19,7 +19,7 @@ object BayouClient {
 
     fun downloadModel(configStr: String, progress: DownloadProgress) {
         val progressFuncLast = DownloadProgressProvider.getProgress
-        DownloadProgressProvider.getProgress = {progress}
+        DownloadProgressProvider.getProgress = { progress }
 
 
         val config = JsonUtils.readValue(configStr, Config::class)

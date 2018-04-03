@@ -31,7 +31,8 @@ class EvidenceExtractor : ASTVisitor() {
 
     @Throws(SynthesisException::class)
     override fun visit(invocation: MethodInvocation?): Boolean {
-        val binding = invocation!!.resolveMethodBinding() ?: throw SynthesisException(SynthesisException.CouldNotResolveBinding)
+        val binding = invocation!!.resolveMethodBinding()
+                ?: throw SynthesisException(SynthesisException.CouldNotResolveBinding)
 
         val cls = binding.declaringClass
         if (cls == null || cls.qualifiedName != "edu.rice.cs.caper.bayou.annotations.Evidence")
@@ -74,7 +75,8 @@ class EvidenceExtractor : ASTVisitor() {
                     val expr = (stmt as ExpressionStatement).expression
                     val invocation = expr as MethodInvocation
 
-                    val binding = invocation.resolveMethodBinding() ?: throw SynthesisException(SynthesisException.CouldNotResolveBinding)
+                    val binding = invocation.resolveMethodBinding()
+                            ?: throw SynthesisException(SynthesisException.CouldNotResolveBinding)
 
                     val cls = binding.declaringClass
                     if (cls == null || cls.qualifiedName != "edu.rice.cs.caper.bayou.annotations.Evidence")

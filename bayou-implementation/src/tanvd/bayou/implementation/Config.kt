@@ -17,7 +17,6 @@ enum class SynthesizerMode {
 }
 
 
-
 data class WrangleConfig(val type: WrangleType, val config: Map<String, String>)
 
 data class EvidenceConfig(val type: EvidenceType, val wrangling: WrangleConfig)

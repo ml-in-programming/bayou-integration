@@ -67,8 +67,8 @@ class DCEOptimizor : ASTVisitor() {
         var node = node
         node = node!!.parent
         while (node != null && (node is ClassInstanceCreation
-                || node is ParenthesizedExpression
-                || node is Assignment)) {
+                        || node is ParenthesizedExpression
+                        || node is Assignment)) {
             node = node.parent
         }
 

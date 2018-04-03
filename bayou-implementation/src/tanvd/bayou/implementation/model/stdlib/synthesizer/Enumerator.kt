@@ -16,14 +16,15 @@ limitations under the License.
 package tanvd.bayou.implementation.model.stdlib.synthesizer
 
 import org.apache.commons.text.similarity.LevenshteinDistance
-import org.eclipse.jdt.core.dom.*
-
+import org.eclipse.jdt.core.dom.AST
+import org.eclipse.jdt.core.dom.Assignment
+import org.eclipse.jdt.core.dom.Expression
+import org.eclipse.jdt.core.dom.SimpleName
 import java.lang.reflect.Constructor
 import java.lang.reflect.Executable
 import java.lang.reflect.Method
 import java.lang.reflect.Modifier
 import java.util.*
-import java.util.stream.Collectors
 
 class Enumerator(internal val ast: AST, internal val env: Environment, internal var mode: Synthesizer.Mode) {
     private val importsDuringSearch: MutableSet<Class<*>>

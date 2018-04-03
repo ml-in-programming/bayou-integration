@@ -19,8 +19,8 @@ import org.eclipse.jdt.core.dom.*
 import org.eclipse.jdt.core.dom.rewrite.ASTRewrite
 import org.eclipse.jface.text.BadLocationException
 import org.eclipse.jface.text.Document
-import tanvd.bayou.implementation.model.android.synthesizer.dsl.DSubTree
 import tanvd.bayou.implementation.core.evidence.EvidenceExtractor
+import tanvd.bayou.implementation.model.android.synthesizer.dsl.DSubTree
 import java.util.*
 
 class Visitor(internal val dAST: DSubTree, internal val document: Document, internal val cu: CompilationUnit) : ASTVisitor() {
@@ -37,7 +37,8 @@ class Visitor(internal val dAST: DSubTree, internal val document: Document, inte
 
     @Throws(SynthesisException::class)
     override fun visit(invocation: MethodInvocation?): Boolean {
-        val binding = invocation!!.resolveMethodBinding() ?: throw SynthesisException(SynthesisException.CouldNotResolveBinding)
+        val binding = invocation!!.resolveMethodBinding()
+                ?: throw SynthesisException(SynthesisException.CouldNotResolveBinding)
 
         val cls = binding.declaringClass
         if (cls == null || cls.qualifiedName != "edu.rice.cs.caper.bayou.annotations.Evidence")

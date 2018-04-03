@@ -1,7 +1,6 @@
 package tanvd.bayou.implementation.model.configurable.wrangle
 
 import tanvd.bayou.implementation.utils.JsonUtils
-import tanvd.bayou.implementation.utils.Resource
 import java.io.File
 import kotlin.reflect.KClass
 
@@ -17,7 +16,7 @@ open class KHotModel(vocabFile: File) {
     }
 
     fun transform(doc: List<String>): Array<Float> {
-        val kHotVector = Array(vocabulary.size, {0.0f})
+        val kHotVector = Array(vocabulary.size, { 0.0f })
         for (str in doc) {
             kHotVector[vocabulary[str]!!] = 1.0f
         }

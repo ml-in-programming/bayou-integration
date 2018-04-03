@@ -4,7 +4,6 @@ import org.apache.commons.math3.distribution.GammaDistribution
 import org.apache.commons.math3.special.Gamma
 import tanvd.bayou.implementation.utils.ArrayUtils
 import tanvd.bayou.implementation.utils.MathUtils
-import tanvd.bayou.implementation.utils.Resource
 import java.io.File
 import java.util.*
 import javax.annotation.Nonnegative

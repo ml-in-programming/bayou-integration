@@ -15,7 +15,7 @@ limitations under the License.
 */
 package tanvd.bayou.implementation.model.stdlib.synthesizer.dsl
 
-import java.util.ArrayList
+import java.util.*
 
 class Sequence {
     internal val calls: MutableList<String>

@@ -131,7 +131,8 @@ class DLoop : DASTNode {
         val clauses = ArrayList<Expression>()
         for (call in _cond) {
             val synth = call.synthesize(env) as? Assignment
-                    /* a call that returns void cannot be in condition */ ?: throw SynthesisException(SynthesisException.MalformedASTFromNN)
+            /* a call that returns void cannot be in condition */
+                    ?: throw SynthesisException(SynthesisException.MalformedASTFromNN)
             if (call.method == null || call.method.returnType != Boolean::class.java && call.method.returnType != Boolean::class.javaPrimitiveType) {
                 val pAssignment = ast.newParenthesizedExpression()
                 pAssignment.expression = synth

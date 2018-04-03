@@ -16,19 +16,15 @@ limitations under the License.
 package tanvd.bayou.implementation.model.configurable.synthesizer
 
 import org.apache.logging.log4j.LogManager
-import org.apache.logging.log4j.Logger
 import org.eclipse.jdt.core.JavaCore
 import org.eclipse.jdt.core.compiler.IProblem
 import org.eclipse.jdt.core.dom.AST
 import org.eclipse.jdt.core.dom.ASTParser
 import org.eclipse.jdt.core.dom.CompilationUnit
-
 import java.io.File
 import java.net.MalformedURLException
 import java.net.URL
-import java.util.ArrayList
-import java.util.Arrays
-import java.util.stream.Collectors
+import java.util.*
 
 class Parser @Throws(ParseException::class)
 constructor(source: String, classpath: String) {

@@ -147,7 +147,7 @@ class DExcept : DASTNode {
         }
         statement.setBody(tryBlock)
         val exceptionsThrown_ = ArrayList(exceptionsThrown)
-        exceptionsThrown_.sortWith (
+        exceptionsThrown_.sortWith(
                 Comparator<Class<*>> { e1, e2 -> if (e1.isAssignableFrom(e2)) 1 else -1 }
         )
 

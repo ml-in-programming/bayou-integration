@@ -18,11 +18,9 @@ package tanvd.bayou.implementation.model.stdlib.synthesizer
 import com.google.googlejavaformat.java.Formatter
 import com.google.googlejavaformat.java.FormatterException
 import org.eclipse.jface.text.Document
-import tanvd.bayou.implementation.model.stdlib.synthesizer.dsl.*
-
+import tanvd.bayou.implementation.model.stdlib.synthesizer.dsl.DSubTree
 import java.net.URLClassLoader
-import java.util.ArrayList
-import java.util.LinkedList
+import java.util.*
 
 class Synthesizer {
 
@@ -47,21 +45,21 @@ class Synthesizer {
 
         val cu = parser.compilationUnit
         val programs = ArrayList<String>()
-            val visitor = Visitor(ast, Document(parser.source), cu!!, mode)
-            try {
-                cu.accept(visitor)
-                if (visitor.synthesizedProgram == null)
-                    return listOf("ERROR")
-                val program = visitor.synthesizedProgram!!.replace("\\s".toRegex(), "")
-                if (!programs.contains(program)) {
-                    val formattedProgram = Formatter().formatSource(visitor.synthesizedProgram)
-                    programs.add(program)
-                    synthesizedPrograms.add(formattedProgram)
-                }
-            } catch (e: SynthesisException) {
-                // do nothing and try next ast
-            } catch (e: FormatterException) {
+        val visitor = Visitor(ast, Document(parser.source), cu!!, mode)
+        try {
+            cu.accept(visitor)
+            if (visitor.synthesizedProgram == null)
+                return listOf("ERROR")
+            val program = visitor.synthesizedProgram!!.replace("\\s".toRegex(), "")
+            if (!programs.contains(program)) {
+                val formattedProgram = Formatter().formatSource(visitor.synthesizedProgram)
+                programs.add(program)
+                synthesizedPrograms.add(formattedProgram)
             }
+        } catch (e: SynthesisException) {
+            // do nothing and try next ast
+        } catch (e: FormatterException) {
+        }
 
         return synthesizedPrograms
     }

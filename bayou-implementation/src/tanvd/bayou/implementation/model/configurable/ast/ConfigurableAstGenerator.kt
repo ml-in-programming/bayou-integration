@@ -53,7 +53,7 @@ class ConfigurableAstGenerator(val main_config: Config) : AstGenerator<Configura
         val runner = session.runner()
         input.evidences.forEach { (type, arr) ->
             val ty = if (main_config.evidences.first { it.type == type }.wrangling.type == WrangleType.KHot) {
-                val indexesOfExistingEvidences = arr.withIndex().mapNotNull { (ind, value) -> if (value.equals(0f, 0.00001f)) null else ind}
+                val indexesOfExistingEvidences = arr.withIndex().mapNotNull { (ind, value) -> if (value.equals(0f, 0.00001f)) null else ind }
                 if (indexesOfExistingEvidences.isNotEmpty()) {
                     Tensor.create(arrayOf(1, 1L,
                             arr.size.toLong()).toLongArray(), FloatBuffer.wrap(arr.toFloatArray()))
@@ -61,7 +61,7 @@ class ConfigurableAstGenerator(val main_config: Config) : AstGenerator<Configura
                 } else {
                     //TODO-tanvd Is it correct way in a case without some evidence? (to add zeros)
                     Tensor.create(arrayOf(1, 1L,
-                            arr.size.toLong()).toLongArray(), FloatBuffer.wrap(Array(arr.size, {0f}).toFloatArray()))
+                            arr.size.toLong()).toLongArray(), FloatBuffer.wrap(Array(arr.size, { 0f }).toFloatArray()))
                 }
             } else {
                 Tensor.create(arrayOf(1, arr.size.toLong()).toLongArray(), FloatBuffer.wrap(arr.toFloatArray()))
@@ -82,7 +82,6 @@ class ConfigurableAstGenerator(val main_config: Config) : AstGenerator<Configura
         val ast = generateFromPsi(result.first()) as DSubTree
         return ast
     }
-
 
 
     private fun generateFromPsi(psi: Tensor<Float>, depth: Long = 0, in_nodes: List<String> = listOf("DSubTree"),

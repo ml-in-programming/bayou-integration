@@ -1,7 +1,7 @@
 package tanvd.bayou.implementation.model.android.quality
 
-import tanvd.bayou.implementation.model.android.synthesizer.dsl.DSubTree
 import tanvd.bayou.implementation.core.quality.RelevanceMeasurement
+import tanvd.bayou.implementation.model.android.synthesizer.dsl.DSubTree
 
 object AndroidRelevanceMeasurement : RelevanceMeasurement<DSubTree> {
     override fun sortAndDedup(programs: List<DSubTree>): List<DSubTree> {

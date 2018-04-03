@@ -16,8 +16,7 @@ limitations under the License.
 package tanvd.bayou.implementation.model.configurable.synthesizer
 
 
-import java.util.Collections
-import java.util.HashMap
+import java.util.*
 
 class SynthesisException(val id: Int) : RuntimeException(toMessage[id]) {
     companion object {

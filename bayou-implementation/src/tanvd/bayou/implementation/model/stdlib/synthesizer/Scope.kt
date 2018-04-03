@@ -15,7 +15,7 @@ limitations under the License.
 */
 package tanvd.bayou.implementation.model.stdlib.synthesizer
 
-import java.util.HashSet
+import java.util.*
 
 /**
  * A scope of variables for the synthesizer to work with

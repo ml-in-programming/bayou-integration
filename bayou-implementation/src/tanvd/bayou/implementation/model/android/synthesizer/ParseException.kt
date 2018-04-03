@@ -19,8 +19,7 @@ import org.eclipse.jdt.core.compiler.IProblem
 
 class ParseException : Exception {
 
-    constructor(problems: List<IProblem>) : super(problems.
-            joinToString("\n") { p -> String.format("Line %d: %s", p.sourceLineNumber, p.message) })
+    constructor(problems: List<IProblem>) : super(problems.joinToString("\n") { p -> String.format("Line %d: %s", p.sourceLineNumber, p.message) })
 
     constructor(message: String) : super(message)
 

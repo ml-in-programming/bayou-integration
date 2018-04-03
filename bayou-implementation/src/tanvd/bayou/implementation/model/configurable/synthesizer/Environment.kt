@@ -17,9 +17,7 @@ package tanvd.bayou.implementation.model.configurable.synthesizer
 
 import org.apache.commons.lang3.ClassUtils
 import org.eclipse.jdt.core.dom.AST
-
-import java.util.HashSet
-import java.util.Stack
+import java.util.*
 
 class Environment(internal val ast: AST, variables: List<Variable>, internal val mode: Synthesizer.Mode) {
 

@@ -1,8 +1,8 @@
 package tanvd.bayou.implementation.model.android.quality
 
-import tanvd.bayou.implementation.model.android.synthesizer.dsl.DSubTree
 import tanvd.bayou.implementation.core.quality.AstVerification
 import tanvd.bayou.implementation.model.android.evidence.AndroidEvidences
+import tanvd.bayou.implementation.model.android.synthesizer.dsl.DSubTree
 
 object AndroidEvidenceAstVerification : AstVerification<AndroidEvidences, DSubTree> {
     override fun verify(tree: DSubTree, evidences: AndroidEvidences): Boolean {

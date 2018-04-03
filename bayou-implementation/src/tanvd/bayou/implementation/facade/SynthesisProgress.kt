@@ -1,6 +1,6 @@
 package tanvd.bayou.implementation.facade
 
-enum class SynthesisPhase{
+enum class SynthesisPhase {
     IDLE,
     Started,
     Parsing,

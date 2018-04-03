@@ -14,7 +14,7 @@ import tanvd.bayou.implementation.model.stdlib.synthesizer.Parser
 import tanvd.bayou.implementation.model.stdlib.synthesizer.Synthesizer
 import tanvd.bayou.implementation.utils.Resource
 
-class  StdlibSynthesizingModel : SynthesizingModel {
+class StdlibSynthesizingModel : SynthesizingModel {
 
     private val logger = LogManager.getLogger(StdlibSynthesizingModel::class.java)
 
@@ -60,8 +60,8 @@ class  StdlibSynthesizingModel : SynthesizingModel {
                 null
             }
         }.map {
-                    it.joinToString(separator = "\n") { it }
-                }
+            it.joinToString(separator = "\n") { it }
+        }
 
         return generatedPrograms.take(maxPrograms)
     }

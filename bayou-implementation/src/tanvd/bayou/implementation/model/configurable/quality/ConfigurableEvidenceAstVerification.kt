@@ -13,13 +13,13 @@ object ConfigurableEvidenceAstVerification : AstVerification<ConfigurableEvidenc
         val callsContext = calls.flatMap { ConfigurableEvidences.contextFromCall(it) }
         val typesContains = evidences.evidences[EvidenceType.ApiType]?.all {
             callsTypes.contains(it)
-        }  ?: true
+        } ?: true
         val apisContains = evidences.evidences[EvidenceType.ApiCall]?.all {
             callsApis.contains(it)
-        }  ?: true
+        } ?: true
         val contextsContains = evidences.evidences[EvidenceType.ContextType]?.all {
             callsContext.contains(it)
-        }  ?: true
+        } ?: true
         return typesContains && apisContains && contextsContains
     }
 

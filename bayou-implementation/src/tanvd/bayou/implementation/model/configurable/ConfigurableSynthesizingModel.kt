@@ -3,8 +3,8 @@ package tanvd.bayou.implementation.model.configurable
 import org.apache.logging.log4j.LogManager
 import tanvd.bayou.implementation.Config
 import tanvd.bayou.implementation.core.evidence.EvidenceExtractor
-import tanvd.bayou.implementation.facade.SynthesisProgress
 import tanvd.bayou.implementation.facade.SynthesisPhase
+import tanvd.bayou.implementation.facade.SynthesisProgress
 import tanvd.bayou.implementation.model.SynthesizeException
 import tanvd.bayou.implementation.model.SynthesizingModel
 import tanvd.bayou.implementation.model.configurable.ast.ConfigurableAstGenerator
@@ -12,11 +12,11 @@ import tanvd.bayou.implementation.model.configurable.ast.ConfigurableAstGenerato
 import tanvd.bayou.implementation.model.configurable.evidence.ConfigurableEvidences
 import tanvd.bayou.implementation.model.configurable.quality.ConfigurableEvidenceAstVerification
 import tanvd.bayou.implementation.model.configurable.quality.ConfigurableRelevanceMeasurement
-import tanvd.bayou.implementation.model.configurable.wrangle.WrangleModelProvider
 import tanvd.bayou.implementation.model.configurable.synthesizer.ParseException
 import tanvd.bayou.implementation.model.configurable.synthesizer.Parser
 import tanvd.bayou.implementation.model.configurable.synthesizer.Synthesizer
 import tanvd.bayou.implementation.model.configurable.synthesizer.toInnerMode
+import tanvd.bayou.implementation.model.configurable.wrangle.WrangleModelProvider
 import tanvd.bayou.implementation.utils.Downloader
 import java.io.File
 
@@ -37,7 +37,7 @@ class ConfigurableSynthesizingModel(val config: Config) : SynthesizingModel {
          * Get combined class path from config and download all files
          */
         val combinedClassPath = config.classpath.map {
-            val file  = Downloader.downloadFile(config.name, it.lib_name, it.lib_url)
+            val file = Downloader.downloadFile(config.name, it.lib_name, it.lib_url)
             file.absolutePath
         }.joinToString(separator = File.pathSeparator)
 
@@ -67,13 +67,13 @@ class ConfigurableSynthesizingModel(val config: Config) : SynthesizingModel {
         synthesisProgress.phase = SynthesisPhase.Embedding
         synthesisProgress.fraction = 0.0
         val input = evidence.evidences.map { (type, list) ->
-            val evConfig = config.evidences.first { it.type == type}
+            val evConfig = config.evidences.first { it.type == type }
             val res = type to WrangleModelProvider.wrangle(config.name, evConfig, list)
             synthesisProgress.fraction += 1.0 / evidence.types.size
             res
         }.let {
-                    ConfigurableAstGeneratorInput(it.map { it.first }, it.toMap())
-                }
+            ConfigurableAstGeneratorInput(it.map { it.first }, it.toMap())
+        }
 
         synthesisProgress.fraction = 1.0
 
@@ -100,8 +100,8 @@ class ConfigurableSynthesizingModel(val config: Config) : SynthesizingModel {
                 null
             }
         }.map {
-                    it.joinToString(separator = "\n") { it }
-                }
+            it.joinToString(separator = "\n") { it }
+        }
 
         synthesisProgress.fraction = 1.0
 

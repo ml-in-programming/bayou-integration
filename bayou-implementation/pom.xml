@@ -18,11 +18,6 @@
     </repositories>
     <build>
         <sourceDirectory>src</sourceDirectory>
-        <!--<resources>-->
-            <!--<resource>-->
-                <!--<directory>resources</directory>-->
-            <!--</resource>-->
-        <!--</resources>-->
         <plugins>
             <plugin>
                 <artifactId>kotlin-maven-plugin</artifactId>
@@ -94,60 +89,53 @@
         </plugins>
     </build>
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
+        <!--logging-->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
             <version>2.8.2</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.eclipse.jdt/org.eclipse.jdt.core -->
+
+        <!--code-->
         <dependency>
             <groupId>org.eclipse.jdt</groupId>
             <artifactId>org.eclipse.jdt.core</artifactId>
             <version>3.12.3</version>
         </dependency>
-        <dependency>
-            <groupId>com.google.code.findbugs</groupId>
-            <artifactId>jsr305</artifactId>
-            <version>3.0.0</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/it.unimi.dsi/fastutil -->
-        <dependency>
-            <groupId>it.unimi.dsi</groupId>
-            <artifactId>fastutil</artifactId>
-            <version>8.1.0</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/com.github.haifengl/smile-math -->
-        <dependency>
-            <groupId>com.github.haifengl</groupId>
-            <artifactId>smile-math</artifactId>
-            <version>1.5.0</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
             <version>3.5</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+
         <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
-            <version>2.5</version>
+            <groupId>com.google.googlejavaformat</groupId>
+            <artifactId>google-java-format</artifactId>
+            <version>1.5</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-math3 -->
+
+        <!--math-->
+        <dependency>
+            <groupId>com.github.haifengl</groupId>
+            <artifactId>smile-math</artifactId>
+            <version>1.5.0</version>
+        </dependency>
+
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-math3</artifactId>
             <version>3.6.1</version>
         </dependency>
 
+        <!--tensorflow-->
         <dependency>
-            <groupId>org.jetbrains.kotlin</groupId>
-            <artifactId>kotlin-stdlib-jre8</artifactId>
-            <version>${kotlin.version}</version>
+            <groupId>org.tensorflow</groupId>
+            <artifactId>tensorflow</artifactId>
+            <version>1.5.0</version>
         </dependency>
 
+        <!--kotlin-->
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-reflect</artifactId>
@@ -155,12 +143,12 @@
         </dependency>
 
         <dependency>
-            <groupId>org.tensorflow</groupId>
-            <artifactId>tensorflow</artifactId>
-            <version>1.5.0</version>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-stdlib-jdk8</artifactId>
+            <version>${kotlin.version}</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
+        <!--serialization-->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-core</artifactId>
@@ -173,32 +161,11 @@
             <version>2.9.2</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.jetbrains.kotlin</groupId>
-            <artifactId>kotlin-test-junit</artifactId>
-            <version>${kotlin.version}</version>
-            <scope>test</scope>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-text -->
+        <!--text-->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-text</artifactId>
             <version>1.2</version>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/com.google.googlejavaformat/google-java-format -->
-        <dependency>
-            <groupId>com.google.googlejavaformat</groupId>
-            <artifactId>google-java-format</artifactId>
-            <version>1.5</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jetbrains.kotlin</groupId>
-            <artifactId>kotlin-stdlib-jdk8</artifactId>
-            <version>${kotlin.version}</version>
-        </dependency>
-
-
     </dependencies>
 </project>

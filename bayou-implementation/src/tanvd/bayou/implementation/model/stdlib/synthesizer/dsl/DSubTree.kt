@@ -15,12 +15,11 @@ limitations under the License.
 */
 package tanvd.bayou.implementation.model.stdlib.synthesizer.dsl
 
-import org.eclipse.jdt.core.dom.*
+import org.eclipse.jdt.core.dom.Block
+import org.eclipse.jdt.core.dom.Expression
+import org.eclipse.jdt.core.dom.Statement
 import tanvd.bayou.implementation.model.stdlib.synthesizer.Environment
-
-import java.util.ArrayList
-import java.util.HashSet
-import java.util.stream.Collectors
+import java.util.*
 
 class DSubTree : DASTNode, tanvd.bayou.implementation.core.synthesizer.DSubTree {
 

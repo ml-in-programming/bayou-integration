@@ -18,9 +18,7 @@ package tanvd.bayou.implementation.model.configurable.synthesizer.dsl
 import org.eclipse.jdt.core.dom.*
 import tanvd.bayou.implementation.model.configurable.synthesizer.*
 import tanvd.bayou.implementation.model.configurable.synthesizer.Type
-
-import java.util.ArrayList
-import java.util.HashSet
+import java.util.*
 
 class DBranch : DASTNode {
 

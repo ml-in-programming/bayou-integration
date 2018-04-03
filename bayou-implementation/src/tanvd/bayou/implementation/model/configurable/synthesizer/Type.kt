@@ -17,10 +17,8 @@ package tanvd.bayou.implementation.model.configurable.synthesizer
 
 import org.apache.commons.lang3.ClassUtils
 import org.eclipse.jdt.core.dom.*
-
 import java.lang.reflect.TypeVariable
-import java.util.Collections
-import java.util.HashMap
+import java.util.*
 
 class Type {
 

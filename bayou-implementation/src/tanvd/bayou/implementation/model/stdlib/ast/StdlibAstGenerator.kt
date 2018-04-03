@@ -1,6 +1,9 @@
 package tanvd.bayou.implementation.model.stdlib.ast
 
-import org.tensorflow.*
+import org.tensorflow.Graph
+import org.tensorflow.SavedModelBundle
+import org.tensorflow.Session
+import org.tensorflow.Tensor
 import tanvd.bayou.implementation.core.ast.AstGenerator
 import tanvd.bayou.implementation.facade.SynthesisProgress
 import tanvd.bayou.implementation.model.android.synthesizer.SynthesisException
@@ -14,7 +17,7 @@ import java.util.*
 data class DecoderConfig(val units: Long, val vocab: Map<String, Long>, val chars: List<String>)
 
 
-class StdlibAstGenerator : AstGenerator<StdlibAstGeneratorInput>{
+class StdlibAstGenerator : AstGenerator<StdlibAstGeneratorInput> {
 
     private val graph: Graph
     private val session: Session
@@ -43,7 +46,7 @@ class StdlibAstGenerator : AstGenerator<StdlibAstGeneratorInput>{
     private fun generateAst(ldaApi: Array<Float>, ldaTypes: Array<Float>): DSubTree {
         val runner = session.runner()
         listOf("APICalls" to ldaApi, "Types" to ldaTypes).forEach { (name, arr) ->
-            val indexesOfExistingEvidences = arr.withIndex().mapNotNull { (ind, value) -> if (value.equals(0f, 0.00001f)) null else ind}
+            val indexesOfExistingEvidences = arr.withIndex().mapNotNull { (ind, value) -> if (value.equals(0f, 0.00001f)) null else ind }
             val ty = if (indexesOfExistingEvidences.isNotEmpty()) {
                 val newArray = Array(indexesOfExistingEvidences.size, { Array(arr.size, { 0f }) })
                 for ((ind, i) in indexesOfExistingEvidences.withIndex()) {
@@ -55,7 +58,7 @@ class StdlibAstGenerator : AstGenerator<StdlibAstGeneratorInput>{
             } else {
                 //TODO-tanvd Is it correct way in a case without some evidence? (to add zeros)
                 Tensor.create(arrayOf(1, 1L,
-                        arr.size.toLong()).toLongArray(), FloatBuffer.wrap(Array(arr.size, {0f}).toFloatArray()))
+                        arr.size.toLong()).toLongArray(), FloatBuffer.wrap(Array(arr.size, { 0f }).toFloatArray()))
             }
             runner.feed(name, ty)
         }
@@ -67,7 +70,6 @@ class StdlibAstGenerator : AstGenerator<StdlibAstGeneratorInput>{
         val ast = generateFromPsi(result.first()) as DSubTree
         return ast
     }
-
 
 
     private fun generateFromPsi(psi: Tensor<Float>, depth: Long = 0, in_nodes: List<String> = listOf("DSubTree"),

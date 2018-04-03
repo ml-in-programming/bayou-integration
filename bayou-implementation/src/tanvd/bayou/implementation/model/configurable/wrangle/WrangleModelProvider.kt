@@ -2,7 +2,6 @@ package tanvd.bayou.implementation.model.configurable.wrangle
 
 import tanvd.bayou.implementation.EvidenceConfig
 import tanvd.bayou.implementation.WrangleType
-import tanvd.bayou.implementation.facade.DownloadProgress
 import tanvd.bayou.implementation.utils.Downloader
 
 

@@ -1,17 +1,17 @@
 package tanvd.bayou.implementation.model.android
 
 import org.apache.logging.log4j.LogManager
-import tanvd.bayou.implementation.model.SynthesizingModel
-import tanvd.bayou.implementation.model.SynthesizeException
 import tanvd.bayou.implementation.core.evidence.EvidenceExtractor
 import tanvd.bayou.implementation.facade.SynthesisProgress
-import tanvd.bayou.implementation.model.android.synthesizer.ParseException
-import tanvd.bayou.implementation.model.android.synthesizer.Parser
-import tanvd.bayou.implementation.model.android.synthesizer.Synthesizer
+import tanvd.bayou.implementation.model.SynthesizeException
+import tanvd.bayou.implementation.model.SynthesizingModel
 import tanvd.bayou.implementation.model.android.ast.AndroidAstGenerator
 import tanvd.bayou.implementation.model.android.evidence.AndroidEvidences
 import tanvd.bayou.implementation.model.android.quality.AndroidEvidenceAstVerification
 import tanvd.bayou.implementation.model.android.quality.AndroidRelevanceMeasurement
+import tanvd.bayou.implementation.model.android.synthesizer.ParseException
+import tanvd.bayou.implementation.model.android.synthesizer.Parser
+import tanvd.bayou.implementation.model.android.synthesizer.Synthesizer
 import tanvd.bayou.implementation.utils.Resource
 import java.io.File
 
@@ -61,8 +61,8 @@ class AndroidSynthesizingModel : SynthesizingModel {
                 null
             }
         }.map {
-                    it.joinToString(separator = "\n") { it }
-                }
+            it.joinToString(separator = "\n") { it }
+        }
 
         return generatedPrograms.take(maxPrograms)
     }

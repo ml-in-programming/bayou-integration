@@ -28,7 +28,8 @@ class DExcept : DASTNode {
     internal var node = "DExcept"
     internal var _try: List<DASTNode>
     internal var _catch: List<DASTNode>
-    @Transient internal var exceptToClause: MutableMap<Any, Any>? = null
+    @Transient
+    internal var exceptToClause: MutableMap<Any, Any>? = null
 
     constructor() {
         this._try = ArrayList()

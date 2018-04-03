@@ -15,15 +15,14 @@ limitations under the License.
 */
 package tanvd.bayou.implementation.model.stdlib.synthesizer
 
-import org.eclipse.jdt.core.dom.*
 //import org.eclipse.jdt.core.dom.Type
+
+import org.eclipse.jdt.core.dom.*
 import org.eclipse.jdt.core.dom.rewrite.ASTRewrite
-import org.eclipse.jdt.core.dom.rewrite.ListRewrite
 import org.eclipse.jface.text.BadLocationException
 import org.eclipse.jface.text.Document
 import tanvd.bayou.implementation.core.evidence.EvidenceExtractor
 import tanvd.bayou.implementation.model.stdlib.synthesizer.dsl.DSubTree
-
 import java.util.*
 
 /**
@@ -220,7 +219,7 @@ class Visitor
             statement.body = body
 
             val exceptions_ = ArrayList<Class<*>>(exceptions)
-            exceptions_.sortedWith(kotlin.Comparator{ e1: Class<*>, e2: Class<*> -> if (e1.isAssignableFrom(e2)) 1 else -1 })
+            exceptions_.sortedWith(kotlin.Comparator { e1: Class<*>, e2: Class<*> -> if (e1.isAssignableFrom(e2)) 1 else -1 })
             for (except in exceptions_) {
                 val catchClause = ast.newCatchClause()
                 val ex = ast.newSingleVariableDeclaration()

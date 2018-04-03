@@ -2,16 +2,13 @@ package tanvd.bayou.implementation.utils
 
 import tanvd.bayou.implementation.facade.DownloadProgress
 import tanvd.bayou.implementation.facade.DownloadProgressProvider
+import java.io.BufferedInputStream
 import java.io.File
+import java.io.FileOutputStream
+import java.net.URL
 import java.nio.file.Path
 import java.nio.file.Paths
 import kotlin.reflect.KClass
-import java.io.FileOutputStream
-import java.net.URL
-import java.io.BufferedInputStream
-
-
-
 
 
 data class RepositoryRecord(val target: String, val name: String, val printableName: String)
@@ -36,28 +33,30 @@ object Downloader {
         }
     }
 
-    fun getTargetFiles(target: String) : List<RepositoryRecord> {
-        return repository.filter { it.target == target}
+    fun getTargetFiles(target: String): List<RepositoryRecord> {
+        return repository.filter { it.target == target }
     }
 
     fun downloadFile(target: String, name: String, url: String, printableName: String = name): File {
-        return repository.firstOrNull {it.name == name && it.target == target }?.let {
+        return repository.firstOrNull { it.name == name && it.target == target }?.let {
             getTargetPath(it.target, it.name).toFile()
-        } ?: downloadTo(printableName, URL(url), getTargetPath(target, name), DownloadProgressProvider.getProgress()).also {
-            repository.add(RepositoryRecord(target, name, printableName))
-            saveRepository()
         }
+                ?: downloadTo(printableName, URL(url), getTargetPath(target, name), DownloadProgressProvider.getProgress()).also {
+                    repository.add(RepositoryRecord(target, name, printableName))
+                    saveRepository()
+                }
     }
 
     fun downloadZip(target: String, name: String, url: String, printableName: String = name): File {
-        return repository.firstOrNull {it.name == name && it.target == target }?.let {
+        return repository.firstOrNull { it.name == name && it.target == target }?.let {
             getTargetPath(it.target, it.name).toFile()
-        } ?: downloadTo(printableName, URL(url), getTargetPath(target, "$name.zip"), DownloadProgressProvider.getProgress()).let {
-            val zip = Zip.extractFolder(it, getTargetPath(target, name).toFile())
-            repository.add(RepositoryRecord(target, name, printableName))
-            saveRepository()
-            zip
         }
+                ?: downloadTo(printableName, URL(url), getTargetPath(target, "$name.zip"), DownloadProgressProvider.getProgress()).let {
+                    val zip = Zip.extractFolder(it, getTargetPath(target, name).toFile())
+                    repository.add(RepositoryRecord(target, name, printableName))
+                    saveRepository()
+                    zip
+                }
     }
 
     private fun downloadTo(printableName: String, url: URL, path: Path, progress: DownloadProgress): File {
@@ -78,7 +77,7 @@ object Downloader {
             while (count != -1) {
                 out.write(data, 0, count)
                 totalCount += count
-                progress.progress = if (size == 0 ) {
+                progress.progress = if (size == 0) {
                     0.0
                 } else {
                     totalCount.toDouble() / size

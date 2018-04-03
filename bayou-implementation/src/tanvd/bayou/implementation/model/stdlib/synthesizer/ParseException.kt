@@ -16,7 +16,6 @@ limitations under the License.
 package tanvd.bayou.implementation.model.stdlib.synthesizer
 
 import org.eclipse.jdt.core.compiler.IProblem
-import java.util.stream.Collectors
 
 class ParseException : Exception {
 
