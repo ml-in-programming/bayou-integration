@@ -1,0 +1,1366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0d8d14fc-9697-4a4e-9814-f4a8b0d3cd07" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/bayou_annotations_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/bayou_implementation_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/bayou-integration.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_kotlin_2_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_haifengl_smile_math_1_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_1_3_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_0_18.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_javac_shaded_9_dev_r4023_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_googlejavaformat_google_java_format_1_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_22_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_text_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_mojo_animal_sniffer_annotations_1_14.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_platform_org_eclipse_core_commands_3_9_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_platform_org_eclipse_core_contenttype_3_6_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_platform_org_eclipse_core_expressions_3_6_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_platform_org_eclipse_core_filesystem_1_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_platform_org_eclipse_core_jobs_3_9_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_platform_org_eclipse_core_resources_3_12_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_platform_org_eclipse_core_runtime_3_13_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_platform_org_eclipse_equinox_common_3_9_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_platform_org_eclipse_equinox_preferences_3_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_platform_org_eclipse_equinox_registry_3_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_platform_org_eclipse_osgi_3_12_100.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_platform_org_eclipse_text_3_6_100.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_reflect_1_2_31.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_1_2_31.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_jdk7_1_2_31.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_jdk8_1_2_31.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_tensorflow_libtensorflow_1_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_tensorflow_libtensorflow_jni_1_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_tensorflow_tensorflow_1_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-annotations/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-annotations/target/classes/android.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-annotations/target/classes/stdlib.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-annotations/target/classes/tanvd/bayou/prototype/annotations/kotlin/ApiType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-annotations/target/classes/tanvd/bayou/prototype/annotations/kotlin/BayouSynthesizer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-annotations/target/classes/tanvd/bayou/prototype/annotations/kotlin/SynthesizerType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-annotations/target/classes/tanvd/bayou/prototype/annotations/kotlin/android/AndroidFunctions.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-annotations/target/classes/tanvd/bayou/prototype/annotations/kotlin/android/ApiCall.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-annotations/target/classes/tanvd/bayou/prototype/annotations/kotlin/android/ContextClass.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-annotations/target/classes/tanvd/bayou/prototype/annotations/kotlin/stdlib/ApiCall.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/META-INF/bayou-implementation.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/android.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/stdlib.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/BayouClient$downloadModel$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/BayouClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/ClasspathUnit.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/ConcretizationConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/Config.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/EvidenceConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/EvidenceType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/SynthesizerConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/SynthesizerMode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/TestClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/WrangleConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/WrangleType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/core/ast/AstGenerator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/core/ast/AstGeneratorInput.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/core/evidence/EvidenceExtractor$Companion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/core/evidence/EvidenceExtractor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/core/evidence/EvidenceProcessor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/core/evidence/Evidences.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/core/evidence/EvidencesExtractorResult.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/core/quality/AstVerification.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/core/quality/RelevanceMeasurement.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/core/synthesizer/DSubTree.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/core/synthesizer/Synthesizer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/facade/DownloadProgress.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/facade/DownloadProgressProvider$getProgress$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/facade/DownloadProgressProvider.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/facade/SimpleDownloadProgress.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/facade/SimpleSynthesisProgress.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/facade/SynthesisPhase.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/facade/SynthesisProgress.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/SynthesizeException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/SynthesizingModel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/AndroidSynthesizingModel$synthesize$generatedPrograms$2$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/AndroidSynthesizingModel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/ast/AndroidAstGenerator$CodeGenResult.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/ast/AndroidAstGenerator$Edges.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/ast/AndroidAstGenerator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/ast/AndroidAstGeneratorInput.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/ast/DecoderConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/evidence/AndroidEvidences$Companion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/evidence/AndroidEvidences.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/evidence/ApiCallProcessor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/evidence/ApiTypeProcessor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/evidence/ContextTypeProcessor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/evidence/LdaHiveModel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/evidence/TfIdfModel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/quality/AndroidEvidenceAstVerification.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/quality/AndroidRelevanceMeasurement$sortAndDedup$$inlined$sortedByDescending$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/quality/AndroidRelevanceMeasurement.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/synthesizer/DCEOptimizor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/synthesizer/Enumerator$Companion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/synthesizer/Enumerator$InvocationChain$structCost$args$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/synthesizer/Enumerator$InvocationChain.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/synthesizer/Enumerator$sortChainsByCost$$inlined$sortedBy$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/synthesizer/Enumerator$sortConstructorsByCost$$inlined$sortedBy$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/synthesizer/Enumerator$sortExecutablesByCost$$inlined$sortedBy$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/synthesizer/Enumerator$sortMethodsByCost$$inlined$sortedBy$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/synthesizer/Enumerator$sortTypesByCost$$inlined$sortedBy$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/synthesizer/Enumerator$sortVariablesByCost$$inlined$sortedBy$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/synthesizer/Enumerator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/synthesizer/Environment$Companion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/synthesizer/Environment.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/synthesizer/ParseException$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/synthesizer/ParseException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/synthesizer/Parser$Companion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/synthesizer/Parser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/synthesizer/SynthesisException$Companion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/synthesizer/SynthesisException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/synthesizer/Synthesizable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/synthesizer/Synthesizer$Companion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/synthesizer/Synthesizer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/synthesizer/Type.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/synthesizer/TypedExpression.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/synthesizer/Variable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/synthesizer/Visitor$Companion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/synthesizer/Visitor$postprocessLocal$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/synthesizer/Visitor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/synthesizer/dsl/DAPICall$className$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/synthesizer/dsl/DAPICall$signature$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/synthesizer/dsl/DAPICall.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/synthesizer/dsl/DASTNode$TooLongSequenceException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/synthesizer/dsl/DASTNode$TooManySequencesException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/synthesizer/dsl/DASTNode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/synthesizer/dsl/DBranch.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/synthesizer/dsl/DExcept$synthesize$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/synthesizer/dsl/DExcept.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/synthesizer/dsl/DLoop.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/synthesizer/dsl/DSubTree$toString$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/synthesizer/dsl/DSubTree.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/android/synthesizer/dsl/Sequence.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/ConfigurableSynthesizingModel$synthesize$generatedPrograms$2$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/ConfigurableSynthesizingModel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/ast/ConfigurableAstGenerator$CodeGenResult.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/ast/ConfigurableAstGenerator$Edges.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/ast/ConfigurableAstGenerator$WhenMappings.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/ast/ConfigurableAstGenerator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/ast/ConfigurableAstGeneratorInput.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/ast/DecoderConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/evidence/ConfigurableEvidences$Companion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/evidence/ConfigurableEvidences.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/quality/ConfigurableEvidenceAstVerification.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/quality/ConfigurableRelevanceMeasurement$sortAndDedup$$inlined$sortedByDescending$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/quality/ConfigurableRelevanceMeasurement.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/Bayou.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/DCEOptimizor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/Enumerator$sortChainsByCost$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/Enumerator$sortConstructorsByCost$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/Enumerator$sortExecutablesByCost$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/Enumerator$sortMethodsByCost$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/Enumerator$sortTypesByCost$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/Enumerator$sortVariablesByCost$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/Enumerator$sortVariablesByCost$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/Enumerator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/Environment$Companion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/Environment.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/ExpressionChain$Companion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/ExpressionChain$structCost$args$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/ExpressionChain.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/ParseException$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/ParseException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/Parser$Companion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/Parser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/Scope.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/SearchTarget.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/SynthesisException$Companion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/SynthesisException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/Synthesizable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/Synthesizer$Companion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/Synthesizer$Mode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/Synthesizer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/SynthesizerKt$WhenMappings.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/SynthesizerKt.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/Type$Companion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/Type.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/TypedExpression.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/Variable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/VariableProperties.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/Visitor$postprocessLocal$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/Visitor$postprocessLocal$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/Visitor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/dsl/DAPICall.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/dsl/DASTNode$TooLongSequenceException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/dsl/DASTNode$TooManySequencesException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/dsl/DASTNode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/dsl/DBranch.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/dsl/DExcept$synthesize$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/dsl/DExcept.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/dsl/DLoop.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/dsl/DSubTree.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/synthesizer/dsl/Sequence.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/wrangle/KHotModel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/wrangle/LdaHiveModel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/wrangle/TfIdfModel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/wrangle/WrangleModelProvider$WhenMappings.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/configurable/wrangle/WrangleModelProvider.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/StdlibSynthesizingModel$synthesize$generatedPrograms$2$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/StdlibSynthesizingModel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/ast/DecoderConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/ast/StdlibAstGenerator$CodeGenResult.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/ast/StdlibAstGenerator$Edges.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/ast/StdlibAstGenerator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/ast/StdlibAstGeneratorInput.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/evidence/ApiCallProcessor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/evidence/ApiTypeProcessor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/evidence/KHotModel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/evidence/StdlibEvidences$Companion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/evidence/StdlibEvidences.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/quality/StdlibEvidenceAstVerification.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/quality/StdlibRelevanceMeasurement$sortAndDedup$$inlined$sortedByDescending$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/quality/StdlibRelevanceMeasurement.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/synthesizer/Bayou.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/synthesizer/DCEOptimizor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/synthesizer/Enumerator$sortChainsByCost$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/synthesizer/Enumerator$sortConstructorsByCost$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/synthesizer/Enumerator$sortExecutablesByCost$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/synthesizer/Enumerator$sortMethodsByCost$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/synthesizer/Enumerator$sortTypesByCost$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/synthesizer/Enumerator$sortVariablesByCost$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/synthesizer/Enumerator$sortVariablesByCost$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/synthesizer/Enumerator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/synthesizer/Environment$Companion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/synthesizer/Environment.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/synthesizer/ExpressionChain$Companion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/synthesizer/ExpressionChain$structCost$args$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/synthesizer/ExpressionChain.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/synthesizer/ParseException$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/synthesizer/ParseException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/synthesizer/Parser$Companion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/synthesizer/Parser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/synthesizer/Scope.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/synthesizer/SearchTarget.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/synthesizer/SynthesisException$Companion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/synthesizer/SynthesisException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/synthesizer/Synthesizable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/synthesizer/Synthesizer$Companion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/synthesizer/Synthesizer$Mode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/synthesizer/Synthesizer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/synthesizer/Type$Companion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/synthesizer/Type.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/synthesizer/TypedExpression.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/synthesizer/Variable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/synthesizer/VariableProperties.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/synthesizer/Visitor$postprocessLocal$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/synthesizer/Visitor$postprocessLocal$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/synthesizer/Visitor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/synthesizer/dsl/DAPICall.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/synthesizer/dsl/DASTNode$TooLongSequenceException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/synthesizer/dsl/DASTNode$TooManySequencesException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/synthesizer/dsl/DASTNode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/synthesizer/dsl/DBranch.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/synthesizer/dsl/DExcept$synthesize$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/synthesizer/dsl/DExcept.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/synthesizer/dsl/DLoop.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/synthesizer/dsl/DSubTree.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/model/stdlib/synthesizer/dsl/Sequence.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/utils/ArrayUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/utils/Downloader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/utils/JsonUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/utils/MathUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/utils/MathUtilsKt.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/utils/RandomSelector.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/utils/RepositoryRecord.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/utils/Resource$firstEntryHook$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/utils/Resource.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/utils/TensorUtilsKt.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-implementation/target/classes/tanvd/bayou/implementation/utils/Zip.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bayou-plugin/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker_bayou/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-annotations/.idea/artifacts/bayou_annotations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-annotations/.idea/kotlinc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-annotations/.idea/libraries/KotlinJavaRuntime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-annotations/.idea/libraries/com_fasterxml_jackson_core_jackson_core_2_9_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-annotations/.idea/libraries/com_fasterxml_jackson_module_jackson_module_kotlin_2_9_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-annotations/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-annotations/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-annotations/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-annotations/android_class.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-annotations/android_functions.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-annotations/bayou-annotations.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-annotations/bayou-annotations.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-annotations/resources/android.json" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-annotations/resources/android.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-annotations/resources/stdlib.json" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-annotations/resources/stdlib.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-annotations/src/tanvd/bayou/prototype/annotations/kotlin/ApiType.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-annotations/src/tanvd/bayou/prototype/annotations/kotlin/ApiType.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-annotations/src/tanvd/bayou/prototype/annotations/kotlin/SynthesizerType.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-annotations/src/tanvd/bayou/prototype/annotations/kotlin/SynthesizerType.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-annotations/src/tanvd/bayou/prototype/annotations/kotlin/android/AndroidFunctions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-annotations/src/tanvd/bayou/prototype/annotations/kotlin/android/AndroidFunctions.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-annotations/src/tanvd/bayou/prototype/annotations/kotlin/android/ApiCall.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-annotations/src/tanvd/bayou/prototype/annotations/kotlin/android/ApiCall.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-annotations/src/tanvd/bayou/prototype/annotations/kotlin/android/ContextClass.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-annotations/src/tanvd/bayou/prototype/annotations/kotlin/android/ContextClass.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-annotations/src/tanvd/bayou/prototype/annotations/kotlin/stdlib/ApiCall.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-annotations/src/tanvd/bayou/prototype/annotations/kotlin/stdlib/ApiCall.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-annotations/src/tanvd/bayou/prototype/annotations/processing/JsonUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-annotations/src/tanvd/bayou/prototype/annotations/processing/JsonUtils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-annotations/src/tanvd/bayou/prototype/annotations/processing/Processor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-annotations/src/tanvd/bayou/prototype/annotations/processing/Processor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-annotations/stdlib_class.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-annotations/stdlib_functions.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/.idea/kotlinc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/.idea/libraries/Maven__org_apache_commons_commons_math3_3_6_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_math3_3_6_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_8_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_8_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/.idea/libraries/Maven__org_apache_logging_log4j_log4j_core_2_8_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_core_2_8_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/.idea/libraries/Maven__org_eclipse_jdt_org_eclipse_jdt_core_3_12_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jdt_org_eclipse_jdt_core_3_12_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/.idea/libraries/Maven__org_eclipse_platform_org_eclipse_equinox_app_1_3_400.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_platform_org_eclipse_equinox_app_1_3_400.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/.idea/libraries/Maven__org_jetbrains_annotations_13_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_13_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/bayou-implementation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/bayou-implementation.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/resources/android.json" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/resources/android.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/resources/stdlib.json" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/resources/stdlib.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/BayouClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/BayouClient.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/Config.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/Config.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/TestClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/TestClient.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/core/ast/AstGenerator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/core/ast/AstGenerator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/core/evidence/EvidenceExtractor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/core/evidence/EvidenceExtractor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/core/evidence/EvidenceProcessor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/core/evidence/EvidenceProcessor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/core/evidence/Evidences.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/core/evidence/Evidences.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/core/evidence/EvidencesExtractorResult.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/core/evidence/EvidencesExtractorResult.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/core/quality/AstVerification.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/core/quality/AstVerification.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/core/quality/RelevanceMeasurement.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/core/quality/RelevanceMeasurement.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/core/synthesizer/DSubTree.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/core/synthesizer/DSubTree.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/core/synthesizer/Synthesizer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/core/synthesizer/Synthesizer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/facade/Downloader.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/facade/Downloader.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/facade/SynthesisProgress.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/facade/SynthesisProgress.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/SynthesizingModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/SynthesizingModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/AndroidSynthesizingModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/AndroidSynthesizingModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/ast/AndroidAstGenerator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/ast/AndroidAstGenerator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/ast/AndroidAstGeneratorInput.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/ast/AndroidAstGeneratorInput.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/evidence/AndroidEvidences.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/evidence/AndroidEvidences.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/evidence/ApiCallProcessor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/evidence/ApiCallProcessor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/evidence/ApiTypeProcessor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/evidence/ApiTypeProcessor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/evidence/ContextTypeProcessor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/evidence/ContextTypeProcessor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/evidence/LdaHiveModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/evidence/LdaHiveModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/evidence/TfIdfModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/evidence/TfIdfModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/quality/AndroidEvidenceAstVerification.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/quality/AndroidEvidenceAstVerification.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/quality/AndroidRelevanceMeasurement.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/quality/AndroidRelevanceMeasurement.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/synthesizer/DCEOptimizor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/synthesizer/DCEOptimizor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/synthesizer/Enumerator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/synthesizer/Enumerator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/synthesizer/Environment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/synthesizer/Environment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/synthesizer/ParseException.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/synthesizer/ParseException.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/synthesizer/Parser.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/synthesizer/Parser.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/synthesizer/SynthesisException.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/synthesizer/SynthesisException.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/synthesizer/Synthesizable.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/synthesizer/Synthesizable.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/synthesizer/Synthesizer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/synthesizer/Synthesizer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/synthesizer/Type.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/synthesizer/Type.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/synthesizer/TypedExpression.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/synthesizer/TypedExpression.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/synthesizer/Variable.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/synthesizer/Variable.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/synthesizer/Visitor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/synthesizer/Visitor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/synthesizer/dsl/DAPICall.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/synthesizer/dsl/DAPICall.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/synthesizer/dsl/DASTNode.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/synthesizer/dsl/DASTNode.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/synthesizer/dsl/DBranch.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/synthesizer/dsl/DBranch.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/synthesizer/dsl/DExcept.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/synthesizer/dsl/DExcept.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/synthesizer/dsl/DLoop.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/synthesizer/dsl/DLoop.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/synthesizer/dsl/DSubTree.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/synthesizer/dsl/DSubTree.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/synthesizer/dsl/Sequence.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/android/synthesizer/dsl/Sequence.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/ConfigurableSynthesizingModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/ConfigurableSynthesizingModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/ast/ConfigurableAstGenerator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/ast/ConfigurableAstGenerator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/ast/ConfigurableAstGeneratorInput.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/ast/ConfigurableAstGeneratorInput.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/evidence/ConfigurableEvidences.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/evidence/ConfigurableEvidences.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/quality/ConfigurableEvidenceAstVerification.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/quality/ConfigurableEvidenceAstVerification.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/quality/ConfigurableRelevanceMeasurement.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/quality/ConfigurableRelevanceMeasurement.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/Bayou.java" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/Bayou.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/DCEOptimizor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/DCEOptimizor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/Enumerator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/Enumerator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/Environment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/Environment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/ExpressionChain.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/ExpressionChain.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/ParseException.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/ParseException.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/Parser.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/Parser.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/Scope.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/Scope.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/SearchTarget.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/SearchTarget.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/SynthesisException.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/SynthesisException.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/Synthesizable.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/Synthesizable.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/Synthesizer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/Synthesizer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/Type.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/Type.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/TypedExpression.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/TypedExpression.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/Variable.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/Variable.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/VariableProperties.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/VariableProperties.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/Visitor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/Visitor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/dsl/DAPICall.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/dsl/DAPICall.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/dsl/DASTNode.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/dsl/DASTNode.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/dsl/DBranch.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/dsl/DBranch.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/dsl/DExcept.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/dsl/DExcept.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/dsl/DLoop.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/dsl/DLoop.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/dsl/DSubTree.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/dsl/DSubTree.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/dsl/Sequence.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/synthesizer/dsl/Sequence.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/wrangle/KHotModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/wrangle/KHotModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/wrangle/LdaHiveModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/wrangle/LdaHiveModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/wrangle/TfIdfModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/wrangle/TfIdfModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/wrangle/WrangleModelProvider.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/wrangle/WrangleModelProvider.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/StdlibSynthesizingModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/StdlibSynthesizingModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/ast/StdlibAstGenerator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/ast/StdlibAstGenerator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/ast/StdlibAstGeneratorInput.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/ast/StdlibAstGeneratorInput.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/evidence/ApiCallProcessor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/evidence/ApiCallProcessor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/evidence/ApiTypeProcessor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/evidence/ApiTypeProcessor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/evidence/KHotModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/evidence/KHotModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/evidence/StdlibEvidences.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/evidence/StdlibEvidences.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/quality/StdlibEvidenceAstVerification.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/quality/StdlibEvidenceAstVerification.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/quality/StdlibRelevanceMeasurement.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/quality/StdlibRelevanceMeasurement.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/Bayou.java" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/Bayou.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/DCEOptimizor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/DCEOptimizor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/Enumerator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/Enumerator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/Environment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/Environment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/ExpressionChain.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/ExpressionChain.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/ParseException.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/ParseException.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/Parser.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/Parser.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/Scope.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/Scope.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/SearchTarget.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/SearchTarget.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/SynthesisException.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/SynthesisException.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/Synthesizable.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/Synthesizable.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/Synthesizer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/Synthesizer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/Type.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/Type.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/TypedExpression.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/TypedExpression.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/Variable.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/Variable.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/VariableProperties.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/VariableProperties.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/Visitor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/Visitor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/dsl/DAPICall.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/dsl/DAPICall.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/dsl/DASTNode.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/dsl/DASTNode.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/dsl/DBranch.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/dsl/DBranch.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/dsl/DExcept.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/dsl/DExcept.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/dsl/DLoop.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/dsl/DLoop.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/dsl/DSubTree.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/dsl/DSubTree.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/dsl/Sequence.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/stdlib/synthesizer/dsl/Sequence.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/utils/ArrayUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/utils/ArrayUtils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/utils/FileUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/utils/FileUtils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/utils/JsonUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/utils/JsonUtils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/utils/MathUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/utils/MathUtils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/utils/NetUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/utils/NetUtils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/utils/TensorUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/utils/TensorUtils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/.idea/kotlinc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/.idea/libraries/KotlinJavaRuntime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/.idea/libraries/bayou_annotations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/.idea/libraries/bayou_annotations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/.idea/libraries/bayou_implementation_1_1_0_jar_with_dependencies.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/.idea/libraries/bayou_implementation_1_1_0_jar_with_dependencies.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/bayou-plugin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/bayou-plugin.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/gen/tanvd/bayou/prototype/language/BayouLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/gen/tanvd/bayou/prototype/language/BayouLexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/gen/tanvd/bayou/prototype/language/parser/BayouParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/gen/tanvd/bayou/prototype/language/parser/BayouParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/gen/tanvd/bayou/prototype/language/psi/BayouBodyAndroid.java" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/gen/tanvd/bayou/prototype/language/psi/BayouBodyAndroid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/gen/tanvd/bayou/prototype/language/psi/BayouBodyStdlib.java" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/gen/tanvd/bayou/prototype/language/psi/BayouBodyStdlib.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/gen/tanvd/bayou/prototype/language/psi/BayouKeyAndroid.java" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/gen/tanvd/bayou/prototype/language/psi/BayouKeyAndroid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/gen/tanvd/bayou/prototype/language/psi/BayouKeyStdlib.java" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/gen/tanvd/bayou/prototype/language/psi/BayouKeyStdlib.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/gen/tanvd/bayou/prototype/language/psi/BayouTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/gen/tanvd/bayou/prototype/language/psi/BayouTypes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/gen/tanvd/bayou/prototype/language/psi/BayouVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/gen/tanvd/bayou/prototype/language/psi/BayouVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/gen/tanvd/bayou/prototype/language/psi/impl/BayouBodyAndroidImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/gen/tanvd/bayou/prototype/language/psi/impl/BayouBodyAndroidImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/gen/tanvd/bayou/prototype/language/psi/impl/BayouBodyStdlibImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/gen/tanvd/bayou/prototype/language/psi/impl/BayouBodyStdlibImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/gen/tanvd/bayou/prototype/language/psi/impl/BayouKeyAndroidImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/gen/tanvd/bayou/prototype/language/psi/impl/BayouKeyAndroidImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/gen/tanvd/bayou/prototype/language/psi/impl/BayouKeyStdlibImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/gen/tanvd/bayou/prototype/language/psi/impl/BayouKeyStdlibImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/idea-flex.skeleton" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/idea-flex.skeleton" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/idea-flex_2.skeleton" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/jflex-1.7.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/jflex-1.7.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/jflex-1.7.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/resources/META-INF/plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/resources/android/android_class.json" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/resources/android/android_class.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/resources/android/android_functions.json" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/resources/android/android_functions.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/resources/android/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/resources/android/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/resources/stdlib/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/resources/stdlib/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/resources/stdlib/stdlib_class.json" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/resources/stdlib/stdlib_class.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/resources/stdlib/stdlib_functions.json" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/resources/stdlib/stdlib_functions.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/BayouTask.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/BayouTask.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/EditorAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/EditorAction.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/annotations/PsiClassesProcessor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/annotations/PsiClassesProcessor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/language/Bayou.bnf" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/language/Bayou.bnf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/language/BayouLanguage.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/language/BayouLanguage.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/language/BayouLexer.flex" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/language/BayouLexer.flex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/language/BayouLexerAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/language/BayouLexerAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/language/BayouParserDefinition.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/language/BayouParserDefinition.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/language/PsiClassProcessor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/language/PsiClassProcessor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/language/completion/BayouCompletionContributor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/language/completion/BayouCompletionContributor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/language/file/FileType.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/language/file/FileType.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/language/file/PsiFile.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/language/file/PsiFile.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/language/highlighting/BayouHighlighterFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/language/highlighting/BayouHighlighterFactory.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/language/highlighting/BayouSyntaxHighlighter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/language/highlighting/BayouSyntaxHighlighter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/language/icon/BayouIcon.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/language/icon/BayouIcon.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/language/icon/bayou-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/language/icon/bayou-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/language/psi/BayouElementType.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/language/psi/BayouElementType.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/language/psi/BayouTokenType.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/language/psi/BayouTokenType.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/synthesizer/BayouRequest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/synthesizer/BayouRequest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/synthesizer/BayouResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/synthesizer/BayouResponse.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/synthesizer/BayouSynthesizer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/synthesizer/BayouSynthesizer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/synthesizer/implementation/BayouTextConverter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/synthesizer/implementation/BayouTextConverter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/utils/CodeUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/utils/CodeUtils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/utils/PsiUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/utils/PsiUtils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/utils/RegexUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/utils/RegexUtils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/utils/Resource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/utils/Resource.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker_bayou/.idea/docker_bayou.iml" beforeDir="false" afterPath="$PROJECT_DIR$/docker_bayou/.idea/docker_bayou.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker_bayou/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/docker_bayou/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker_bayou/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/docker_bayou/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker_bayou/bayou/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker_bayou/bayou/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker_bayou/tensorflow/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker_bayou/tensorflow/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker_bayou/tensorflow/start_tensorflow.sh" beforeDir="false" afterPath="$PROJECT_DIR$/docker_bayou/tensorflow/start_tensorflow.sh" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/bayou-implementation/target/" />
+    <ignored path="$PROJECT_DIR$/bayou-annotations/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view />
+      </state>
+    </system>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="bayou-integration" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="PsiClassProcessor.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/language/PsiClassProcessor.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="32" column="148" selection-start-line="32" selection-start-column="148" selection-end-line="32" selection-end-column="148" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bayou-annotations/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="526">
+              <caret line="98" selection-start-line="98" selection-end-line="98" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bayou-implementation/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="136" column="23" selection-start-line="136" selection-start-column="23" selection-end-line="136" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="16">
+              <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConfigurableAstGenerator.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/ast/ConfigurableAstGenerator.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JsonUtils.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/utils/JsonUtils.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BayouSynthesizer.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/synthesizer/BayouSynthesizer.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="64">
+              <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>2.9.2</find>
+      <find>test</find>
+      <find>jackson</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$/../../AORM" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/bayou-annotations" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../JetAudit" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../deployment/logs-handler-utils/IpToCloudResolver" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/bayou-annotations/bayou-annotations.iml" />
+        <option value="$PROJECT_DIR$/bayou-plugin/bayou-plugin.iml" />
+        <option value="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/BayouTask.kt" />
+        <option value="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/EditorAction.kt" />
+        <option value="$PROJECT_DIR$/bayou-annotations/pom.xml" />
+        <option value="$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/language/PsiClassProcessor.kt" />
+        <option value="$PROJECT_DIR$/bayou-implementation/pom.xml" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="bayou-annotations" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="bayou-implementation" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-5" />
+    <option name="y" value="-15" />
+    <option name="width" value="1925" />
+    <option name="height" value="1215" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="bayou-integration" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bayou-integration" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bayou-integration" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bayou-integration" type="462c0819:PsiDirectoryNode" />
+              <item name="bayou-annotations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bayou-integration" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bayou-integration" type="462c0819:PsiDirectoryNode" />
+              <item name="bayou-annotations" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bayou-integration" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bayou-integration" type="462c0819:PsiDirectoryNode" />
+              <item name="bayou-annotations" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="annotations" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_opened_file_path" value="$APPLICATION_HOME_DIR$/lib/jackson-core-2.8.8.jar!/" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.46024734" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\TanVD\Work\Diploma\bayou-integration\bayou-annotations" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration name="Bayou Plugin" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="bayou-plugin" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <alternative-path path="IntelliJ IDEA IU-181.4203.550" alternative-path-enabled="true" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="bayou-plugin" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0d8d14fc-9697-4a4e-9814-f4a8b0d3cd07" name="Default" comment="" />
+      <created>1522781973386</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1522781973386</updated>
+      <workItem from="1522781976790" duration="1532000" />
+      <workItem from="1522783687457" duration="94000" />
+      <workItem from="1522783783273" duration="27000" />
+      <workItem from="1522783812982" duration="648000" />
+      <workItem from="1522784465098" duration="378000" />
+      <workItem from="1522784866868" duration="5885000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="8564000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="2062" height="1126" extended-state="6" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32971373" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32971373" />
+      <window_info anchor="right" id="Maven Projects" order="3" weight="0.32958984" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32971373" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32971373" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32971373" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992636" visible="true" weight="0.24511719" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info id="Favorites" order="2" sideWeight="0.50073636" side_tool="true" weight="0.24511719" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39980257" />
+      <window_info anchor="right" id="Gradle" order="3" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Build" order="7" visible="true" weight="0.32971373" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/EditorAction.kt</url>
+          <line>13</line>
+          <properties />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/language/PsiClassProcessor.kt</url>
+          <line>43</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/BayouTask.kt</url>
+          <line>16</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/language/PsiClassProcessor.kt</url>
+          <line>26</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/language/PsiClassProcessor.kt</url>
+          <line>29</line>
+          <properties />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/language/PsiClassProcessor.kt</url>
+          <line>34</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/language/PsiClassProcessor.kt</url>
+          <line>31</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/utils/JsonUtils.kt</url>
+          <line>23</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="9" />
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+        <watch expression="psiClass.methods" language="kotlin" />
+        <watch expression="methods" language="kotlin" />
+        <watch expression="method.name" language="kotlin" />
+        <watch expression="InputStreamReader(BayouSynthesizer::class.java.classLoader.getResourceAsStream(&quot;${input.type.name.toLowerCase()}/config.json&quot;)).readText()" language="kotlin" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>InputStreamReader(BayouSynthesizer::class.java.classLoader.getResourceAsStream(&quot;${input.type.name.toLowerCase()}/config.json&quot;)).readText()</expression-string>
+        <language-id>kotlin</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>InputStreamReader(BayouSynthesizer::class.java.classLoader.getResourceAsStream(&quot;${input.type.name.toLowerCase()}.json&quot;)).readText()</expression-string>
+        <language-id>kotlin</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>method.name</expression-string>
+        <language-id>kotlin</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>methods</expression-string>
+        <language-id>kotlin</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>psiClass.methods</expression-string>
+        <language-id>kotlin</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/bayou-annotations/src/tanvd/bayou/prototype/annotations/processing/JsonUtils.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+          <folding>
+            <element signature="e#54#328#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bayou-annotations/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bayou-implementation/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2128">
+          <caret line="133" selection-start-line="133" selection-end-line="144" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/BayouTask.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="43" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="43" />
+          <folding>
+            <element signature="e#31#633#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bayou-annotations/src/tanvd/bayou/prototype/annotations/kotlin/SynthesizerType.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="60" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bayou-annotations/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="19" column="46" lean-forward="true" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/EditorAction.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bayou-implementation/bayou-implementation.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" selection-start-line="2" selection-end-line="19" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/BayouTask.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bayou-annotations/src/tanvd/bayou/prototype/annotations/kotlin/SynthesizerType.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="60" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bayou-implementation/bayou-implementation.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" selection-start-line="2" selection-end-line="19" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bayou-annotations/bayou-annotations.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bayou-annotations/src/tanvd/bayou/prototype/annotations/kotlin/SynthesizerType.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="60" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bayou-implementation/bayou-implementation.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" selection-start-line="2" selection-end-line="19" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bayou-annotations/src/tanvd/bayou/prototype/annotations/kotlin/SynthesizerType.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="60" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bayou-implementation/bayou-implementation.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" selection-start-line="2" selection-end-line="19" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bayou-annotations/bayou-annotations.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bayou-annotations/src/tanvd/bayou/prototype/annotations/kotlin/SynthesizerType.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="60" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bayou-annotations/src/tanvd/bayou/prototype/annotations/kotlin/ApiType.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bayou-annotations/src/tanvd/bayou/prototype/annotations/kotlin/android/AndroidFunctions.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bayou-annotations/src/tanvd/bayou/prototype/annotations/kotlin/android/ApiCall.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bayou-annotations/src/tanvd/bayou/prototype/annotations/kotlin/android/ContextClass.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bayou-annotations/src/tanvd/bayou/prototype/annotations/kotlin/stdlib/ApiCall.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/TestClient.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bayou-plugin/idea-flex.skeleton">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bayou-annotations/src/tanvd/bayou/prototype/annotations/processing/JsonUtils.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+          <folding>
+            <element signature="e#54#328#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bayou-plugin/bayou-plugin.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_162/jre/lib/rt.jar!/sun/awt/windows/WInputMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="474" column="24" selection-start-line="474" selection-start-column="24" selection-end-line="474" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/java-impl.jar!/com/intellij/psi/impl/search/AllClassesSearchExecutor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="114" selection-start-line="114" selection-end-line="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/com/intellij/openapi/application/impl/ApplicationImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="1091" selection-start-line="1091" selection-end-line="1091" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/java-impl.jar!/com/intellij/codeInsight/completion/AllClassesGetter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="171" selection-start-line="171" selection-end-line="171" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-api.jar!/com/intellij/psi/search/GlobalSearchScope.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/module/jackson-module-kotlin/2.8.8/jackson-module-kotlin-2.8.8.jar!/com/fasterxml/jackson/module/kotlin/KotlinModule.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/EditorAction.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/BayouTask.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#31#633#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/BayouClient.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/synthesizer/BayouSynthesizer.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bayou-plugin/src/tanvd/bayou/prototype/language/PsiClassProcessor.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="32" column="148" selection-start-line="32" selection-start-column="148" selection-end-line="32" selection-end-column="148" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/model/configurable/ast/ConfigurableAstGenerator.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bayou-implementation/src/tanvd/bayou/implementation/utils/JsonUtils.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bayou-annotations/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="526">
+          <caret line="98" selection-start-line="98" selection-end-line="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bayou-implementation/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="136" column="23" selection-start-line="136" selection-start-column="23" selection-end-line="136" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>bayou-annotations:jar</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.46024734" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Kotlin (bayou-implementation)|Kotlin</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.46024734" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>JFlex &amp; idea-flex.skeleton</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.46024734" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>IntelliJ IDEA IU-181.4203.550</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.46024734" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>bayou-implementation</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.46024734" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>KotlinJavaRuntime</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.46024734" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

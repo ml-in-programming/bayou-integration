@@ -64,14 +64,13 @@ class PsiClassesProcessor(val project: Project, val progress: SynthesisProgress)
             }
 
             if (model == null && (contextClasses.isNotEmpty() || apiCalls.isNotEmpty() || apiTypes.isNotEmpty())) {
-                ApplicationManager.getApplication().invokeLater{
+                ApplicationManager.getApplication().invokeLater {
                     executeWriteAction(project, method.containingFile) {
                         method.body?.replace(PsiUtils.createCodeBlock("{\n // You have not set type of synthesizer.\n}", project))
                     }
                 }
                 return true
-            }
-            else if (model != null && !BayouClient.existsModel(model!!.name.toLowerCase())){
+            } else if (model != null && !BayouClient.existsModel(model!!.name.toLowerCase())) {
                 val config = InputStreamReader(BayouSynthesizer::class.java.classLoader.getResourceAsStream("${model!!.name.toLowerCase()}.json")).readText()
 
                 BayouClient.downloadModel(config, DownloadProgressWrapper(ProgressManager.getInstance().progressIndicator))
@@ -92,7 +91,7 @@ class PsiClassesProcessor(val project: Project, val progress: SynthesisProgress)
                 } else {
                     PsiUtils.createCodeBlock("{\n // Something went wrong. Try again with other params.\n}", project)
                 }
-                ApplicationManager.getApplication().invokeLater{
+                ApplicationManager.getApplication().invokeLater {
                     executeWriteAction(project, method.containingFile) {
                         method.body?.replace(codeBlock)
                         PsiUtils.reformatFile(method.containingFile, project)
@@ -104,7 +103,7 @@ class PsiClassesProcessor(val project: Project, val progress: SynthesisProgress)
     }
 }
 
-class DownloadProgressWrapper(val progressIndicator: ProgressIndicator): DownloadProgress {
+class DownloadProgressWrapper(val progressIndicator: ProgressIndicator) : DownloadProgress {
 
     override var progress: Double = 0.0
         set(value) {

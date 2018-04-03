@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/bayou-annotations/bayou-annotations.iml" filepath="$PROJECT_DIR$/bayou-annotations/bayou-annotations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bayou-implementation/bayou-implementation.iml" filepath="$PROJECT_DIR$/bayou-implementation/bayou-implementation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/bayou-integration.iml" filepath="$PROJECT_DIR$/.idea/bayou-integration.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bayou-plugin/bayou-plugin.iml" filepath="$PROJECT_DIR$/bayou-plugin/bayou-plugin.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,45 +1,48 @@
 <idea-plugin>
-  <id>tanvd.bayou.prototype</id>
-  <name>Bayou prototype</name>
-  <version>1.0</version>
-  <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+    <id>tanvd.bayou.prototype</id>
+    <name>Bayou prototype</name>
+    <version>1.0</version>
+    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
 
-  <description><![CDATA[
+    <description><![CDATA[
         Simple prototype of bayou integration
     ]]></description>
 
-  <change-notes><![CDATA[
+    <change-notes><![CDATA[
       Add change notes here.<br>
       <em>most HTML tags may be used</em>
     ]]>
-  </change-notes>
+    </change-notes>
 
-  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-  <idea-version since-build="145.0"/>
-
-
-  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
-       on how to target different products -->
-  <!-- uncomment to enable plugin in all products
-  <depends>com.intellij.modules.lang</depends>
-  -->
-
-  <extensions defaultExtensionNs="com.intellij">
-    <fileTypeFactory implementation="tanvd.bayou.prototype.language.file.BayouFileTypeFactory"/>
-    <lang.parserDefinition language="Bayou" implementationClass="tanvd.bayou.prototype.language.BayouParserDefinition"/>
-    <lang.syntaxHighlighterFactory key="Bayou" language="Bayou" implementationClass="tanvd.bayou.prototype.language.highlighting.BayouHighlighterFactory"/>
-    <completion.contributor language="Bayou" implementationClass="tanvd.bayou.prototype.language.completion.BayouCompletionContributor"/>
-  </extensions>
-
-  <depends>org.jetbrains.kotlin</depends>
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="145.0"/>
 
 
-  <actions>
-    <!-- Add your actions here -->
-    <action id="tanvd.bayou.prototype.EditorAction" class="tanvd.bayou.prototype.EditorAction"
-            text="Generate With Bayou" description="Generate With Bayou">
-      <add-to-group group-id="CodeMenu" anchor="first"/>
-    </action>
-  </actions>
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <fileTypeFactory implementation="tanvd.bayou.prototype.language.file.BayouFileTypeFactory"/>
+        <lang.parserDefinition language="Bayou"
+                               implementationClass="tanvd.bayou.prototype.language.BayouParserDefinition"/>
+        <lang.syntaxHighlighterFactory key="Bayou" language="Bayou"
+                                       implementationClass="tanvd.bayou.prototype.language.highlighting.BayouHighlighterFactory"/>
+        <completion.contributor language="Bayou"
+                                implementationClass="tanvd.bayou.prototype.language.completion.BayouCompletionContributor"/>
+    </extensions>
+
+    <depends>org.jetbrains.kotlin</depends>
+
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="tanvd.bayou.prototype.EditorAction" class="tanvd.bayou.prototype.EditorAction"
+                text="Generate With Bayou" description="Generate With Bayou">
+            <add-to-group group-id="CodeMenu" anchor="first"/>
+        </action>
+    </actions>
 
 </idea-plugin>

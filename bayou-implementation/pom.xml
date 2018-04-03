@@ -7,7 +7,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <kotlin.version>1.2.30</kotlin.version>
+        <kotlin.version>1.2.31</kotlin.version>
         <kotlin.compiler.incremental>true</kotlin.compiler.incremental>
     </properties>
     <repositories>
@@ -19,6 +19,7 @@
     <build>
         <sourceDirectory>src</sourceDirectory>
         <plugins>
+            <!--compiler-->
             <plugin>
                 <artifactId>kotlin-maven-plugin</artifactId>
                 <configuration>
@@ -31,38 +32,9 @@
                     <execution>
                         <id>compile</id>
                         <phase>compile</phase>
-                        <goals> <goal>compile</goal> </goals>
-                    </execution>
-                    <execution>
-                        <id>test-compile</id>
-                        <phase>test-compile</phase>
                         <goals>
-                            <goal>test-compile</goal>
+                            <goal>compile</goal>
                         </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <!-- any other plugins -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-assembly-plugin</artifactId>
-                <version>2.6</version>
-                <executions>
-                    <execution>
-                        <id>make-assembly</id>
-                        <phase>package</phase>
-                        <goals> <goal>single</goal> </goals>
-                        <configuration>
-                            <archive>
-                                <manifest>
-                                    <mainClass>tanvd.bayou.implementation.BayouAPI</mainClass>
-                                </manifest>
-                            </archive>
-                            <descriptorRefs>
-                                <descriptorRef>jar-with-dependencies</descriptorRef>
-                                <descriptorRef>src</descriptorRef>
-                            </descriptorRefs>
-                        </configuration>
                     </execution>
                 </executions>
             </plugin>
@@ -77,15 +49,30 @@
                             <goal>compile</goal>
                         </goals>
                     </execution>
+                </executions>
+            </plugin>
+            <!-- jar -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.6</version>
+                <executions>
                     <execution>
-                        <id>testCompile</id>
-                        <phase>test-compile</phase>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
                         <goals>
-                            <goal>testCompile</goal>
+                            <goal>single</goal>
                         </goals>
+                        <configuration>
+                            <descriptorRefs>
+                                <descriptorRef>jar-with-dependencies</descriptorRef>
+                                <descriptorRef>src</descriptorRef>
+                            </descriptorRefs>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
+
         </plugins>
     </build>
     <dependencies>
@@ -140,12 +127,14 @@
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-reflect</artifactId>
             <version>${kotlin.version}</version>
+            <!--<scope>provided</scope>-->
         </dependency>
 
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-stdlib-jdk8</artifactId>
             <version>${kotlin.version}</version>
+            <!--<scope>provided</scope>-->
         </dependency>
 
         <!--serialization-->

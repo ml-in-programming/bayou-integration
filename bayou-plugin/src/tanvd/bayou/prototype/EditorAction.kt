@@ -5,7 +5,6 @@ import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.actionSystem.CommonDataKeys
 import com.intellij.openapi.fileEditor.FileEditorManager
 import com.intellij.openapi.progress.ProgressManager
-import org.bouncycastle.asn1.cms.Evidence
 import tanvd.bayou.prototype.annotations.kotlin.SynthesizerType
 import tanvd.bayou.prototype.language.EvidencesInput
 
@@ -48,7 +47,8 @@ class EditorAction : AnAction() {
                     "CONTEXT" -> {
                         input.contextClasses.add(it.groupValues[2])
                     }
-                    else -> {}
+                    else -> {
+                    }
                 }
             }
 

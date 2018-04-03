@@ -27,10 +27,10 @@ class PsiClassesProcessor(val project: Project, val progress: SynthesisProgress,
         BayouClient.setDownloadProgress { DownloadProgressWrapper(ProgressManager.getInstance().progressIndicator) }
 
         psiClass.methods.forEach { method ->
-            val input = methods[method.name] ?: return false
+            val input = methods[method.name] ?: return@forEach
 
             if (!BayouClient.existsModel(input.type.name.toLowerCase())) {
-                val config = InputStreamReader(BayouSynthesizer::class.java.classLoader.getResourceAsStream("${input.type.name.toLowerCase()}.json")).readText()
+                val config = InputStreamReader(BayouSynthesizer::class.java.classLoader.getResourceAsStream("${input.type.name.toLowerCase()}/config.json")).readText()
 
                 BayouClient.downloadModel(config, DownloadProgressWrapper(ProgressManager.getInstance().progressIndicator))
             }

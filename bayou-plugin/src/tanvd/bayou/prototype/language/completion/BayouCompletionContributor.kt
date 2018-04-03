@@ -24,7 +24,7 @@ class BayouCompletionContributor : CompletionContributor() {
     }
 
     init {
-            extend(CompletionType.BASIC,
+        extend(CompletionType.BASIC,
                 PlatformPatterns.psiElement(BayouTypes.VALUE as IElementType).withLanguage(BayouLanguage.INSTANCE),
                 object : CompletionProvider<CompletionParameters>() {
                     public override fun addCompletions(parameters: CompletionParameters,
@@ -32,21 +32,22 @@ class BayouCompletionContributor : CompletionContributor() {
                                                        resultSet: CompletionResultSet) {
                         val parentType = parameters.position.context?.node?.elementType
                         when (parentType) {
-                           BODY_STDLIB -> {
-                               val key = parameters.position.prevSibling.prevSibling?.firstChild?.node?.elementType
-                               when (key) {
-                                   API -> {
-                                       stdlibFunctions.forEach {
-                                           resultSet.addElement(LookupElementBuilder.create(it))
-                                       }
-                                   }
-                                   TYPE -> {
-                                       stdlibClass.forEach {
-                                           resultSet.addElement(LookupElementBuilder.create(it))
-                                       }
-                                   }
-                                   else -> {}
-                               }
+                            BODY_STDLIB -> {
+                                val key = parameters.position.prevSibling.prevSibling?.firstChild?.node?.elementType
+                                when (key) {
+                                    API -> {
+                                        stdlibFunctions.forEach {
+                                            resultSet.addElement(LookupElementBuilder.create(it))
+                                        }
+                                    }
+                                    TYPE -> {
+                                        stdlibClass.forEach {
+                                            resultSet.addElement(LookupElementBuilder.create(it))
+                                        }
+                                    }
+                                    else -> {
+                                    }
+                                }
                             }
                             BODY_ANDROID -> {
                                 val key = parameters.position.prevSibling.prevSibling?.firstChild?.node?.elementType
@@ -66,10 +67,12 @@ class BayouCompletionContributor : CompletionContributor() {
                                             resultSet.addElement(LookupElementBuilder.create(it))
                                         }
                                     }
-                                    else -> {}
+                                    else -> {
+                                    }
                                 }
                             }
-                            else -> {}
+                            else -> {
+                            }
                         }
                     }
                 }
