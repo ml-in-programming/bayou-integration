@@ -55,12 +55,8 @@ class ConfigurableAstGenerator(val main_config: Config) : AstGenerator<Configura
             val ty = if (main_config.evidences.first { it.type == type }.wrangling.type == WrangleType.KHot) {
                 val indexesOfExistingEvidences = arr.withIndex().mapNotNull { (ind, value) -> if (value.equals(0f, 0.00001f)) null else ind}
                 if (indexesOfExistingEvidences.isNotEmpty()) {
-                    val newArray = Array(indexesOfExistingEvidences.size, { Array(arr.size, { 0f }) })
-                    for ((ind, i) in indexesOfExistingEvidences.withIndex()) {
-                        newArray[ind][i] = 1f
-                    }
-                    Tensor.create(arrayOf(indexesOfExistingEvidences.size.toLong(), 1L,
-                            arr.size.toLong()).toLongArray(), FloatBuffer.wrap(newArray.map { it.toList() }.toList().flatMap { it }.toFloatArray()))
+                    Tensor.create(arrayOf(1, 1L,
+                            arr.size.toLong()).toLongArray(), FloatBuffer.wrap(arr.toFloatArray()))
 
                 } else {
                     //TODO-tanvd Is it correct way in a case without some evidence? (to add zeros)

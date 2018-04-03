@@ -17,9 +17,6 @@ package tanvd.bayou.implementation.model.stdlib.synthesizer
 
 import com.google.googlejavaformat.java.Formatter
 import com.google.googlejavaformat.java.FormatterException
-import com.google.gson.Gson
-import com.google.gson.GsonBuilder
-import org.eclipse.jdt.core.dom.CompilationUnit
 import org.eclipse.jface.text.Document
 import tanvd.bayou.implementation.model.stdlib.synthesizer.dsl.*
 

@@ -90,6 +90,6 @@ constructor(source: String, classpath: String) {
         /**
          * Place to send logging information.
          */
-        private val _logger = LogManager.getLogger(EvidenceExtractor::class.java.name)
+        private val _logger = LogManager.getLogger(Parser::class.java.name)
     }
 }

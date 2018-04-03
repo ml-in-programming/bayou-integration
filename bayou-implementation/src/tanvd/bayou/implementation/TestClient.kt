@@ -25,9 +25,9 @@ import edu.rice.cs.caper.bayou.annotations.Evidence;
 import java.util.List;
 
 public class TestUtil {
-    void write(String file, String toWrite) {
-        Evidence.apicalls("write");
-        Evidence.types("FileWriter");
+    void write(String file) {
+        Evidence.types("FileOutputStream");
+        Evidence.types("Random");
     }
 }
         """

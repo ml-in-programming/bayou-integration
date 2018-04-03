@@ -21,6 +21,7 @@ import org.eclipse.jdt.core.dom.rewrite.ASTRewrite
 import org.eclipse.jdt.core.dom.rewrite.ListRewrite
 import org.eclipse.jface.text.BadLocationException
 import org.eclipse.jface.text.Document
+import tanvd.bayou.implementation.core.evidence.EvidenceExtractor
 import tanvd.bayou.implementation.model.configurable.synthesizer.dsl.DSubTree
 
 import java.util.*

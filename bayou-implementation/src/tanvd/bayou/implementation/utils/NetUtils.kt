@@ -1,7 +1,5 @@
 package tanvd.bayou.implementation.utils
 
-import com.github.kittinunf.fuel.Fuel
-import com.github.kittinunf.fuel.httpGet
 import tanvd.bayou.implementation.facade.DownloadProgress
 import tanvd.bayou.implementation.facade.DownloadProgressProvider
 import java.io.File
@@ -10,10 +8,6 @@ import java.nio.file.Paths
 import kotlin.reflect.KClass
 import java.io.FileOutputStream
 import java.net.URL
-import java.nio.channels.Channels
-import java.nio.channels.ReadableByteChannel
-import java.io.IOException
-import java.net.MalformedURLException
 import java.io.BufferedInputStream
 
 
