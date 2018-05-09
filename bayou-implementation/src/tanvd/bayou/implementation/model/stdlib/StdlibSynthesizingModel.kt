@@ -47,7 +47,8 @@ class StdlibSynthesizingModel : SynthesizingModel {
         /**
          * Generate asts, verify them and then dedup and sort by relevance
          */
-        val asts = StdlibRelevanceMeasurement.sortAndDedup(astGenerator.process(evidence.toAstGeneratorInput(), synthesisProgress).filter { StdlibEvidenceAstVerification.verify(it, evidence) })
+        val asts = StdlibRelevanceMeasurement.sortAndDedup(astGenerator.process(evidence.toAstGeneratorInput(),
+                synthesisProgress, maxPrograms).filter { StdlibEvidenceAstVerification.verify(it, evidence) })
 
         /*
          * Try to generate programs from asts

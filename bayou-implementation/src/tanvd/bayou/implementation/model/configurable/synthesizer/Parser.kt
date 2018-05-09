@@ -66,7 +66,7 @@ constructor(source: String, classpath: String) {
         parser.setCompilerOptions(options)
         parser.setKind(ASTParser.K_COMPILATION_UNIT)
         parser.setUnitName("Program.java")
-        parser.setEnvironment(arrayOf<String>(if (classpath != null) classpath!! else ""),
+        parser.setEnvironment(arrayOf(if (classpath != null) classpath!! else ""),
                 arrayOf(""), arrayOf("UTF-8"), true)
         parser.setResolveBindings(true)
         compilationUnit = parser.createAST(null) as CompilationUnit
@@ -77,7 +77,7 @@ constructor(source: String, classpath: String) {
 
                     p.id != IProblem.ParameterMismatch
         }.toList()
-        if (problems.size > 0)
+        if (problems.isNotEmpty())
             throw ParseException(problems)
     }
 

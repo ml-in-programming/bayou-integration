@@ -1,0 +1,24 @@
+{
+  parserClass="tanvd.bayou.plugin.language.parser.BayouParser"
+
+  extends="com.intellij.extapi.psi.ASTWrapperPsiElement"
+
+  psiClassPrefix="Bayou"
+  psiImplClassSuffix="Impl"
+  psiPackage="tanvd.bayou.plugin.language.psi"
+  psiImplPackage="tanvd.bayou.plugin.language.psi.impl"
+
+  elementTypeHolderClass="tanvd.bayou.plugin.language.psi.BayouTypes"
+  elementTypeClass="tanvd.bayou.plugin.language.psi.BayouElementType"
+  tokenTypeClass="tanvd.bayou.plugin.language.psi.BayouTokenType"
+}
+
+bayouFile ::= ((ANDROID bodyAndroid) | (STDLIB bodyStdlib))
+
+keyAndroid ::= (API | TYPE | CONTEXT)
+bodyAndroid ::= (keyAndroid SEPARATOR VALUE)+
+
+keyStdlib ::= (API | TYPE)
+bodyStdlib ::= (keyStdlib SEPARATOR VALUE)+
+
+

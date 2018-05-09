@@ -33,9 +33,9 @@ class AndroidAstGenerator : AstGenerator<AndroidAstGeneratorInput> {
         session = saved.session()
     }
 
-    override fun process(input: AndroidAstGeneratorInput, synthesisProgress: SynthesisProgress): List<DSubTree> {
+    override fun process(input: AndroidAstGeneratorInput, synthesisProgress: SynthesisProgress, maxNumber: Int): List<DSubTree> {
         val results = ArrayList<DSubTree>()
-        for (i in 1..100) {
+        for (i in 1..maxNumber) {
             try {
                 results.add(generateAst(input.apiCalls, input.apiTypes, input.contextClasses))
             } catch (e: Exception) {

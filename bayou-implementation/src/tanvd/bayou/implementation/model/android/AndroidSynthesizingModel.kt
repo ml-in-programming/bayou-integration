@@ -48,7 +48,8 @@ class AndroidSynthesizingModel : SynthesizingModel {
         /**
          * Generate asts, verify them and then dedup and sort by relevance
          */
-        val asts = AndroidRelevanceMeasurement.sortAndDedup(astGenerator.process(evidence.toAstGeneratorInput(), synthesisProgress).filter { AndroidEvidenceAstVerification.verify(it, evidence) })
+        val asts = AndroidRelevanceMeasurement.sortAndDedup(astGenerator.process(evidence.toAstGeneratorInput(),
+                synthesisProgress, maxPrograms).filter { AndroidEvidenceAstVerification.verify(it, evidence) })
 
         /*
          * Try to generate programs from asts

@@ -8,8 +8,8 @@ import tanvd.bayou.implementation.model.configurable.synthesizer.dsl.DSubTree
 object ConfigurableEvidenceAstVerification : AstVerification<ConfigurableEvidences, DSubTree> {
     override fun verify(tree: DSubTree, evidences: ConfigurableEvidences): Boolean {
         val calls = tree.bagOfAPICalls().map { it._call }
-        val callsTypes = calls.mapNotNull { ConfigurableEvidences.typeFromCall(it) }
-        val callsApis = calls.mapNotNull { ConfigurableEvidences.apicallFromCall(it) }
+        val callsTypes = calls.mapNotNull { ConfigurableEvidences.typeFromCall(it) }.map { it.takeWhile { it != '<' } }
+        val callsApis = calls.mapNotNull { ConfigurableEvidences.apicallFromCall(it) }.map { it.takeWhile { it != '<' } }
         val callsContext = calls.flatMap { ConfigurableEvidences.contextFromCall(it) }
         val typesContains = evidences.evidences[EvidenceType.ApiType]?.all {
             callsTypes.contains(it)

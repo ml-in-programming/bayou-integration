@@ -30,9 +30,9 @@ class StdlibAstGenerator : AstGenerator<StdlibAstGeneratorInput> {
         session = saved.session()
     }
 
-    override fun process(input: StdlibAstGeneratorInput, synthesisProgress: SynthesisProgress): List<DSubTree> {
+    override fun process(input: StdlibAstGeneratorInput, synthesisProgress: SynthesisProgress, maxNumber: Int): List<DSubTree> {
         val results = ArrayList<DSubTree>()
-        for (i in 1..100) {
+        for (i in 1..maxNumber) {
             try {
                 results.add(generateAst(input.apiCalls.map { it.toFloat() }.toTypedArray(), input.apiTypes.map { it.toFloat() }.toTypedArray()))
             } catch (e: Exception) {

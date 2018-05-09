@@ -36,10 +36,10 @@ class ConfigurableSynthesizingModel(val config: Config) : SynthesizingModel {
         /*
          * Get combined class path from config and download all files
          */
-        val combinedClassPath = config.classpath.map {
+        val combinedClassPath = config.classpath.joinToString(separator = File.pathSeparator) {
             val file = Downloader.downloadFile(config.name, it.lib_name, it.lib_url)
             file.absolutePath
-        }.joinToString(separator = File.pathSeparator)
+        }
 
         /*
          * Parse the program.
@@ -82,7 +82,7 @@ class ConfigurableSynthesizingModel(val config: Config) : SynthesizingModel {
         /**
          * Generate asts, verify them and then dedup and sort by relevance
          */
-        val asts = ConfigurableRelevanceMeasurement.sortAndDedup(astGenerator.process(input, synthesisProgress).filter { ConfigurableEvidenceAstVerification.verify(it, evidence) })
+        val asts = ConfigurableRelevanceMeasurement.sortAndDedup(astGenerator.process(input, synthesisProgress, maxPrograms).filter { ConfigurableEvidenceAstVerification.verify(it, evidence) })
         synthesisProgress.fraction = 1.0
 
         synthesisProgress.phase = SynthesisPhase.Concretization

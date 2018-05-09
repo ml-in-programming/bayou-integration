@@ -3,11 +3,11 @@
   "classpath": [
     {
       "lib_name": "evidence.jar",
-      "lib_url": "https://www.dropbox.com/s/jhnysqb4t77mbta/evidence.jar?dl=1"
+      "lib_url": "https://s3-eu-west-1.amazonaws.com/public-resources.ml-labs.aws.intellij.net/bayou/android/classpath/evidence.jar"
     },
     {
       "lib_name": "android.jar",
-      "lib_url": "https://www.dropbox.com/s/vtp41w4u76gi0r5/android.jar?dl=1"
+      "lib_url": "https://s3-eu-west-1.amazonaws.com/public-resources.ml-labs.aws.intellij.net/bayou/android/classpath/android.jar"
     }
   ],
   "evidences": [
@@ -16,9 +16,9 @@
       "wrangling": {
         "type": "LDA",
         "config": {
-          "tfidf_vocab_url": "https://www.dropbox.com/s/xswliybquvnzhf7/tfidf_vocab_api.json?dl=1",
-          "tfidf_model_url": "https://www.dropbox.com/s/oc2kvkfqt4fy3s3/tfidf_model_api.json?dl=1",
-          "lda_model_url": "https://www.dropbox.com/s/zwn5sem5damhla8/lda_model_api.json?dl=1",
+          "tfidf_vocab_url": "https://s3-eu-west-1.amazonaws.com/public-resources.ml-labs.aws.intellij.net/bayou/android/tfidf/tfidf_vocab_api.json",
+          "tfidf_model_url": "https://s3-eu-west-1.amazonaws.com/public-resources.ml-labs.aws.intellij.net/bayou/android/tfidf/tfidf_model_api.json",
+          "lda_model_url": "https://s3-eu-west-1.amazonaws.com/public-resources.ml-labs.aws.intellij.net/bayou/android/lda/lda_model_api.json",
           "lda_alpha": "0.1",
           "lda_eta": "0.00390625"
         }
@@ -29,22 +29,23 @@
       "wrangling": {
         "type": "LDA",
         "config": {
-          "tfidf_vocab_url": "https://www.dropbox.com/s/xrlunrh22n75o8a/tfidf_vocab_types.json?dl=1",
-          "tfidf_model_url": "https://www.dropbox.com/s/49dlrpf04o5tabe/tfidf_model_types.json?dl=1",
-          "lda_model_url": "https://www.dropbox.com/s/vsugx3tmuumm291/lda_model_types.json?dl=1",
+          "tfidf_vocab_url": "https://s3-eu-west-1.amazonaws.com/public-resources.ml-labs.aws.intellij.net/bayou/android/tfidf/tfidf_vocab_types.json",
+          "tfidf_model_url": "https://s3-eu-west-1.amazonaws.com/public-resources.ml-labs.aws.intellij.net/bayou/android/tfidf/tfidf_model_types.json",
+          "lda_model_url": "https://s3-eu-west-1.amazonaws.com/public-resources.ml-labs.aws.intellij.net/bayou/android/lda/lda_model_types.json",
           "lda_alpha": "0.1",
           "lda_eta": "0.015625"
         }
       }
     },
     {
+
       "type": "ContextType",
       "wrangling": {
         "type": "LDA",
         "config": {
-          "tfidf_vocab_url": "https://www.dropbox.com/s/azoyncl7unpf2if/tfidf_vocab_context.json?dl=1",
-          "tfidf_model_url": "https://www.dropbox.com/s/31i67y2dv4url89/tfidf_model_context.json?dl=1",
-          "lda_model_url": "https://www.dropbox.com/s/lcv1c2nol394613/lda_model_context.json?dl=1",
+          "tfidf_vocab_url": "https://s3-eu-west-1.amazonaws.com/public-resources.ml-labs.aws.intellij.net/bayou/android/tfidf/tfidf_vocab_context.json",
+          "tfidf_model_url": "https://s3-eu-west-1.amazonaws.com/public-resources.ml-labs.aws.intellij.net/bayou/android/tfidf/tfidf_model_context.json",
+          "lda_model_url": "https://s3-eu-west-1.amazonaws.com/public-resources.ml-labs.aws.intellij.net/bayou/android/lda/lda_model_context.json",
           "lda_alpha": "0.1",
           "lda_eta": "0.03125"
         }
@@ -52,8 +53,8 @@
     }
   ],
   "synthesizer": {
-    "model_url": "https://www.dropbox.com/s/koh4hijswjhlkqb/full-model.zip?dl=1",
-    "config_url": "https://www.dropbox.com/s/yfivipttekwdoc6/config.json?dl=1",
+    "model_url": "https://s3-eu-west-1.amazonaws.com/public-resources.ml-labs.aws.intellij.net/bayou/android/full-model.zip",
+    "config_url": "https://s3-eu-west-1.amazonaws.com/public-resources.ml-labs.aws.intellij.net/bayou/android/config.json",
     "psi_size": 32
   },
   "concretization": {

@@ -35,16 +35,16 @@ class ConfigurableAstGenerator(val main_config: Config) : AstGenerator<Configura
         session = saved.session()
     }
 
-    override fun process(input: ConfigurableAstGeneratorInput, synthesisProgress: SynthesisProgress): List<DSubTree> {
+    override fun process(input: ConfigurableAstGeneratorInput, synthesisProgress: SynthesisProgress, maxNumber: Int): List<DSubTree> {
         val results = ArrayList<DSubTree>()
-        for (i in 1..100) {
+        for (i in 1..maxNumber) {
             try {
                 results.add(generateAst(input))
             } catch (e: Exception) {
                 print(e.message)
             }
             calls_in_last_ast.clear()
-            synthesisProgress.fraction += 0.01
+            synthesisProgress.fraction += 1.0 / maxNumber
         }
         return results
     }
