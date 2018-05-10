@@ -91,8 +91,12 @@ class GenerateIntentionAction : PsiElementBaseIntentionAction(), IntentionAction
                 }
 
                 indicator.isIndeterminate = false
-                val response = BayouSynthesizer.invoke(evidences.type, BayouRequest(returnType, inputParams, evidences.apiCalls,
-                        evidences.apiTypes, evidences.contextClasses), ProgressIndicatorWrapper(indicator))
+                val response = try {
+                    BayouSynthesizer.invoke(evidences.type, BayouRequest(returnType, inputParams, evidences.apiCalls,
+                            evidences.apiTypes, evidences.contextClasses), ProgressIndicatorWrapper(indicator))
+                } catch (e: Exception) {
+                    null
+                }
 
                 val codeBlock = runReadAction {
                     if (response != null) {
