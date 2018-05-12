@@ -5,8 +5,12 @@
     <vendor email="vdtankov@gmail.com">Vladislav Tankov</vendor>
 
     <description><![CDATA[
-        Java STDlib and Android SDK code synthesizer.
-        Based on BSL-synthesizer (Bayou) technology.
+        <p>Java STDlib and Android SDK method's code synthesizer.</p>
+        <p>Plugin provides Bayou language which is DSL to query BSL synthesizer</p>
+        <p>Based on BSL-synthesizer (Bayou) technology.</p>
+        <br/>
+        <p>Github repository of project: <a href="https://github.com/ml-in-programming/bayou-integration">GitHub Repository</a></p>
+        <p>Project is curated by JetBrains Research: <a href="https://research.jetbrains.org/ru/groups/ml_methods/projects?project_id=32">Project Page</a></p>
     ]]></description>
 
     <change-notes><![CDATA[
@@ -18,13 +22,13 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <fileTypeFactory implementation="tanvd.bayou.plugin.language.file.BayouFileTypeFactory"/>
-        <lang.parserDefinition language="BSL"
+        <lang.parserDefinition language="Bayou"
                                implementationClass="tanvd.bayou.plugin.language.BayouParserDefinition"/>
-        <lang.syntaxHighlighterFactory key="BSL" language="BSL"
+        <lang.syntaxHighlighterFactory key="Bayou" language="Bayou"
                                        implementationClass="tanvd.bayou.plugin.language.highlighting.BayouHighlighterFactory"/>
-        <completion.contributor language="BSL"
+        <completion.contributor language="Bayou"
                                 implementationClass="tanvd.bayou.plugin.language.completion.BayouCompletionContributor"/>
-        <annotator language="BSL" implementationClass="tanvd.bayou.plugin.language.SimpleAnnotator"/>
+        <annotator language="Bayou" implementationClass="tanvd.bayou.plugin.language.SimpleAnnotator"/>
 
         <intentionAction>
             <className>tanvd.bayou.plugin.GenerateIntentionAction</className>

@@ -14,7 +14,7 @@ To work with plugin you need to install it (from Plugins repository or just buil
 
 One the first run of synthesizing plugin will download all needed models into temporary location (depends on your OS). 
 
-To start you synthesizing you need to create method (into body of which synthesized code will be inserted). Here create multiline comment "/* ... /*", hit alt+enter, select Inject language or reference and select here BSL language.
+To start you synthesizing you need to create method (into body of which synthesized code will be inserted). Here create multiline comment "/* ... /*", hit alt+enter, select Inject language or reference and select here Bayou language.
 
 ### DSL language
 DSL language consists of header and number of evidence block.

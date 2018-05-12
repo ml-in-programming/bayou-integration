@@ -12,11 +12,11 @@ import javax.swing.Icon
 class BayouFileType private constructor() : LanguageFileType(BayouLanguage.INSTANCE) {
 
     override fun getName(): String {
-        return "BSL file"
+        return "Bayou file"
     }
 
     override fun getDescription(): String {
-        return "BSL language file"
+        return "Bayou language file"
 
     }
 
@@ -35,6 +35,6 @@ class BayouFileType private constructor() : LanguageFileType(BayouLanguage.INSTA
 
 class BayouFileTypeFactory : FileTypeFactory() {
     override fun createFileTypes(@NotNull fileTypeConsumer: FileTypeConsumer) {
-        fileTypeConsumer.consume(BayouFileType.INSTANCE, "BSL")
+        fileTypeConsumer.consume(BayouFileType.INSTANCE, "Bayou")
     }
 }

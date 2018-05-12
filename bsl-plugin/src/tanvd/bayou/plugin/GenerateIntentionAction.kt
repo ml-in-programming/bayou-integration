@@ -68,7 +68,7 @@ class GenerateIntentionAction : PsiElementBaseIntentionAction(), IntentionAction
         val containingMethod = getContainingMethod(comment)!!
         val evidences = BayouSynthesizer.getEvidencesFromLang(request)
 
-        ProgressManager.getInstance().run(object : Task.Backgroundable(project, "Bayou Code Generation", true) {
+        ProgressManager.getInstance().run(object : Task.Backgroundable(project, "BSL Synthesizer Code Generation", true) {
             override fun run(indicator: ProgressIndicator) {
                 if (!BayouClient.existsModel(evidences.type.name.toLowerCase())) {
                     val config = InputStreamReader(BayouSynthesizer::class.java.classLoader.getResourceAsStream("${evidences.type.name.toLowerCase()}/config.json")).readText()

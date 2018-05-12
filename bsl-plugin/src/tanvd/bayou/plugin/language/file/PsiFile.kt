@@ -13,7 +13,7 @@ class BayouFile(@NotNull viewProvider: FileViewProvider) : PsiFileBase(viewProvi
     }
 
     override fun toString(): String {
-        return "BSL File"
+        return "Bayou File"
     }
 
     @Override
