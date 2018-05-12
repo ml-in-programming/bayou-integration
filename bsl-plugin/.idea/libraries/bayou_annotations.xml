@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="bayou-annotations">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/bayou-annotations.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

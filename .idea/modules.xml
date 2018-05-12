@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/bayou-annotations/bayou-annotations.iml" filepath="$PROJECT_DIR$/bayou-annotations/bayou-annotations.iml" />
-      <module fileurl="file://$PROJECT_DIR$/bayou-implementation/bayou-implementation.iml" filepath="$PROJECT_DIR$/bayou-implementation/bayou-implementation.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/bayou-integration.iml" filepath="$PROJECT_DIR$/.idea/bayou-integration.iml" />
-      <module fileurl="file://$PROJECT_DIR$/bayou-plugin/bayou-plugin.iml" filepath="$PROJECT_DIR$/bayou-plugin/bayou-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/bsl-code-synthesizer.iml" filepath="$PROJECT_DIR$/.idea/bsl-code-synthesizer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bsl-implementation/bsl-implementation.iml" filepath="$PROJECT_DIR$/bsl-implementation/bsl-implementation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bsl-plugin/bsl-plugin.iml" filepath="$PROJECT_DIR$/bsl-plugin/bsl-plugin.iml" />
     </modules>
   </component>
 </project>

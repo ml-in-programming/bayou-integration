@@ -6,14 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="bayou-annotations" />
-        <module name="bayou-implementation" />
+        <module name="bsl-implementation" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="bayou-annotations" target="1.8" />
-      <module name="bayou-implementation" target="1.8" />
-      <module name="bayou-implementation (1)" target="1.8" />
+      <module name="bsl-annotations" target="1.8" />
+      <module name="bsl-implementation" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

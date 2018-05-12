@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="bsl-annotations:jar">
+    <output-path>$PROJECT_DIR$/build/artifacts/bsl_annotations_jar</output-path>
+    <root id="archive" name="bsl-annotations.jar">
+      <element id="module-output" name="bsl-annotations" />
+    </root>
+  </artifact>
+</component>

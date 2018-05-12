@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="bayou-annotations:jar">
-    <output-path>$PROJECT_DIR$/build/artifacts/bayou_annotations_jar</output-path>
-    <root id="archive" name="bayou-annotations.jar">
-      <element id="module-output" name="bayou-annotations" />
-    </root>
-  </artifact>
-</component>
