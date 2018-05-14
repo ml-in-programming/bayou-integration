@@ -1,29 +1,28 @@
 # BSL Code Synthesizer
-BSL Code Synthesizer project is fully JVM implementation of Bayesian Sketch Learning synthesizer based on paper of CaperGroup and their reference implementation of a such synthesizer --- Bayou.
+BSL Code Synthesizer project is a JVM implementation of the Bayesian Sketch Learning synthesizer based on the CaperGroup's [paper](https://arxiv.org/abs/1703.05698) and [Bayou](https://github.com/capergroup/bayou), their reference implementation of a such synthesizer.
 
-BSL Code Synthesizer includes a plugin to IntelliJ IDEA with own DSL language which capable of synthesizing Java STDlib and Android SDK code right into IntelliJ IDEA
+BSL Code Synthesizer is implemented as an IntelliJ IDEA plugin capable of synthesizing Java STDlib and Android SDK code from a specification in a custom DSL.
 
-## Structure
-BSL Code Synthesizer project contains of two main modules:
-* bsl-implementation -- JVM implementation of BSL Code Synthesizer. It is configurable and supports two "metamodels" -- Java STDlib and Android SDK (it means, that we are providing two configurations right now, but it is definitely possible to configure any "metamodel" you need, if bsl-implementation has needed algorithms).
-* bsl-plugin -- IntelliJ IDEA plugin which is a UI frontend to bsl-implementation. It provides DSL to write synthesizing queries and intention actions to call bsl-implementation.
+## Code Structure
+BSL Code Synthesizer consists of two main modules:
+* bsl-implementation -- a JVM implementation of a BSL Code Synthesizer. It is highly configurable and currently supports two "metamodels": Java STDlib and Android SDK. Any other metamodel can be defined if all appropriate algorithms are implemented within this library.
+* bsl-plugin -- an IntelliJ IDEA plugin which acts as a UI frontend to the bsl-implementation library. It provides a DSL to define synthesizing queries and intention actions to call bsl-implementation.
 
-## BSL plugin
+## The IntelliJ IDEA Plugin
 
-To work with plugin you need to install it (from Plugins repository or just build it from scratch from this Github repository).
+The plugin could be installed from the Plugins Repository or build from scratch from this Github repository.
 
-One the first run of synthesizing plugin will download all needed models into temporary location (depends on your OS). 
+On the first synthesis command the plugin will download all needed models into a temporary folder depending on your OS. 
 
-To start you synthesizing you need to create method (into body of which synthesized code will be inserted). Here create multiline comment "/* ... /*", hit alt+enter, select Inject language or reference and select here Bayou language.
+To run the synthesis you need to create a Java method where the synthesized code will be placed. Create a multiline comment "/* ... /*" before this method, hit Alt+Enter, select `Inject language or reference` and select `Bayou language` from the drop-down list.
 
-### DSL language
-DSL language consists of header and number of evidence block.
-In header (first line) you need to select type of synthesizer -- STDLIB or ANDROID.
+### The DSL Language
+The DSL language consists of a header and one or more of evidence blocks. The header (the first line of your comment) defines synthesizer type: `STDLIB` or `ANDROID`. Evidence blocks could be one of the following: 
 One the next lines you need to add evidences:
-* For STDLIB (API|TYPE):=VALUE
-* For ANDROID (API|TYPE|CONTEXT):=VALUE
+* `API:=<VALUE>` or `TYPE:=<VALUE>` for STDLIB synthesizer,
+* `API:=<VALUE>`, `TYPE:=<VALUE>` or `CONTEXT:=<VALUE>` for ANDROID synthesizer.
 
-Language errors are annotated, so in case of problems just take a closer look at this annotations.
+Syntactic errors are annotated for this DSL, so in case of a error just take a closer look at appearing annotations.
 
 ### Examples
 
