@@ -5,16 +5,16 @@
     <vendor email="vdtankov@gmail.com">Vladislav Tankov</vendor>
 
     <description><![CDATA[
-        <p>Java STDlib and Android SDK method's code synthesizer.</p>
-        <p>Plugin provides Bayou language which is DSL to query BSL synthesizer</p>
-        <p>Based on BSL-synthesizer (Bayou) technology.</p>
+        <p>A synthesizer of API-heavy code for Java STDlib and Android SDK.</p>
+        <p>Custom DSL is used to define which API calls and data types should be present in the desired code fragment.</p>
+        <p>This plugin is based on the Bayesian Sketch Learning approach and <a href="https://github.com/capergroup/bayou">Bayou</a> project.</p>
         <br/>
-        <p>Github repository of project: <a href="https://github.com/ml-in-programming/bayou-integration">GitHub Repository</a></p>
-        <p>Project is curated by JetBrains Research: <a href="https://research.jetbrains.org/ru/groups/ml_methods/projects?project_id=32">Project Page</a></p>
+        <p>GitHub repository: <a href="https://github.com/ml-in-programming/bayou-integration">GitHub Repository</a></p>
+        <p>This project is a part of JetBrains Research: <a href="https://research.jetbrains.org/groups/ml_methods/projects?project_id=32">Project Page</a></p>
     ]]></description>
 
     <change-notes><![CDATA[
-      Initial release of plugin
+      Initial release of the plugin
     ]]>
     </change-notes>
 
