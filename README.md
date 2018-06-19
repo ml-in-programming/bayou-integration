@@ -34,7 +34,7 @@ Delete file:
 
 Read file: 
 
-![Read file synthesizing](https://s3-eu-west-1.amazonaws.com/public-resources.ml-labs.aws.intellij.net/bayou/gifs/delete_file_test.gif)
+![Read file synthesizing](https://s3-eu-west-1.amazonaws.com/public-resources.ml-labs.aws.intellij.net/bayou/gifs/read_file_test.gif)
 
 Clear list:
 
